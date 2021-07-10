@@ -2,6 +2,23 @@
 
 <br/>
 
+### Table of contents
+
+- `.ipynb`
+  - Data-Detail.ipynb
+    - Code showing current dictionary status
+  - Comparative_Analysis_with_nltk.ipynb
+    - After comparison validation with open word datasets, only pure security jargon is left.
+
+- MongoDB
+  - Managing Jargon Dictionry for Cybersecurity
+- CoNLL 2003 (English) Dataset
+- MITRE ATT&CTK® Website
+
+<br/>
+
+<br/>
+
 ## # MongoDB
 
 *It does not disclose its vocabulary dictionary related to CTI, which is being developed secretly.*
