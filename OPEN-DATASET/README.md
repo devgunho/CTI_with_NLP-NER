@@ -4,10 +4,10 @@
 
 ### Table of contents
 
-- `.ipynb`
+- Modules
   - Data-Detail.ipynb
     - Code showing current dictionary status
-  - Comparative_Analysis_with_nltk.ipynb
+  - Comparative_Analysis_with_nltk.py
     - After comparison validation with open word datasets, only pure security jargon is left.
 
 - MongoDB

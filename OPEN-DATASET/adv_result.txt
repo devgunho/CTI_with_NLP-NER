@@ -1,0 +1,1 @@
+['halfway', 'westerly', 'westerly', 'killingly', 'southeast']
