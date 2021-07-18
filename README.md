@@ -13,6 +13,7 @@ CTI (Cyber Threat Intelligence) with NLP
   - TEXTHERO
   - BERT-NER
   - FLASK-SERVER
+- Python Naming Convention
 - Text Data Preprocessing
   - Modin : Get faster pandas with Modin
   - doccano : https://github.com/doccano/doccano
@@ -23,6 +24,16 @@ CTI (Cyber Threat Intelligence) with NLP
 - Reference
   - STIX / TAXI
   - MITRE ATT&CK
+
+<br/>
+
+<br/>
+
+## # Python Naming Style
+
+<p align="center">
+    <img src="README.assets/naming.png"/>
+</p>
 
 <br/>
 
