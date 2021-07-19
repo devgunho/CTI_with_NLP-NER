@@ -18,4 +18,3 @@ FLASK-SERVER> .\venv\Scripts\Activate
 (venv) FLASK-SERVER> cat requirements.txt
 (venv) FLASK-SERVER> deactivate
 ```
-

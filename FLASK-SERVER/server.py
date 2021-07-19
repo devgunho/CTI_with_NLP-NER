@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-import mongodbconnect
+import mongodb_connect
 
 app = Flask(__name__)
 
@@ -8,13 +8,14 @@ app = Flask(__name__)
 @app.route("/", methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        print("methods: POST")
-        if request.form.get("submit_a"):
-            print("BTN a push!")
+        print("[+] methods: POST")
+        if request.form.get("mongo_check"):
+            print("[+] MongoDB Connection Check btn. pushed!")
+            mongodb_connect.show_mongodb_list()
         elif request.form.get("submit_b"):
             print("BTN b push!")
     elif request.method == "GET":
-        print("methods: GET")
+        print("[+] methods: GET")
     return render_template('index.html')
 
 
