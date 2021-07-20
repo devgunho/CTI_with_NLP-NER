@@ -8,14 +8,14 @@ app = Flask(__name__)
 @app.route("/", methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        print("[+] methods: POST")
+        print("[+] Methods: POST")
         if request.form.get("mongo_check"):
             print("[+] MongoDB Connection Check btn. pushed!")
             mongodb_connect.show_mongodb_list()
         elif request.form.get("submit_b"):
             print("BTN b push!")
     elif request.method == "GET":
-        print("[+] methods: GET")
+        print("[+] Methods: GET")
     return render_template('index.html')
 
 
