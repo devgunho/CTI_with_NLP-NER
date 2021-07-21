@@ -10,26 +10,20 @@ Use google BERT to do CoNLL-2003 NER !
 
 [BERT-SQuAD](https://github.com/kamalkraj/BERT-SQuAD)
 
-<br/>
 
-
-## Requirements
+# Requirements
 
 -  `python3`
 - `pip3 install -r requirements.txt`
 
-<br/>
-
-## Run
+# Run
 
 `python run_ner.py --data_dir=data/ --bert_model=bert-base-cased --task_name=ner --output_dir=out_base --max_seq_length=128 --do_train --num_train_epochs 5 --do_eval --warmup_proportion=0.1`
 
-<br/>
 
+# Result
 
-## Result
-
-### # BERT-BASE
+## BERT-BASE
 
 ### Validation Data
 ```
@@ -53,13 +47,9 @@ avg / total     0.9456    0.9534    0.9495      5942
 
 avg / total     0.9065    0.9209    0.9135      5648
 ```
-<br/>
+## Pretrained model download from [here](https://1drv.ms/u/s!Auc3VRul9wo5hghurzE47bTRyUeR?e=08seO3)
 
-### Pretrained model download from [here](https://1drv.ms/u/s!Auc3VRul9wo5hghurzE47bTRyUeR?e=08seO3)
-
-<br/>
-
-### # BERT-LARGE
+## BERT-LARGE
 
 ### Validation Data
 ```
@@ -83,13 +73,9 @@ avg / total     0.9531    0.9606    0.9568      5942
 
 avg / total     0.9121    0.9232    0.9174      5648
 ```
-<br/>
+## Pretrained model download from [here](https://1drv.ms/u/s!Auc3VRul9wo5hgr8jwhFD8iPCYp1?e=UsJJ2V)
 
-### Pretrained model download from [here](https://1drv.ms/u/s!Auc3VRul9wo5hgr8jwhFD8iPCYp1?e=UsJJ2V)
-
-<br/>
-
-## Inference
+# Inference
 
 ```python
 from bert import Ner
@@ -125,11 +111,9 @@ print(output)
 '''
 ```
 
-<br/>
+# Inference C++
 
-## Inference C++
-
-### Pretrained and converted bert-base model download from [here](https://1drv.ms/u/s!Auc3VRul9wo5hgkJjtxZ8FAQGuj2?e=wffJCT)
+## Pretrained and converted bert-base model download from [here](https://1drv.ms/u/s!Auc3VRul9wo5hgkJjtxZ8FAQGuj2?e=wffJCT)
 ### Download libtorch from [here](https://download.pytorch.org/libtorch/cpu/libtorch-shared-with-deps-1.2.0.zip)
 
 - install `cmake`, tested with `cmake` version `3.10.2`
@@ -138,7 +122,7 @@ print(output)
   ```bash
     cd cpp-app/
     cmake -DCMAKE_PREFIX_PATH=../libtorch
-  ```
+   ```
     ![cmake output image](/img/cmake.png)
     ```bash
     make
@@ -156,9 +140,9 @@ NB: Bert-Base C++ model is split in to two parts.
   - Bert Feature extractor and NER classifier.
   - This is done because `jit trace` don't support `input` depended `for` loop or `if` conditions inside `forword` function of `model`.
 
-<br/>
 
-## Deploy REST-API
+
+# Deploy REST-API
 BERT NER model deployed as rest api
 ```bash
 python api.py
