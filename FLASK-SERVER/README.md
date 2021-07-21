@@ -26,8 +26,8 @@ FLASK-SERVER> .\venv\Scripts\Activate
 ## To Do List
 
 - [ ] BERT Start Action
-  - [ ] https://github.com/kamalkraj/BERT-NER
-  - [ ] https://github.com/bond005/deep_ner
+  - [x] https://github.com/kamalkraj/BERT-NER
+  - [ ] Attaching to Flask server
 - [ ] brat
 - [ ] LDA
 - [ ] Entity Scoring
