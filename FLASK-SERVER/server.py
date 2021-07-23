@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 
 import mongodb_connect
+import run_ner
 
 app = Flask(__name__)
 
@@ -12,8 +13,9 @@ def index():
         if request.form.get("mongo_check"):
             print("[+] MongoDB Connection Check btn. pushed!")
             mongodb_connect.show_mongodb_list()
-        elif request.form.get("submit_b"):
-            print("BTN b push!")
+        elif request.form.get("ner_train_start"):
+            print("[+] Named Entity Recognition using BERT training Start btn. pushed!")
+            run_ner.ner_main()
     elif request.method == "GET":
         print("[+] Methods: GET")
     return render_template('index.html')

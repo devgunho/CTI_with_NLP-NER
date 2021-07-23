@@ -21,14 +21,24 @@ FLASK-SERVER> .\venv\Scripts\Activate
 
 <br/>
 
+### Ubuntu 20.04
+
+```
+```
+
 <br/>
 
 ## To Do List
 
+- [ ] MongoDB
+  - [x] Simple Connection
+  - [ ] Search DB
 - [ ] BERT Start Action
   - [x] https://github.com/kamalkraj/BERT-NER
-  - [ ] Attaching to Flask server
+  - [x] Attaching to Flask server
+  - [ ] Change `ner_data` to Custom dataset
 - [ ] brat
+  - [ ] Install & Run Server
 - [ ] LDA
 - [ ] Entity Scoring
 - [ ] Time Entity Extraction
@@ -36,3 +46,10 @@ FLASK-SERVER> .\venv\Scripts\Activate
 <br/>
 
 <br/>
+
+## Module Description
+
+- `mongodb_connect.py`
+- `run_ner.py`
+  - `bert.py`
+
