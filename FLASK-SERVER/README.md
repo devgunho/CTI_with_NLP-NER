@@ -32,6 +32,21 @@ FLASK-SERVER$ python server.py
 
 <br/>
 
+#### brat Installation
+
+```bash
+FLASK-SERVER$ git clone https://github.com/nlplab/brat.git
+FLASK-SERVER$ cd brat/
+FLASK-SERVER/brat$ rm -rf .git
+FLASK-SERVER/brat$ ./install.sh -u
+
+# brat username (e.g. “editor”)
+# brat password (for the given user, e.g. “annotate”)
+# administrator contact email (e.g. “admin@example.com”)
+
+FLASK-SERVER/brat$ python standalone.py
+```
+
 <br/>
 
 ## To Do List
