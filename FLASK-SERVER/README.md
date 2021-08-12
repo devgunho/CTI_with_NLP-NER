@@ -49,6 +49,14 @@ FLASK-SERVER/brat$ python standalone.py
 
 <br/>
 
+#### Only run brat
+
+```bash
+FLASK-SERVER/brat$ python standalone.py
+```
+
+<br/>
+
 ## To Do List
 
 - [ ] MongoDB
@@ -59,7 +67,8 @@ FLASK-SERVER/brat$ python standalone.py
   - [x] Attaching to Flask server
   - [ ] Change `ner_data` to Custom dataset
 - [ ] brat
-  - [ ] Install & Run Server
+  - [x] Install & Run Server
+  - [ ] Auto Annotation
 - [ ] LDA
 - [ ] Entity Scoring
 - [ ] Time Entity Extraction
