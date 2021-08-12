@@ -23,8 +23,14 @@ FLASK-SERVER> .\venv\Scripts\Activate
 
 ### Ubuntu 20.04
 
+```bash
+FLASK-SERVER$ virtualenv venv
+FLASK-SERVER$ source ./venv/bin/activate
+FLASK-SERVER$ python -m pip install -r requirements.txt
+FLASK-SERVER$ python server.py
 ```
-```
+
+<br/>
 
 <br/>
 
