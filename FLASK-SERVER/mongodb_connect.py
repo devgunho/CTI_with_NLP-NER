@@ -1,4 +1,3 @@
-from flask import render_template
 import pymongo
 
 ip = 'localhost'
@@ -9,7 +8,15 @@ def show_mongodb_list():
 
     # Connect MongoDB
     connection = pymongo.MongoClient(ip, port)
+    try:
+        mongodblist = connection.list_database_names()
+        print("[*] MongoDB LIST:", mongodblist)
+        return mongodblist
+    except:
+        print("[-] Connection ERROR!")
 
-    mongodblist = connection.list_database_names()
-    print("[*] MongoDB LIST:", mongodblist)
-    return mongodblist
+def run_mongodb():
+    show_mongodb_list()
+
+if __name__ == "__main__":
+    run_mongodb()

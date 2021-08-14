@@ -267,6 +267,9 @@ def convert_examples_to_features(examples, label_list, max_seq_length, tokenizer
 
 
 def ner_main():
+    if os.path.isdir("./ner_output"):
+        print("[-] Output directory (ner_output) already exists and is not empty.")
+        return 0
     parser = argparse.ArgumentParser()
 
     # Original Required parameters
@@ -306,7 +309,7 @@ def ner_main():
                         # required=True,
                         help="The name of the task to train.")
     parser.add_argument("--output_dir",
-                        default="out_base",
+                        default="ner_output",
                         type=str,
                         # required=True,
                         help="The output directory where the model predictions and checkpoints will be written.")

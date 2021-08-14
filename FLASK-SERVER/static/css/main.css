@@ -2759,6 +2759,7 @@
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		margin-bottom: 10px;
 	}
 
 		input[type="submit"]:hover,

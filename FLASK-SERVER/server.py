@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 
+import crawling
 import mongodb_connect
 import run_ner
 
@@ -13,6 +14,9 @@ def index():
         if request.form.get("mongo_check"):
             print("[+] MongoDB Connection Check btn. pushed!")
             mongodb_connect.show_mongodb_list()
+        if request.form.get("crawling_start"):
+            print("[+] Start Crawling btn. pushed!")
+            crawling.start()
         elif request.form.get("ner_train_start"):
             print("[+] Named Entity Recognition using BERT training Start btn. pushed!")
             run_ner.ner_main()
