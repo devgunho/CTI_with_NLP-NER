@@ -295,7 +295,7 @@ def ner_main():
 
     # Modified Required parameters for FLASK-SERVER
     parser.add_argument("--data_dir",
-                        default="ner_data",
+                        default="ner_input",
                         type=str,
                         # required=True,
                         help="The input data dir. Should contain the .tsv files (or other data files) for the task.")
@@ -394,7 +394,7 @@ def ner_main():
     #                     help="Can be used for distant debugging.")
     # parser.add_argument('--server_port', type=str, default='',
     #                     help="Can be used for distant debugging.")
-    
+
     # Modified Other parameters
     parser.add_argument("--cache_dir",
                         default="",
@@ -411,6 +411,7 @@ def ner_main():
                         action='store_true',
                         help="Whether to run training.")
     parser.add_argument("--do_eval",
+                        default="--do_eval",   # plus eval.
                         action='store_true',
                         help="Whether to run eval or not.")
     parser.add_argument("--eval_on",

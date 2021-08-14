@@ -1,0 +1,582 @@
+
+html
+[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]
+[if IE 8]>         <html class="no-js lt-ie9"> <![endif]
+[if gt IE 8]><!  <![endif]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Security Blog
+
+
+
+
+
+
+
+
+ dataLayer scripts, place in head before GTM snippet 
+
+
+ End dataLayer 
+ Google Tag Manager 
+
+ End Google Tag Manager 
+
+[if lt IE 9]><script src="/javascripts/vendor/es5-shim.min.js"></script><![endif]
+
+
+
+
+
+ Google Tag Manager (noscript) 
+
+ End Google Tag Manager (noscript) 
+
+
+This website requires certain cookies to work and uses other cookies to help you have the best experience.  By visiting this website, certain cookies have already been set, which you may delete and block. By closing this message or continuing to use our site, you agree to the use of cookies. Visit our updated privacy and cookie policy to learn more.  
+
+
+This Website Uses CookiesBy closing this message or continuing to use our site, you agree to our cookie policy. Learn More
+This website requires certain cookies to work and uses other cookies to help you have the best experience.  By visiting this website, certain cookies have already been set, which you may delete and block.  By closing this message or continuing to use our site, you agree to the use of cookies. Visit our updated privacy and cookie policy to learn more.  
+
+
+
+
+
+Security Magazine logo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+search
+
+Search
+
+
+      search
+    
+
+      close search
+    
+
+
+
+
+
+
+cartfacebook
+twitter
+linkedin
+youtube
+
+
+Security Magazine logo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MAGAZINEeMagazineThis Month's Issue
+Contact UsEditorial GuidelinesAdvertiseSubscribeNEWSSecurity Newswire
+COVID-19TechnologiesSecurity Blog
+NewsletterWeb Exclusives
+COLUMNSCareer Intelligence 
+Security TalkThe Corner Office 
+Leadership & ManagementCyber Tactics
+Overseas and SecureThe Risk MatrixMANAGEMENTLeadership Management
+Enterprise Services
+Security Education & Training
+MorePHYSICALAccess Management
+Video Surveillance
+Identity Management
+MoreCYBERSECTORSEducation: University
+Hospitals & Medical Centers
+Critical Infrastructure
+MoreEXCLUSIVESTop Cybersecurity LeadersThe Security Benchmark Report surveyMost Influential People in Security
+Top Guard and Security Officer CompaniesThe Security Leadership Issue
+Annual Innovations, Technology, & Services Report
+Women in SecurityEVENTSIndustry Events
+Webinars
+Solutions by SectorSecurity 500 ConferenceMOREPodcastsVideos
+Cybersecurity & Geopolitical VodcastISC West 2019Photo GalleriesPolls
+Classifieds & Job Listings
+White Papers
+StoreSponsor Insights Continuing EducationCall for Entries INFOCENTERSEnterprise Response to COVID-19Put the Smart In Building SecuritySign InCreate AccountSign OutMy Account
+
+
+
+
+
+Home » Blogs » Security Blog
+
+
+
+
+    Security Blog
+    
+Subscribe
+
+
+The Security Blog is written by our team of editors and includes thought provoking opinions, trends, and essential security information for security executives.
+
+
+
+
+
+
+Blog Topics
+
+Security Blog
+
+
+On the Track of OSAC
+
+
+
+Recent Comments
+
+Insufficient information
+
+
+Thankyou so much for sharing such an informative...
+
+
+I just wish my mechanical lock had a...
+
+
+security
+
+
+Security
+
+
+
+Blog Roll
+
+Security Industry Association
+
+
+Security Magazine's Daily News
+
+
+SIA FREE Email News
+
+
+SDM Blog
+
+
+
+
+
+
+
+Ground truth in the financial threat landscape
+
+
+
+
+
+Tom Kellermann
+
+August 23, 2021
+
+Let's take a closer look at the recent evolution of cybercriminals and the anatomy of the most common attacks.Read More
+
+
+
+
+
+End-to-end encryption and securing data
+
+
+
+
+
+Matt Perdew
+
+August 23, 2021
+
+What steps can a company take to provide sufficient redundant security so a vendor breach doesn't result in financial damage?Read More
+
+
+
+
+
+Remote work worked, until it didn’t
+
+
+Matt Berzinski
+
+August 13, 2021
+
+COVID-19 created an identity and access weak point, but here’s how next-gen identity and access management can help.Read More
+
+
+
+
+
+An Industry in need: The demand for increased security measures and regulation of the energy sector
+
+
+Alan Cunningham
+
+August 12, 2021
+
+As with most other business, economic, and governmental sectors that are imperative to daily life, the energy sector is at risk from a variety of threats both cyber and physical. What can be done?Read More
+
+
+
+
+
+Vaccine passports must leverage decentralized identity solutions
+
+
+Li Jun
+
+August 11, 2021
+
+As private enterprises and governments around the world look into vaccine passports for the future, security leaders must ensure that they are administered in the right way, so that we aren't taking away one problem and creating another.Read More
+
+
+
+
+
+100-day plan: What European nations can do to protect utilities
+
+
+
+
+
+Andrew Hollister
+
+July 30, 2021
+
+Secure and reliable utility operations are vital to national security across the globe. The frequency of attacks on critical infrastructure is rapidly rising, not just in the U.S., but across the globe. Here’s what security leaders can do to protect utilities.Read More
+
+
+
+
+
+Cybersecurity professionals to newcomers: Focus on vendor-neutral certifications
+
+July 23, 2021
+
+Cybersecurity professionals are far more likely to hold vendor-specific certificates than certifications from a vendor-neutral association or standards-based organization, according to the (ISC)2 Cybersecurity Career Pursuers Study. But when asked which qualifications they would recommend to cybersecurity newcomers, professionals tend to prioritize vendor-neutral credentials.Read More
+
+
+
+
+
+Ransomware prevention tactics keep businesses healthy
+
+
+Yoji Watanabe
+
+July 20, 2021
+
+With more than 4,000 ransomware attacks occurring daily since the start of 2016 according to The U.S. Department of Justice, every company of every size, every network stack and every infrastructure deployment is a potential target.Read More
+
+
+
+
+
+Cloud computing is a bonanza – but security lags
+
+
+
+
+
+Robert R. Ackerman Jr.
+
+July 1, 2021
+
+Fact is, security in the cloud needs improvement. The problem is that cloud service providers treat cloud security as a shared responsibility with their customers. And while cloud purveyors typically hold up their end of the bargain, many customers do not. Human error among cloud customers is rampant.Read More
+
+
+
+
+
+Business travel: Hope is not a strategy
+
+
+
+
+
+Dan Richards
+
+June 29, 2021
+
+As travel continues to make its comeback, businesses need to be taking a renewed look at their duty of care policies to provide their road warriors with the adequate — and expected — level of safety and security.Read More
+
+
+
+
+Previous 1 2 3 4 5 6 7 8 9 … 155 156 Next
+
+
+
+
+
+
+Subscribe For Free!
+
+eMagazine SubscriptionsSecurity eNewsletter & Other eNews AlertsOnline RegistrationMobile AppSubscription Customer Service 
+
+
+
+
+
+
+
+
+
+
+
+
+More Videos
+
+
+
+Sponsored Content
+
+
+
+
+
+
+                Sponsored Content is a special paid section where industry companies provide high quality, objective, non-commercial content around topics of interest to the Security audience. All Sponsored Content is supplied by the advertising company. Interested in participating in our Sponsored Content section? Contact your local rep.close
+
+Sponsored byReconeyezMilitary Standard Outdoor Alarm System with Visual Verification and AI now Available in USA
+
+
+Sponsored byAxisWhat are the advantages of end-to-end solutions for financial institutions?
+
+
+Sponsored byFeverWarnWhy temperature monitoring is critical in a post-pandemic/herd immunity environment
+
+
+
+
+Popular Stories
+
+
+
+
+
+
+
+          Data breaches in the first half of 2021 exposed 18.8 billion records
+        
+
+
+
+
+
+
+
+
+          The Tokyo Olympics are a cybersecurity success story
+        
+
+
+
+
+
+
+
+
+          Top de-escalation strategies and training for security leaders
+        
+
+
+
+
+
+
+
+
+          DHS issues terrorism advisory ahead of 20th Anniversary of 9/11 terror attacks
+        
+
+
+
+
+
+
+
+
+          Reindeer leaked the sensitive data of more than 300,000 people
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+Events
+
+September 16, 2021
+
+Security Teams: Add Value or Risk Extinction
+
+In this webinar, learn how enterprise security leaders can position their programs from obsolete to indispensable. Striving to own business continuity and risk and resiliency as part of the security program positions security teams as a valuable business enabler.
+
+
+September 21, 2021
+
+6 Key Components for a Proactive End-to-End Security Solution
+
+Join us to learn how analytics, network cameras, audio, intercoms, and access control work together to create an end-to-end solution in our powerful, yet easy-to-use video management software. 
+
+
+
+View All
+Submit An Event
+
+
+
+
+Poll
+Which metric comparing peer organizations to yours would be most beneficial for your security program?
+
+Which metric comparing peer organizations to yours would be most beneficial for your security program?
+
+
+
+
+
+Comparing security spend as a percentage of overall revenue
+
+
+
+
+
+Allocation of security spend per employee
+
+
+
+
+
+Knowing the number contract and proprietary security guards at peer organizations
+
+
+
+
+
+All of the above
+
+
+
+
+View Results
+Poll Archive
+
+
+Products
+
+
+
+
+
+
+Effective Security Management, 7th Edition
+
+
+ Effective Security Management, 5e, teaches practicing security professionals how to build their careers by mastering the fundamentals of good management. Charles Sennewald brings a time-tested blend of common sense, wisdom, and humor to this bestselling introduction to workplace dynamics. 
+
+
+See More Products
+
+
+
+
+ <p><div style="text-align: center;"><a href="/security-500-survey"><img alt="Security 500 360" src="/ext/resources/images/Custom-content/2020-CC/SEC-500/360.png" /></a></div> 
+
+
+
+
+
+
+	Digital Edition
+	
+
+
+--> -->
+        
+
+
+
+
+
+Get our new eMagazine delivered to your inbox every month.Stay in the know on the latest enterprise risk and security industry trends.SUBSCRIBE TODAY!Want MoreConnectPartnersSubscribeResourcesEditorial GuidelinesSecurity Group
+Market ResearchCustom Content & Marketing ServicesSurvey And SamplePrivacyPRIVACY POLICYTERMS & CONDITIONSDO NOT SELL MY PERSONAL INFORMATIONPRIVACY REQUESTACCESSIBILITYCopyright ©2021. All Rights Reserved BNP Media.Design, CMS, Hosting & Web Development :: ePublishing
+
+
+
+
+
+
+
+

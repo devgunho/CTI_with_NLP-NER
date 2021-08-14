@@ -1,0 +1,1046 @@
+html
+[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]
+[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]
+[if IE 8]>         <html class="no-js lt-ie9"> <![endif]
+[if gt IE 8]><!
+
+<![endif]
+
+
+
+
+
+
+
+
+
+ This site is optimized with the Yoast SEO plugin v14.9 - https://yoast.com/wordpress/plugins/seo/ 
+Cybersecurity's next fight: How to protect employees from online harassment | Microsoft Security Blog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ / Yoast SEO plugin. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Stream WordPress user activity plugin v3.5.1 
+
+ LinkedIn Code 
+
+ End LinkedIn Code 
+
+ 
+
+
+
+
+Skip to main content
+ start universal header 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Skip to main content
+
+
+
+
+
+
+
+Microsoft
+
+
+
+Security
+
+
+
+
+Security
+
+
+
+
+                            Security
+                        
+
+
+
+
+ Home 
+
+
+
+Solutions 
+
+
+Cloud security
+
+
+Compliance management
+
+
+Identity & access management
+Identity & access management
+
+
+Decentralized identity blockchain
+
+
+Identity & access management overview
+
+
+Identity compromise protection
+
+
+Identity governance
+
+
+Seamless user experiences
+
+
+Secure app access
+
+
+Unified identity management
+
+
+
+
+Information protection & governance
+
+
+Risk management
+
+
+Secure remote work
+
+
+Threat protection
+
+
+Zero Trust
+
+
+
+ 
+
+Products 
+
+
+App & email security
+App & email security
+
+
+Azure Dedicated HSM
+
+
+Azure Key Vault
+
+
+Microsoft Cloud App Security
+
+
+Microsoft Defender for Office 365
+
+
+
+
+Compliance
+Compliance
+
+
+Compliance management
+
+
+Information protection & governance
+
+
+Risk management
+
+
+
+
+Endpoint security
+Endpoint security
+
+
+Azure Defender for IoT
+
+
+Azure IoT Central
+
+
+Azure Sphere
+
+
+Microsoft Defender for Endpoint
+
+
+Microsoft Defender for Identity
+
+
+Microsoft Endpoint Manager
+
+
+
+
+Identity & access management
+Identity & access management
+
+
+Azure Active Directory
+
+
+Conditional Access
+
+
+External identities
+
+
+Identity protection
+
+
+Multifactor authentication (MFA)
+
+
+Passwordless Authentication
+
+
+Privileged Identity Management (PIM)
+
+
+SSO solution: Secure app access with single sign-on
+
+
+
+
+Network security
+Network security
+
+
+Azure Application Gateway
+
+
+Azure DDoS Protection
+
+
+Azure Firewall
+
+
+Azure Firewall manager
+
+
+Azure Front-door
+
+
+Azure VPN Gateway
+
+
+Azure Web Application Firewall
+
+
+
+
+Security posture
+Security posture
+
+
+Azure Security Center
+
+
+Microsoft Secure Score
+
+
+
+
+SIEM & XDR
+SIEM & XDR
+
+
+Azure Defender
+
+
+Azure Defender for IoT
+
+
+Azure Sentinel
+
+
+Microsoft 365 Defender
+
+
+Microsoft Defender for Endpoint
+
+
+
+
+
+ 
+
+Partners 
+
+
+Find a partner
+
+
+Government partners
+
+
+Industry alliances
+
+
+Microsoft Intelligent Security Association
+
+
+Partners overview
+
+
+
+ 
+
+Resources 
+
+
+Events
+
+
+Intelligence reports
+
+
+Security blog
+
+
+Security operations
+
+
+Security technical content
+
+
+Service Trust Portal
+
+
+Trust Center
+
+
+Webinars, whitepapers & more
+
+
+
+
+
+
+More
+
+
+
+
+
+
+
+ 
+
+
+
+ All Microsoft
+
+
+
+
+Microsoft 365
+
+
+Azure
+
+
+Office 365
+
+
+Dynamics 365
+
+
+Power Platform
+
+
+Windows 10
+
+
+
+
+Products & Services
+Products & Services
+
+
+Windows Server
+
+
+Enterprise Mobility + Security
+
+
+Power BI
+
+
+Teams
+
+
+Visual Studio
+
+
+Microsoft Advertising
+
+
+
+
+Emerging Technologies
+Emerging Technologies
+
+
+AI
+
+
+Internet of Things
+
+
+Azure Cognitive Services
+
+
+Quantum
+
+
+Microsoft HoloLens
+
+
+Mixed Reality
+
+
+
+
+Developer & IT
+Developer & IT
+
+
+Docs
+
+
+Developer Center
+
+
+Windows Dev Center
+
+
+Windows IT Pro Center
+
+
+FastTrack
+
+
+Power Platform
+
+
+
+
+Partner
+Partner
+
+
+Partner Network
+
+
+Solution Providers
+
+
+Partner Center
+
+
+Cloud Hosting
+
+
+
+
+Industries
+Industries
+
+
+Education
+
+
+Financial services
+
+
+Government
+
+
+Health
+
+
+Manufacturing & resources
+
+
+Retail
+
+
+
+
+Other
+Other
+
+
+Security
+
+
+Licensing
+
+
+AppSource
+
+
+Azure Marketplace
+
+
+Events
+
+
+Research
+
+
+
+
+View Sitemap
+
+
+
+
+
+
+
+
+
+
+Search
+Search Microsoft.com
+
+
+
+
+
+
+Cancel
+
+
+
+Sign in
+
+
+
+
+
+
+
+
+  end universal footer 
+
+
+
+		August 25, 2021	
+
+				Cybersecurity’s next fight: How to protect employees from online harassment			
+
+
+
+
+Natalia Godyla
+Product Marketing Manager, Security
+
+
+Leigh Honeywell
+CEO and Co-founder, Tall Poppy
+
+
+
+
+
+
+
+
+
+
+
+
+ Your share button code 
+
+
+		Share	
+
+
+  Twitter 
+
+				Twitter			
+
+
+ LinkedIn 
+
+				LinkedIn			
+
+
+ Facebook 
+
+				Facebook			
+
+
+ E-Mail 
+
+				Email			
+
+
+
+				Print			
+
+
+
+
+
+The security community is continuously changing, growing, and learning from each other to better position the world against cyber threats. In the latest Voice of the Community blog series post, Microsoft Product Marketing Manager Natalia Godyla talks with Leigh Honeywell, CEO and Co-founder of Tall Poppy, which builds tools and services to help companies protect their employees from online harassment and abuse. In this blog, Leigh talks about company strategies for fighting online harassment.
+Natalia: What are some examples of online harassment experienced in the workplace?
+Leigh: Online harassment breaks down into two types. The first is harassment related to your job. One example of this would be that an ex-employee has a conflict with the company and is harassing former colleagues. In other cases, it has to do with a policy decision or a moderation decision that the company made, resulting in people within the organization experiencing harassment.
+The other type of harassment has nothing to do with somebody’s day job. For instance, an employee had a bad breakup and their ex is bothering them at work. It’s not strictly related to the employee’s day-to-day work, but it’s going to impact their ability to be present at work and participate in work life. Many folks who are dealing with harassment—whether related to work or not—experience lost productivity, attrition, and burnout.
+Discover how communication compliance in Microsoft 365 can help you detect harassing or threatening language and take action to protect your employees.
+Natalia: How widespread of a problem is online harassment?
+Leigh: Online harassment is a significant phenomenon. In 2020, 41 percent of Americans experienced it and 28 percent experienced the more severe kinds, like threats of violence, stalking, sexual harassment, and persistent harassment, according to the Pew Online Harassment Update1. That’s a huge number of people experiencing these issues. It has made us prioritize motivating people to improve their security hygiene around personal accounts.
+Your employees’ personal accounts are part of the attack surface of the company. Social engineering attacks are when cybercriminals use psychological manipulation on their targets. If someone is being extorted based on their personal life, it has the potential to impact the company. In a classic CEO scam, somebody breaks into an executive’s personal email account, emails a person in accounting posing as the executive, and asks them to send a wire transfer to a bank account controlled by the scammer.
+Natalia: What are recent trends in online harassment?
+Leigh: According to the most recent Pew study, online harassment went up. Project Include just published a study2 on the internal company harassment landscape during COVID-19, and there has been a sharp uptick in workplace harassment.
+Even though the numbers are stable in terms of how many people are experiencing online harassment, before COVID-19, if you were dealing with harassment from outside the company in the course of your work, you still got to go home and have that mental separation. When people work remotely, it’s a different experience, and it feels a lot more personal and vulnerable for those dealing with this kind of harassment.
+Natalia: What should organizations understand about online harassment?
+Leigh: It’s clear under US and Canadian law that organizations have a duty to ensure that employees don’t harass each other within the organization. When harassment in the workplace comes from outside the company, such as internet harassment, there isn’t a ton of clarity. I think it’s important to make sure that employees have clear policies and internal recourse.
+In a typical harassment scenario, an employee says something controversial on Twitter, and people try to get them fired from their company. Sometimes, the things that people say that get them fired are racist or homophobic or biased in some way. When people talk about cancel culture, they are typically talking about consequences. You say something, and you get held to that word.
+However, it’s hard to arbitrate. Is the controversial statement fireable, or is it controversial because they are members of an underrepresented group and are being targeted for standing up for themselves? That’s one of the lenses I use to unpack these situations.
+Natalia: How can online harassment lead to hacking?
+Leigh: After abuse on social channels and unwanted emails, online harassment sometimes gets more aggressive. You see password reset attempts that you have not requested. The next level is credential stuffing, where an attacker obtains a person’s email and password combo from old breaches and tries the credentials on different accounts. Another potential escalation is SIM swapping, which involves the attacker impersonating the victim to a phone company and porting their phone number away to a fresh SIM card. This attack usually targets folks who are high profile and is less common in stalking situations.
+Natalia: What does the incident response process look like when an employee is under attack?
+Leigh: When dealing with an urgent incident in a workplace, such as somebody hacking into a printer at a branch office, there are known playbooks for responding to different attacks. Likewise, we have different playbooks based on the type of harassment situation an employee is dealing with, for example, harassment by an ex-employee or an employee being targeted due to a company policy decision.
+We also pay a lot of attention to the adversaries. We’ll typically make sure the person has safe devices and ensure the adversary does not have access to their personal accounts. We’ll walk them through changing relevant passwords and checking authorized applications. From there, it’s about making sure that the person is OK, and that includes making sure they know about internal resources like an employee assistance program for counseling services.
+Natalia: What are the best practices a company can institute to mitigate online harassment or assist those impacted by it?
+Leigh: First, have clear internal policies and escalation points around acceptable social media use. There are some industries where it’s understandable that you don’t want employees having a social media presence, but those are rare these days. In general, it’s not realistic to tell employees not to exist online in public, so what’s important is to make boundaries, expectations, and guardrails clear via a written social media policy. Employees want to have long-lived careers and build their personal brands—trying to shut that down wholesale will end up with unfair enforcement and isn’t realistic.
+The second best practice is to make sure people have tools and resources available to secure their personal lives, whether it’s a hardware security key such as a Yubikey or a quality password manager. All those day-to-day tools are as important in the workplace as they are in people’s personal lives. Online harassment training teaches employees how to keep attackers out of their personal accounts such as email, bank accounts, and social media. It can be overwhelming trying to understand all the information available about staying safe online. And there’s an argument to be made that you shouldn’t have to become an expert on personal cybersecurity to be able to live your life with an internet presence in the modern world.
+The third one would be to ensure there are available resources within the organization that are clear and accessible, so it’s understood where the escalation paths are—whether it’s providing training to management and having management communicate to frontline staff or using internal communications tools to inform employees of resources.
+Helping employees improve their personal cybersecurity can help them feel confident that their personal digital infrastructure is secure and helps ensure that online harassment isn’t going to escalate to an incident like an account takeover.
+Learn more
+Learn how communication compliance in Microsoft 365 can help you detect harassing or threatening language and take action to foster a culture of safety.
+To learn more about Microsoft Security solutions, visit our website. Bookmark the Security blog to keep up with our expert coverage on security matters. Also, follow us at @MSFTSecurity for the latest news and updates on cybersecurity.
+ 
+
+1The State of Online Harassment, Emily A. Vogels, Pew Research Center, 13 January 2021.
+2Remote work since COVID-19 is exacerbating harm: What companies need to know and do, Yang Hong, McKensie Mack, Ellen Pao, Caroline Sinders, Project Include, March 2021.
+ .entry-content 
+
+
+				Filed under:			
+
+
+Cybersecurity 
+
+
+ #post-## 
+
+
+You may also like these articles 
+
+
+
+
+
+
+						Featured image for Widespread credential phishing campaign abuses open redirector links					
+
+
+
+		August 26, 2021	
+
+Widespread credential phishing campaign abuses open redirector links
+
+
+
+						Microsoft has been actively tracking a widespread credential phishing campaign using open redirector links, which allow attackers to use a URL in a trusted domain and embed the eventual final malicious URL as a parameter.					
+
+
+Read more
+ Widespread credential phishing campaign abuses open redirector links
+
+
+
+
+
+
+
+
+
+						Featured image for How Vodafone Global Security Director creates an inclusive and secure workplace					
+
+
+
+		August 23, 2021	
+
+How Vodafone Global Security Director creates an inclusive and secure workplace
+
+
+
+						Vodafone Global Cybersecurity Director Emma Smith talks about leading an inclusive workplace and shares security strategies—like how to get rid of passwords.					
+
+
+Read more
+ How Vodafone Global Security Director creates an inclusive and secure workplace
+
+
+
+
+
+
+
+
+
+						Featured image for How to proactively defend against Mozi IoT botnet					
+
+
+
+		August 19, 2021	
+
+How to proactively defend against Mozi IoT botnet
+
+
+
+						Mozi is a peer-to-peer (P2P) botnet that uses a BitTorrent-like network to infect IoT devices such as network gateways and digital video records (DVRs). It works by exploiting weak telnet passwords1 and nearly a dozen unpatched IoT vulnerabilities2 and it’s been used to conduct distributed denial-of-service (DDoS) attacks, data exfiltration, and command or payload execution.					
+
+
+Read more
+ How to proactively defend against Mozi IoT botnet
+
+
+
+
+
+
+
+
+
+Get started with Microsoft Security
+
+Microsoft is a leader in cybersecurity, and we embrace our responsibility to make the world a safer place.
+
+
+Learn more
+ Get started with Microsoft Security
+
+
+
+ 
+
+
+
+ #mainContent 
+
+
+
+			Get all the news, updates, and more at 
+	
+
+			@MSFTSecurity		
+twitter 
+
+
+
+
+
+
+
+
+
+ start universal footer 
+
+
+
+
+
+
+
+What's new
+
+
+Surface Laptop 4
+
+
+Surface Laptop Go
+
+
+Surface Go 2
+
+
+Surface Pro X
+
+
+Surface Duo
+
+
+Microsoft 365
+
+
+Windows 10 apps
+
+
+HoloLens 2
+
+
+
+
+Microsoft Store
+
+
+Account profile
+
+
+Download Center
+
+
+Microsoft Store support
+
+
+Returns
+
+
+Order tracking
+
+
+Virtual workshops and training
+
+
+Microsoft Store Promise
+
+
+Financing
+
+
+
+
+Education
+
+
+Microsoft in education
+
+
+Office for students
+
+
+Office 365 for schools
+
+
+Deals for students & parents
+
+
+Microsoft Azure in education
+
+
+
+
+
+
+Enterprise
+
+
+Azure
+
+
+AppSource 
+
+
+Automotive
+
+
+Government
+
+
+Healthcare
+
+
+Manufacturing
+
+
+Financial services
+
+
+Retail
+
+
+
+
+Developer
+
+
+Microsoft Visual Studio
+
+
+Windows Dev Center
+
+
+Developer Center
+
+
+Microsoft developer program
+
+
+Channel 9
+
+
+Microsoft 365 Dev Center
+
+
+Microsoft 365 Developer Program
+
+
+Microsoft Garage
+
+
+
+
+Company
+
+
+Careers
+
+
+About Microsoft
+
+
+Company news
+
+
+Privacy at Microsoft
+
+
+Investors
+
+
+Diversity and inclusion
+
+
+Accessibility
+
+
+Security
+
+
+
+
+
+
+English (United States)
+
+
+
+Sitemap
+
+
+Contact Microsoft
+
+
+Privacy 
+
+
+Manage cookies
+
+
+Terms of use
+
+
+Trademarks
+
+
+Safety & eco
+
+
+About our ads
+
+© Microsoft 2021
+
+
+
+
+
+
+  end universal footer 
+ #page 
+
+ 
+ JSLL tracking 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	generated 204 seconds ago
+	generated in 0.262 seconds
+	served from batcache in 0.004 seconds
+	expires in 96 seconds
+

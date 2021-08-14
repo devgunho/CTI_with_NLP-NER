@@ -1,0 +1,676 @@
+
+html
+[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]
+[if IE 8]>         <html class="no-js lt-ie9"> <![endif]
+[if gt IE 8]><!  <![endif]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Management
+
+
+
+
+
+
+
+
+ dataLayer scripts, place in head before GTM snippet 
+
+
+ End dataLayer 
+ Google Tag Manager 
+
+ End Google Tag Manager 
+
+[if lt IE 9]><script src="/javascripts/vendor/es5-shim.min.js"></script><![endif]
+
+
+
+
+
+ Google Tag Manager (noscript) 
+
+ End Google Tag Manager (noscript) 
+
+
+This website requires certain cookies to work and uses other cookies to help you have the best experience.  By visiting this website, certain cookies have already been set, which you may delete and block. By closing this message or continuing to use our site, you agree to the use of cookies. Visit our updated privacy and cookie policy to learn more.  
+
+
+This Website Uses CookiesBy closing this message or continuing to use our site, you agree to our cookie policy. Learn More
+This website requires certain cookies to work and uses other cookies to help you have the best experience.  By visiting this website, certain cookies have already been set, which you may delete and block.  By closing this message or continuing to use our site, you agree to the use of cookies. Visit our updated privacy and cookie policy to learn more.  
+
+
+
+
+
+Security Magazine logo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+search
+
+Search
+
+
+      search
+    
+
+      close search
+    
+
+
+
+
+
+
+cartfacebook
+twitter
+linkedin
+youtube
+
+
+Security Magazine logo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MAGAZINEeMagazineThis Month's Issue
+Contact UsEditorial GuidelinesAdvertiseSubscribeNEWSSecurity Newswire
+COVID-19TechnologiesSecurity Blog
+NewsletterWeb Exclusives
+COLUMNSCareer Intelligence 
+Security TalkThe Corner Office 
+Leadership & ManagementCyber Tactics
+Overseas and SecureThe Risk MatrixMANAGEMENTLeadership Management
+Enterprise Services
+Security Education & Training
+MorePHYSICALAccess Management
+Video Surveillance
+Identity Management
+MoreCYBERSECTORSEducation: University
+Hospitals & Medical Centers
+Critical Infrastructure
+MoreEXCLUSIVESTop Cybersecurity LeadersThe Security Benchmark Report surveyMost Influential People in Security
+Top Guard and Security Officer CompaniesThe Security Leadership Issue
+Annual Innovations, Technology, & Services Report
+Women in SecurityEVENTSIndustry Events
+Webinars
+Solutions by SectorSecurity 500 ConferenceMOREPodcastsVideos
+Cybersecurity & Geopolitical VodcastISC West 2019Photo GalleriesPolls
+Classifieds & Job Listings
+White Papers
+StoreSponsor Insights Continuing EducationCall for Entries INFOCENTERSEnterprise Response to COVID-19Put the Smart In Building SecuritySign InCreate AccountSign OutMy Account
+
+
+
+
+
+Home » Topics » Management
+
+
+    Management
+    
+
+Subscribe
+ 
+
+
+
+    Solutions for security enterprise leadership and management to enable the business.  
+  
+
+
+
+
+
+
+Topics
+
+
+
+Security Enterprise Services
+
+From security officers to mass notification to workplace violence mitigation, enterprise services work to add value to your organization.
+
+
+
+Security Leadership and Management
+
+Solutions for security executives to lead and manage their security staff, mitigate risk for their enterprise and show security's value in the C-suite.
+
+
+
+Logical Security
+
+Learn how to better manage authentication with Logical Security features and news.
+
+
+
+Security & Business Resilience
+
+How an enterprise can prepare for and recover after an emergency, disaster or pandemic.
+
+
+
+Security Education & Training
+
+What pitfalls can complicate background checks? How can you build a better whistleblower program? Learn a different skill monthly with Education & Training.
+
+
+
+Profiles in Excellence
+
+The security industry is changing, as is the profile of a successful security executive. Maintaining the status quo is no longer an option, and ignorance of risks is no longer an excuse for not mitigating them. This topic in Security features game-changing security directors or industry leaders in different sectors. So who is breaking new ground in the security industry, making great strides forward in risk management while better supporting the enterprise as a whole? If you know someone (or are someone) who fits this bill – let us know! Send your recommendations and suggestions for future Profiles in Excellence to Security Associate Editor Maria Henriquez at henriquezm@bnpmedia.com.
+
+
+
+ 
+
+
+Articles
+
+
+Events
+
+
+
+
+ARTICLES
+
+
+
+
+Addressing insider threats: in the boardroom
+
+
+Adarsh Mantravadi
+
+August 26, 2021
+
+Board members are often entrusted with sensitive data and information, which ensures they can be effective in their roles. But if that data gets into the wrong hands, the organization could run into costly legal trouble and reputational damage.Read More
+
+
+
+
+
+Tech companies pledge billions to bolster cybersecurity investments
+
+August 26, 2021
+
+Some of the country’s leading technology companies have committed to investing billions of dollars to strengthen cybersecurity defenses and to train skilled workers, the White House announced, following President Joe Biden’s private meeting with top executives.
+
+Some of the country’s leading technology companies have committed to investing billions of dollars in strengthening cybersecurity defenses and in training skilled workers, the White House announced, following President Joe Biden’s private meeting with top executives.Read More
+
+
+
+
+
+Move to higher ground before the data tsunami hits: A paradigm shift for managing federal data
+
+
+Boyd White
+
+August 26, 2021
+
+Many agencies don’t have the ability to collect, centralize and analyze all the data from remote endpoints. Even if they do, the data collection is not fast enough. Enter the American Rescue Plan and capitalize on it to boost your security infrastructure.Read More
+
+
+
+
+
+
+
+Listen to Jadee Hanson, CISO and CIO at Code42, in the latest Security podcast
+
+August 26, 2021
+
+Editor Maggie Shein sits down with Jadee Hanson, Chief Information Security Officer and Chief Information Officer at Code42 about her career start in pentesting, as well as how to address data loss when it comes from the inside your organization, and navigating insider threat.Read More
+
+
+
+
+
+Taking stock of your disaster response plan during hurricane season
+
+
+
+
+
+W. Curtis Preston
+
+August 26, 2021
+
+With hurricane season quickly approaching us, it gives us a chance to stop and think about how well prepared we are for disasters of all kinds. A solid, well-tested disaster recovery (DR) plan is the difference between your company surviving a natural disaster – or ceasing to exist the moment it happens.Read More
+
+
+
+
+
+5 minutes with Troy Gill - Putting together the perfect threat hunter team
+
+
+
+
+
+Maria Henriquez
+
+August 26, 2021
+
+How do you find, hire and create the perfect threat hunter team? Troy Gill, Manager of Security Research and Zix’s AppRiver Threat Research Team, speaks to what it takes to be an exceptional threat hunter and what qualities they need to be successful.Read More
+
+
+
+
+
+
+Jesse Kinser named CISO at Pathwire
+
+August 26, 2021
+
+Jesse Kinser has been named Chief Information Security Officer (CISO) at Pathwire. Kinser will lead a team of security professionals to establish a creative approach to grow the security posture of the organization.Read More
+
+
+
+
+
+Whack-a-mole is not remediation
+Virtual patching can help you maximize cybersecurity ROI
+
+
+
+
+
+Aviram Jenik
+
+August 26, 2021
+
+Vulnerability remediation can feel like an ever-escalating game of whack-a-mole. Security teams need to work smarter, not harder, to stay ahead of the onslaught of new vulnerabilities. Effective prioritization is a key step to identify the big rocks that need to be fixed first. Read More
+
+
+
+
+
+US State Department suffers cyberattack
+
+August 25, 2021
+
+Though not officially confirmed, the U.S. State Department was reportedly a victim of a cyberattack. Read More
+
+
+
+
+
+
+The Cybersecurity and Geopolitical podcast - Cyber warfare, cyber mischief and the cost to nation-states, Episode 5
+
+August 25, 2021
+
+The Cybersecurity and Geopolitical podcast returns with Ian Thornton-Trump (CISO at Cyjax) and Tristan de Souza taking a sweeping look at some of the main protagonists on the global stage right now: Russia, China, Iran and North Korea. Security magazine brings enterprise security and risk professionals this entertaining and illuminating podcast on the latest challenges and intriguing flashpoints within cybersecurity and the geopolitical landscape.Read More
+
+
+
+More Articles Tagged with 'Management'
+
+
+EVENTS
+
+
+Webinar
+
+
+      9/23/20 to 9/23/21
+
+
+
+
+
+Contact: Vania
+
+Tech Solutions for Safer Buildings
+ON DEMAND: Join our subject matter experts as they explore how the right systems can help identify, analyze and report potential incidents and help building owners sustain compliance and create safer spaces. Read More
+
+
+Webinar
+
+
+      11/17/20 to 11/17/21
+
+
+
+
+
+Contact: Vania
+
+How Video Management Systems Can Optimize Your Security Operations
+ON DEMAND: This webinar will guide you through how VMS can optimize your security operations at the enterprise level and examine how Valerus, Vicon’s ONVIF-compliant, full-featured solution can improve security response times via AI-driven analytics as well as expedite forensic searches and investigations.
+Read More
+
+
+Webinar
+
+
+      2/23/21 to 2/23/22
+
+
+
+
+
+Contact: Vania
+
+Security Supply Chain Compromises: An Interactive Simulation
+On Demand: This interactive crisis sim webinar is inspired by the real-life events of SUNBURST. In this scenario, you’ll focus on making decisions that balance the risks to your organization based on available facts. Read More
+
+
+Webinar Solutions by Sector
+
+
+      5/25/21 to 5/25/22
+
+
+
+
+
+Contact: Vania
+
+Career Focus: The Evolving Role of the Security Executive
+ON DEMAND: How can you advance your career in the security industry with the skills and competencies necessary to benefit your organization? What will the security executive and the security function of the future look like? Join us as we hear from veterans in the security industry about their experiences, their lessons learned, and best practices for advancing their careers.
+Read More
+
+
+Webinar
+
+
+      6/24/21 to 6/24/22
+
+
+
+
+
+Contact: Vania
+
+Security Superheroes: Your Employees Need More Than Traditional Security Now
+ON DEMAND: Protecting employees from potential exposure could be a daunting task, but with the right property technology, your office space can become an interactive and responsive asset that helps you ensure new health protocol compliance.
+Read More
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Subscribe For Free!
+
+eMagazine SubscriptionsSecurity eNewsletter & Other eNews AlertsOnline RegistrationMobile AppSubscription Customer Service 
+
+
+
+
+
+
+
+
+
+
+
+
+More Videos
+
+
+
+Sponsored Content
+
+
+
+
+
+
+                Sponsored Content is a special paid section where industry companies provide high quality, objective, non-commercial content around topics of interest to the Security audience. All Sponsored Content is supplied by the advertising company. Interested in participating in our Sponsored Content section? Contact your local rep.close
+
+Sponsored byReconeyezMilitary Standard Outdoor Alarm System with Visual Verification and AI now Available in USA
+
+
+Sponsored byAxisWhat are the advantages of end-to-end solutions for financial institutions?
+
+
+Sponsored byFeverWarnWhy temperature monitoring is critical in a post-pandemic/herd immunity environment
+
+
+
+
+Popular Stories
+
+
+
+
+
+
+
+          Data breaches in the first half of 2021 exposed 18.8 billion records
+        
+
+
+
+
+
+
+
+
+          The Tokyo Olympics are a cybersecurity success story
+        
+
+
+
+
+
+
+
+
+          Top de-escalation strategies and training for security leaders
+        
+
+
+
+
+
+
+
+
+          DHS issues terrorism advisory ahead of 20th Anniversary of 9/11 terror attacks
+        
+
+
+
+
+
+
+
+
+          Reindeer leaked the sensitive data of more than 300,000 people
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+Events
+
+September 16, 2021
+
+Security Teams: Add Value or Risk Extinction
+
+In this webinar, learn how enterprise security leaders can position their programs from obsolete to indispensable. Striving to own business continuity and risk and resiliency as part of the security program positions security teams as a valuable business enabler.
+
+
+September 21, 2021
+
+6 Key Components for a Proactive End-to-End Security Solution
+
+Join us to learn how analytics, network cameras, audio, intercoms, and access control work together to create an end-to-end solution in our powerful, yet easy-to-use video management software. 
+
+
+
+View All
+Submit An Event
+
+
+
+
+Poll
+Which metric comparing peer organizations to yours would be most beneficial for your security program?
+
+Which metric comparing peer organizations to yours would be most beneficial for your security program?
+
+
+
+
+
+Comparing security spend as a percentage of overall revenue
+
+
+
+
+
+Allocation of security spend per employee
+
+
+
+
+
+Knowing the number contract and proprietary security guards at peer organizations
+
+
+
+
+
+All of the above
+
+
+
+
+View Results
+Poll Archive
+
+
+Products
+
+
+
+
+
+
+Effective Security Management, 7th Edition
+
+
+ Effective Security Management, 5e, teaches practicing security professionals how to build their careers by mastering the fundamentals of good management. Charles Sennewald brings a time-tested blend of common sense, wisdom, and humor to this bestselling introduction to workplace dynamics. 
+
+
+See More Products
+
+
+
+
+ <p><div style="text-align: center;"><a href="/security-500-survey"><img alt="Security 500 360" src="/ext/resources/images/Custom-content/2020-CC/SEC-500/360.png" /></a></div> 
+
+
+
+
+
+
+	Digital Edition
+	
+
+
+--> -->
+        
+
+
+
+
+
+Get our new eMagazine delivered to your inbox every month.Stay in the know on the latest enterprise risk and security industry trends.SUBSCRIBE TODAY!Want MoreConnectPartnersSubscribeResourcesEditorial GuidelinesSecurity Group
+Market ResearchCustom Content & Marketing ServicesSurvey And SamplePrivacyPRIVACY POLICYTERMS & CONDITIONSDO NOT SELL MY PERSONAL INFORMATIONPRIVACY REQUESTACCESSIBILITYCopyright ©2021. All Rights Reserved BNP Media.Design, CMS, Hosting & Web Development :: ePublishing
+
+
+
+
+
+
+
+
