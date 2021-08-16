@@ -131,8 +131,7 @@ Security Magazine logo
 
 
 
-MAGAZINEeMagazineThis Month's Issue
-Contact UsEditorial GuidelinesAdvertiseSubscribeNEWSSecurity Newswire
+MAGAZINEeMagazineThis Month's ContentContact UsEditorial GuidelinesAdvertiseSubscribeNEWSSecurity Newswire
 COVID-19TechnologiesSecurity Blog
 NewsletterWeb Exclusives
 COLUMNSCareer Intelligence 
@@ -156,7 +155,7 @@ Solutions by SectorSecurity 500 ConferenceMOREPodcastsVideos
 Cybersecurity & Geopolitical VodcastISC West 2019Photo GalleriesPolls
 Classifieds & Job Listings
 White Papers
-StoreSponsor Insights Continuing EducationCall for Entries INFOCENTERSEnterprise Response to COVID-19Put the Smart In Building SecuritySign InCreate AccountSign OutMy Account
+StoreSponsor Insights Continuing EducationCall for Entries INFOCENTERSAccess Control Turnstiles Leverage the Power of Your VMS Put the Smart In Building SecuritySign InCreate AccountSign OutMy Account
 
 
 
@@ -220,6 +219,32 @@ SIA FREE Email News
 SDM Blog
 
 
+
+
+
+
+
+Five trends complicating industrial automation cybersecurity and how a standards-based approach is the solution
+
+
+Jennifer Halsey
+
+September 2, 2021
+
+Five trends, in particular, are complicating industrial automation cybersecurity and driving the increased need for a standards-based approach.Read More
+
+
+
+
+
+Anticipating the risks of meme culture
+
+
+Preston Hogue
+
+August 30, 2021
+
+Cultural and societal movements that originate and gain momentum online can spill over into the real world. What are the consequences to enterprises?Read More
 
 
 
@@ -334,38 +359,6 @@ With more than 4,000 ransomware attacks occurring daily since the start of 2016 
 
 
 
-
-Cloud computing is a bonanza – but security lags
-
-
-
-
-
-Robert R. Ackerman Jr.
-
-July 1, 2021
-
-Fact is, security in the cloud needs improvement. The problem is that cloud service providers treat cloud security as a shared responsibility with their customers. And while cloud purveyors typically hold up their end of the bargain, many customers do not. Human error among cloud customers is rampant.Read More
-
-
-
-
-
-Business travel: Hope is not a strategy
-
-
-
-
-
-Dan Richards
-
-June 29, 2021
-
-As travel continues to make its comeback, businesses need to be taking a renewed look at their duty of care policies to provide their road warriors with the adequate — and expected — level of safety and security.Read More
-
-
-
-
 Previous 1 2 3 4 5 6 7 8 9 … 155 156 Next
 
 
@@ -401,7 +394,7 @@ Sponsored Content
 
                 Sponsored Content is a special paid section where industry companies provide high quality, objective, non-commercial content around topics of interest to the Security audience. All Sponsored Content is supplied by the advertising company. Interested in participating in our Sponsored Content section? Contact your local rep.close
 
-Sponsored byReconeyezMilitary Standard Outdoor Alarm System with Visual Verification and AI now Available in USA
+Sponsored byAxisExploring how network audio adds value to our world
 
 
 Sponsored byAxisWhat are the advantages of end-to-end solutions for financial institutions?
@@ -440,16 +433,6 @@ Popular Stories
 
 
 
-          Top de-escalation strategies and training for security leaders
-        
-
-
-
-
-
-
-
-
           DHS issues terrorism advisory ahead of 20th Anniversary of 9/11 terror attacks
         
 
@@ -460,7 +443,17 @@ Popular Stories
 
 
 
-          Reindeer leaked the sensitive data of more than 300,000 people
+          Court rules truck companies have duty to perform due diligence when hiring
+        
+
+
+
+
+
+
+
+
+          T-Mobile's data breach affects nearly all its US customers
         
 
 

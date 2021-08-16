@@ -37,6 +37,14 @@ FLASK-SERVER/brat$ python standalone.py
 
 <br/>
 
+#### Run Flask Server
+
+```bash
+$ python server.py
+```
+
+<br/>
+
 #### Only run brat
 
 ```bash

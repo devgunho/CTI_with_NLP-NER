@@ -17,11 +17,11 @@ def load_url_list():
     return url_list
 
 
-def run_crawling():
+def run():
     blacklist = [
         'style',
         'script',
-        # other elements,
+        # other elements...
     ]
 
     url_list = load_url_list()
@@ -38,7 +38,9 @@ def run_crawling():
         # urlparse
         url = urlparse(target_url)
         # print(url.netloc, url.path)
-        parent_dir = "./text_data"
+        parent_dir = "./dataset_none-tag"
+        if not os.path.isdir(parent_dir):
+            os.mkdir(parent_dir)
         path = os.path.join(parent_dir, url.netloc)
         # print(path)
         if not os.path.isdir(path):
@@ -61,4 +63,4 @@ def run_crawling():
 
 
 if __name__ == "__main__":
-    run_crawling()
+    run()

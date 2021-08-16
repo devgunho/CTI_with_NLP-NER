@@ -703,45 +703,21 @@ You may also like these articles
 
 
 
-						Featured image for Widespread credential phishing campaign abuses open redirector links					
+						Featured image for A deep-dive into the SolarWinds Serv-U SSH vulnerability					
 
 
 
-		August 26, 2021	
+		September 2, 2021	
 
-Widespread credential phishing campaign abuses open redirector links
-
-
-
-						Microsoft has been actively tracking a widespread credential phishing campaign using open redirector links, which allow attackers to use a URL in a trusted domain and embed the eventual final malicious URL as a parameter.					
-
-
-Read more
- Widespread credential phishing campaign abuses open redirector links
+A deep-dive into the SolarWinds Serv-U SSH vulnerability
 
 
 
-
-
-
-
-
-
-						Featured image for How Vodafone Global Security Director creates an inclusive and secure workplace					
-
-
-
-		August 23, 2021	
-
-How Vodafone Global Security Director creates an inclusive and secure workplace
-
-
-
-						Vodafone Global Cybersecurity Director Emma Smith talks about leading an inclusive workplace and shares security strategies—like how to get rid of passwords.					
+						We're sharing technical information about the vulnerability tracked as CVE-2021-35211, which was used to attack the SolarWinds Serv-U FTP software in limited and targeted attacks.					
 
 
 Read more
- How Vodafone Global Security Director creates an inclusive and secure workplace
+ A deep-dive into the SolarWinds Serv-U SSH vulnerability
 
 
 
@@ -751,21 +727,45 @@ Read more
 
 
 
-						Featured image for How to proactively defend against Mozi IoT botnet					
+						Featured image for Get free DMARC visibility with Valimail Authenticate and Microsoft Office 365					
 
 
 
-		August 19, 2021	
+		September 1, 2021	
 
-How to proactively defend against Mozi IoT botnet
+Get free DMARC visibility with Valimail Authenticate and Microsoft Office 365
 
 
 
-						Mozi is a peer-to-peer (P2P) botnet that uses a BitTorrent-like network to infect IoT devices such as network gateways and digital video records (DVRs). It works by exploiting weak telnet passwords1 and nearly a dozen unpatched IoT vulnerabilities2 and it’s been used to conduct distributed denial-of-service (DDoS) attacks, data exfiltration, and command or payload execution.					
+						Phishing and email spoofing not only erode brand trust, but they also leave recipients vulnerable to financial loss and serious invasions of privacy.					
 
 
 Read more
- How to proactively defend against Mozi IoT botnet
+ Get free DMARC visibility with Valimail Authenticate and Microsoft Office 365
+
+
+
+
+
+
+
+
+
+						Featured image for Microsoft a Leader in 2021 Gartner® Magic Quadrant™ for Unified Endpoint Management Tools					
+
+
+
+		August 31, 2021	
+
+Microsoft a Leader in 2021 Gartner® Magic Quadrant™ for Unified Endpoint Management Tools
+
+
+
+						Adapting to the evolving business landscape, organizations increasingly depend on Microsoft Endpoint Manager to enable hybrid work—where the endpoint is the new workplace. 					
+
+
+Read more
+ Microsoft a Leader in 2021 Gartner® Magic Quadrant™ for Unified Endpoint Management Tools
 
 
 
@@ -1039,8 +1039,8 @@ About our ads
 
 
 
-	generated 204 seconds ago
-	generated in 0.262 seconds
-	served from batcache in 0.004 seconds
-	expires in 96 seconds
+	generated 160 seconds ago
+	generated in 0.110 seconds
+	served from batcache in 0.003 seconds
+	expires in 140 seconds
 

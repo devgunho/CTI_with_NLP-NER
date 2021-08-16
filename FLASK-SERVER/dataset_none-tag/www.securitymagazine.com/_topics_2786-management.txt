@@ -131,8 +131,7 @@ Security Magazine logo
 
 
 
-MAGAZINEeMagazineThis Month's Issue
-Contact UsEditorial GuidelinesAdvertiseSubscribeNEWSSecurity Newswire
+MAGAZINEeMagazineThis Month's ContentContact UsEditorial GuidelinesAdvertiseSubscribeNEWSSecurity Newswire
 COVID-19TechnologiesSecurity Blog
 NewsletterWeb Exclusives
 COLUMNSCareer Intelligence 
@@ -156,7 +155,7 @@ Solutions by SectorSecurity 500 ConferenceMOREPodcastsVideos
 Cybersecurity & Geopolitical VodcastISC West 2019Photo GalleriesPolls
 Classifieds & Job Listings
 White Papers
-StoreSponsor Insights Continuing EducationCall for Entries INFOCENTERSEnterprise Response to COVID-19Put the Smart In Building SecuritySign InCreate AccountSign OutMy Account
+StoreSponsor Insights Continuing EducationCall for Entries INFOCENTERSAccess Control Turnstiles Leverage the Power of Your VMS Put the Smart In Building SecuritySign InCreate AccountSign OutMy Account
 
 
 
@@ -237,73 +236,125 @@ ARTICLES
 
 
 
-Addressing insider threats: in the boardroom
-
-
-Adarsh Mantravadi
-
-August 26, 2021
-
-Board members are often entrusted with sensitive data and information, which ensures they can be effective in their roles. But if that data gets into the wrong hands, the organization could run into costly legal trouble and reputational damage.Read More
+Career Intelligence
+Public engagement’s influence on your security career
 
 
 
 
 
-Tech companies pledge billions to bolster cybersecurity investments
-
-August 26, 2021
-
-Some of the country’s leading technology companies have committed to investing billions of dollars to strengthen cybersecurity defenses and to train skilled workers, the White House announced, following President Joe Biden’s private meeting with top executives.
-
-Some of the country’s leading technology companies have committed to investing billions of dollars in strengthening cybersecurity defenses and in training skilled workers, the White House announced, following President Joe Biden’s private meeting with top executives.Read More
+Jerry J Brennan
 
 
 
 
+Joanne R. Pollock
 
-Move to higher ground before the data tsunami hits: A paradigm shift for managing federal data
+September 3, 2021
 
-
-Boyd White
-
-August 26, 2021
-
-Many agencies don’t have the ability to collect, centralize and analyze all the data from remote endpoints. Even if they do, the data collection is not fast enough. Enter the American Rescue Plan and capitalize on it to boost your security infrastructure.Read More
+As in-person engagement has slowed or ceased because of the COVID-19 pandemic, the industry has shifted and security professionals still have ways of engaging, networking, advancing their security careers, and maintaining their professional reputations—virtually or as a hybrid. Here’s how.Read More
 
 
 
 
 
-
-
-Listen to Jadee Hanson, CISO and CIO at Code42, in the latest Security podcast
-
-August 26, 2021
-
-Editor Maggie Shein sits down with Jadee Hanson, Chief Information Security Officer and Chief Information Officer at Code42 about her career start in pentesting, as well as how to address data loss when it comes from the inside your organization, and navigating insider threat.Read More
+Cyber Tactics
+Emerging technology, evolving threats — Part II: The asymmetry effect
 
 
 
 
 
-Taking stock of your disaster response plan during hurricane season
+John McClurg
+
+September 2, 2021
+
+A single application may have hundreds of thousands of vulnerabilities. Increasingly, cybercriminals are targeting people just as much if not more than the systems that underlie an infrastructure, which is why the trusted insider conundrum is exacting renewed attention. In most instances, they represent a cheaper and more accessible conduit to achieve one’s objective. What’s to be done?Read More
 
 
 
 
 
-W. Curtis Preston
-
-August 26, 2021
-
-With hurricane season quickly approaching us, it gives us a chance to stop and think about how well prepared we are for disasters of all kinds. A solid, well-tested disaster recovery (DR) plan is the difference between your company surviving a natural disaster – or ceasing to exist the moment it happens.Read More
+Five trends complicating industrial automation cybersecurity and how a standards-based approach is the solution
 
 
+Jennifer Halsey
+
+September 2, 2021
+
+Five trends, in particular, are complicating industrial automation cybersecurity and driving the increased need for a standards-based approach.Read More
 
 
 
-5 minutes with Troy Gill - Putting together the perfect threat hunter team
+
+
+
+
+Let’s help developers address open source software security
+
+
+
+
+
+Chris Eng
+
+September 2, 2021
+
+By staying on top of open source trends, scanning frequently and working with security counterparts to get the information needed, developers can fix more third-party library flaws faster to develop more secure applications in the future.
+Read More
+
+
+
+
+
+CISOs are changing their ways amid their toughest environment ever
+
+
+
+
+
+Robert R. Ackerman Jr.
+
+September 2, 2021
+
+A CISOs first 90 days on the job provide a window of opportunity for establishing their credibility and earning a vote of confidence from leadership. This requires, among other things, thoroughly assessing a corporation’s organization, technology, governance and the processes it embraces.
+Read More
+
+
+
+
+
+How to improve employee retention in the security industry
+
+
+
+
+
+Jason Morjaria
+
+September 1, 2021
+
+If you want to improve your security hiring and employee retention practices, here are three great tips.Read More
+
+
+
+
+
+
+3 ways partners can advise customers through cybersecurity needs
+
+
+Marco Sanchez
+
+September 1, 2021
+
+Many companies aren’t focused on cybersecurity disciplines directly, nor do they know how to optimize their cybersecurity. Therefore, it becomes the customers’ IT and technology partners’ job to focus on the basics, creating a faster and more fluid response for their clients. Let’s look at three ways partners can advise customers on their cybersecurity needs. Read More
+
+
+
+
+
+5 minutes with Kevin Dooley, Sr. Director of Security and Transportation for the San Diego Padres
 
 
 
@@ -311,58 +362,39 @@ With hurricane season quickly approaching us, it gives us a chance to stop and t
 
 Maria Henriquez
 
-August 26, 2021
+August 31, 2021
 
-How do you find, hire and create the perfect threat hunter team? Troy Gill, Manager of Security Research and Zix’s AppRiver Threat Research Team, speaks to what it takes to be an exceptional threat hunter and what qualities they need to be successful.Read More
-
-
-
-
-
-
-Jesse Kinser named CISO at Pathwire
-
-August 26, 2021
-
-Jesse Kinser has been named Chief Information Security Officer (CISO) at Pathwire. Kinser will lead a team of security professionals to establish a creative approach to grow the security posture of the organization.Read More
+Security speaks to Kevin Dooley, Senior Director of Security and Transportation for the San Diego Padres, about the approach his team is taking to fan and player safety. Read More
 
 
 
 
 
-Whack-a-mole is not remediation
-Virtual patching can help you maximize cybersecurity ROI
+FCC’s proposed ban on Chinese camera and video surveillance components
 
 
 
 
 
-Aviram Jenik
+Maria Henriquez
 
-August 26, 2021
+August 31, 2021
 
-Vulnerability remediation can feel like an ever-escalating game of whack-a-mole. Security teams need to work smarter, not harder, to stay ahead of the onslaught of new vulnerabilities. Effective prioritization is a key step to identify the big rocks that need to be fixed first. Read More
-
-
-
-
-
-US State Department suffers cyberattack
-
-August 25, 2021
-
-Though not officially confirmed, the U.S. State Department was reportedly a victim of a cyberattack. Read More
+Following the National Defense Authorization Act (NDAA) 2019 Section 889 and the ban of cameras and components made by certain Chinese companies, the Federal Communications Commission (FCC) has proposed a rule to ban products from Chinese electronics companies. Read More
 
 
 
 
 
 
-The Cybersecurity and Geopolitical podcast - Cyber warfare, cyber mischief and the cost to nation-states, Episode 5
+Can CISOs afford to have data breach fatigue?
 
-August 25, 2021
 
-The Cybersecurity and Geopolitical podcast returns with Ian Thornton-Trump (CISO at Cyjax) and Tristan de Souza taking a sweeping look at some of the main protagonists on the global stage right now: Russia, China, Iran and North Korea. Security magazine brings enterprise security and risk professionals this entertaining and illuminating podcast on the latest challenges and intriguing flashpoints within cybersecurity and the geopolitical landscape.Read More
+Anurag Gurtu
+
+August 31, 2021
+
+With any number of warnings and false alarms happening continuously, security professionals need to know how to avoid breach fatigue and focus on what’s most important to protect their organization.Read More
 
 
 
@@ -495,7 +527,7 @@ Sponsored Content
 
                 Sponsored Content is a special paid section where industry companies provide high quality, objective, non-commercial content around topics of interest to the Security audience. All Sponsored Content is supplied by the advertising company. Interested in participating in our Sponsored Content section? Contact your local rep.close
 
-Sponsored byReconeyezMilitary Standard Outdoor Alarm System with Visual Verification and AI now Available in USA
+Sponsored byAxisExploring how network audio adds value to our world
 
 
 Sponsored byAxisWhat are the advantages of end-to-end solutions for financial institutions?
@@ -534,16 +566,6 @@ Popular Stories
 
 
 
-          Top de-escalation strategies and training for security leaders
-        
-
-
-
-
-
-
-
-
           DHS issues terrorism advisory ahead of 20th Anniversary of 9/11 terror attacks
         
 
@@ -554,7 +576,17 @@ Popular Stories
 
 
 
-          Reindeer leaked the sensitive data of more than 300,000 people
+          Court rules truck companies have duty to perform due diligence when hiring
+        
+
+
+
+
+
+
+
+
+          T-Mobile's data breach affects nearly all its US customers
         
 
 

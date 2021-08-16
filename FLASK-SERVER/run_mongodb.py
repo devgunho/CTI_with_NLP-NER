@@ -15,8 +15,8 @@ def show_mongodb_list():
     except:
         print("[-] Connection ERROR!")
 
-def run_mongodb():
+def run():
     show_mongodb_list()
 
 if __name__ == "__main__":
-    run_mongodb()
+    run()
