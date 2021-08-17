@@ -1039,8 +1039,6 @@ About our ads
 
 
 
-	generated 160 seconds ago
-	generated in 0.110 seconds
-	served from batcache in 0.003 seconds
-	expires in 140 seconds
+	generated in 0.204 seconds
+	146120 bytes batcached for 300 seconds
 

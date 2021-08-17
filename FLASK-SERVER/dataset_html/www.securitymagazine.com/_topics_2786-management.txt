@@ -1,0 +1,858 @@
+
+<!DOCTYPE html>
+
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<link href="https://www.securitymagazine.com/topics/2786-management" rel="canonical"/>
+<meta content="authenticity_token" name="csrf-param"/>
+<meta content="oxoXphMEzNVjMMhGoYTenAgRTidcBqKmk2pEPewU/sAGYzBERWvKKBwifgjKAIs9YIW/99gi0HGDUwsFRpLZxQ==" name="csrf-token"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Security Magazine Content on Management" name="description"/>
+<meta content="Management" name="keywords"/>
+<link href="https://www.securitymagazine.com/rss/articles" rel="alternate" title="Security Magazine  RSS Feed" type="application/xml"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="/images/favicon/mstile-144.png" name="msapplication-TileImage"/>
+<link href="/images/favicon/favicons.ico" rel="icon" sizes="16x16 32x32 48x48 64x64" type="image/x-icon"/>
+<link href="/images/favicon/apple-touch-icon-152.png" rel="apple-touch-icon-precomposed" sizes="152x152" type="image/x-icon"/>
+<link href="/images/favicon/apple-touch-icon-144.png" rel="apple-touch-icon-precomposed" sizes="144x144" type="image/x-icon"/>
+<link href="/images/favicon/apple-touch-icon-120.png" rel="apple-touch-icon-precomposed" sizes="120x120" type="image/x-icon"/>
+<link href="/images/favicon/apple-touch-icon-72.png" rel="apple-touch-icon-precomposed" sizes="72x72" type="image/x-icon"/>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5159f27a1160d2b2"></script>
+<script>
+      window.homeVersionV2Enabled = true;
+    </script>
+<meta content="false" name="has-log-view">
+<title>Management</title>
+<link href="/stylesheets/application-v2.css" media="screen" rel="stylesheet"/>
+<link href="/stylesheets/print.css" media="print" rel="stylesheet"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link crossorigin="" href="//fonts.gstatic.com/" rel="preconnect"/>
+<link href="//fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900|Lora:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="/ext/resources/securitymagazine.css" media="screen" rel="stylesheet">
+<script src="/javascripts/jade.default.min.js"></script>
+<script src="/javascripts/application.js"></script>
+<!-- dataLayer scripts, place in head before GTM snippet -->
+<script>var dataLayer = window.dataLayer || [];</script>
+<script>
+      dataLayer.push({"id":2786,"topics":["Management"],"title":"Management","page_type":["topics"],"date_posted":"07/20/2019","gated":false,"registered":false,"subscribed_user":false});
+    </script>
+<!-- End dataLayer -->
+<!-- Google Tag Manager -->
+<script>
+//<![CDATA[
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KNK327G');
+//]]>
+</script>
+<!-- End Google Tag Manager -->
+<script>
+  window.epub = window.epub || {};
+
+    window.epub['AD_HISTORY_ENABLED'] = false;
+</script>
+<!--[if lt IE 9]><script src="/javascripts/vendor/es5-shim.min.js"></script><![endif]-->
+<script>
+  var googletag = {
+    cmd: []
+  };
+
+  var targeting = {"topic":["management"],"topic_id":["2786"],"page_type":["topics"],"reg_user":"false","page_name":"management","subscribed_user":"false"};
+</script>
+<script>window.vpb={singleDisplayMode:true};var dayMs = 36e5, cb = parseInt(Date.now() / dayMs),vpbSrc = "//player.mediafuse.com/prebidlink/" + cb + "/wrapper_hb_302826_5908.js", gptSrc = "//securepubads.g.doubleclick.net/tag/js/gpt.js", c = document.head || document.body || document.documentElement; function loadScript(src, cb) { var s = document.createElement("script"); s.src = src; c.appendChild(s); s.onload = cb; s.onerror = cb; return s; } loadScript(vpbSrc, function() { loadScript(gptSrc); })</script>
+<script>var $hasLogViewMeta = $('meta[name=has-log-view]').attr('content');
+var $logViewUrlMeta = $('meta[name=log-view-url]').attr('content');
+if($hasLogViewMeta === 'true') {
+  var baseLogUrl = typeof $logViewUrlMeta === "undefined" ? window.location.pathname : $logViewUrlMeta
+  var logUrl = baseLogUrl + '/log_view' + window.location.search;
+  if (typeof navigator.sendBeacon === 'function') {
+    navigator.sendBeacon(logUrl);
+  } else {
+    // Gotta love IE
+    $.post(logUrl);
+  }
+}  </script>
+</link></meta></head>
+<body data-action="show" data-ad-unit-prefix="null" data-article-requires-registration="null" data-article-requires-subscription="null" data-controller="taxonomies" data-dfp-prefix="/52040140/sec" data-is-microsite="0" data-poststitial-ad="false" data-prestitial-ad="false">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-KNK327G" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<section class="cookie-policy" id="cookie-policy"><div class="cookie-policy__body"><style>@charset "utf-8";
+
+.mobileShow {display: none;} 
+
+  /* Smartphone Portrait and Landscape */ 
+  @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px){ 
+      .mobileShow {display: inline;}
+}
+
+  .mobileHide { display: inline; } 
+
+  /* Smartphone Portrait and Landscape */ 
+  @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px){ 
+     .mobileHide { display: none;}
+  }
+
+
+summary {
+  color:#2fbbc5;
+
+font-family:'Lato', sans-serif; 
+font-weight:200; 
+font-size:12px;
+}
+
+summary:hover {
+opacity:0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+</style>
+<div class="mobileHide">
+<span style="font-family:verdana,geneva,sans-serif;"><span style="font-size:12px;"><strong><span style="color:#696969;">This website requires certain cookies to work and uses other cookies to help you have the best experience.  By visiting this website, certain cookies have already been set, which you may delete and block. By closing this message or continuing to use our site, you agree to the use of cookies. Visit our updated <a href="/privacy"><span style="color:#696969;">privacy and cookie policy to learn more.  </span></a></span></strong></span></span></div>
+<div class="mobileShow">
+<details>
+<summary>This Website Uses Cookies<br/>By closing this message or continuing to use our site, you agree to our cookie policy. <u>Learn More</u></summary>
+<span style="font-family:verdana,geneva,sans-serif;"><span style="font-size:12px;"><strong><span style="color:#696969;">This website requires certain cookies to work and uses other cookies to help you have the best experience.  By visiting this website, certain cookies have already been set, which you may delete and block.  By closing this message or continuing to use our site, you agree to the use of cookies. Visit our updated <a href="/privacy"><span style="color:#696969;">privacy and cookie policy to learn more.  </span></a></span></strong></span></span></details></div></div><span class="cookie-policy__close" id="cookie-policy-close"></span></section>
+<div class="-is-homepage-v2">
+<div class="mmenu-placeholder">
+<header class="main-header-wrapper"><div class="main-header"><div class="site-logo">
+<a href="/">
+<svg class="svg-logo" preserveaspectratio="xMinYMax meet" role="image" viewbox="0 0 470.8 151.5" xmlns="http://www.w3.org/2000/svg">
+<title>Security Magazine logo</title>
+<path d="M123.8 147.6v-15.3H89.4V88.2l28.4.1V73.1H89.5V34.4h34.4V19H73.4v128.6" fill="#C52026"></path>
+<path d="M124.5 147.6v-16.1H89.4l.8.8V88.2l-.8.8h29.2V72.3H89.5l.8.8V34.4l-.7.8h35.1v-17H72.6V148.4H124.6v-.8zm-50.4 0V19l-.8.8h50.6l-.8-.8v15.3l.7-.8H88.7v40.2h29.1l-.8-.8V88l.8-.8H88.6V132.9H123.8l-.8-.8v15.3l.8-.8H73.4l.7 1z" fill="#FFF"></path>
+<path d="M128.6 116.2c0 12 1.6 18.2 6.2 23.8 5.2 6.2 12.4 9.3 21.3 9.3 13 0 28.5-5 28.5-28.7V98.1h-16.3v22.5c0 9-3.3 13-10.8 13-11.7 0-12.9-7.5-12.9-25.9V49c0-13.9 6.4-15.8 12.7-15.8 3.7 0 6.7 1.7 8.2 4.5 1.6 3.1 1.6 6.1 1.6 24.1v3.9h16.2V44.9c0-11-3.8-18.8-11.3-23.2-4.2-2.6-9.6-4-15.5-4-8.8 0-15.6 2.7-20.5 8.1 0 0-7.6 6.3-7.3 24.9v65.5z" fill="#C52026"></path>
+<path d="M127.9 116.2c0 12.2 1.7 18.5 6.3 24.3 5.4 6.4 12.7 9.6 21.9 9.6 13.4 0 29.3-5.1 29.3-29.5V97.3H167.5v23.3c0 8.6-3 12.3-10.1 12.3-10.5 0-12.1-5.7-12.1-25.1V49c0-13.2 5.7-15 12-15 3.4 0 6.2 1.5 7.5 4.1 1.5 2.9 1.6 6 1.6 23.8v4.7h17.8V44.9c0-11.2-3.9-19.3-11.7-23.8-4.4-2.7-9.9-4.1-15.9-4.1-9.1 0-16 2.7-21.1 8.4l.1-.1c-.3.3-7.9 6.8-7.6 25.4-.1 0-.1 65.5-.1 65.5zm1.5-65.5c-.3-17.9 7-24.2 7.1-24.3h.1v-.1c4.8-5.3 11.3-7.8 19.9-7.8 5.7 0 11 1.3 15.1 3.9 7.3 4.3 11 11.9 11 22.6v20.8l.8-.8h-16.2l.8.8v-3.9c0-18.1 0-21.2-1.7-24.4-1.5-3.1-4.8-4.9-8.8-4.9-6.3 0-13.5 1.9-13.5 16.5V108c0 18.5 1.3 26.6 13.6 26.6 7.9 0 11.6-4.4 11.6-13.8V98.1l-.8.8h16.3l-.8-.8v22.5c0 23.1-15.1 28-27.8 28-8.7 0-15.7-3-20.8-9-4.4-5.5-6-11.6-6-23.4.1 0 .1-65.5.1-65.5z" fill="#FFF"></path>
+<path d="M276.3 73.8V34h11.8c6.4 0 10.3.8 10.3 12.2v18.7c0 5.4-1.8 8.9-10.8 8.9h-11.3zm23.2 13.1c10.4-3.5 15.7-11.5 15.7-24.1V44c0-16.5-9.4-24.9-27.8-24.9h-27.2v128.6h16.2V88.8h6.6l22.1 58.9h17.2l-22.8-60.8z" fill="#C52026"></path>
+<path d="M277.1 73.8V34l-.8.8h11.8c6.1 0 9.6.5 9.6 11.4v18.7c0 5.1-1.7 8.2-10.1 8.2h-11.3l.8.7zm10.6.7c10.2 0 11.6-4.7 11.6-9.7V46.2c0-12-4.6-12.9-11.1-12.9H275.6v41.3H287.7z" fill="#FFF"></path>
+<path d="M299.7 87.6c10.7-3.6 16.2-11.9 16.2-24.8V44c0-17-9.6-25.7-28.6-25.7h-28v130.1h17.8V88.8l-.8.8h6.6l-.7-.5 22.1 58.9.2.5h18.8l-.4-1-22.7-60.8-.5.9zm22.5 59.3H305l.7.5-22.1-58.9-.2-.5H275.5V147.7l.8-.8h-16.2l.8.8V19l-.8.8h27.2c18 0 27.1 8.1 27.1 24.2v18.8c0 12.1-5.1 20-15.2 23.3l-.7.2.3.7 22.7 60.8.7-.9z" fill="#FFF"></path>
+<path d="M325.9 19h16.5v128.6h-16.5z" fill="#C52026"></path>
+<path d="M325.9 148.4h17.3V18.2h-18.1V148.4h.8zm0-128.6h16.5l-.8-.8v128.6l.8-.8h-16.5l.8.8V19l-.8.8z" fill="#FFF"></path>
+<g>
+<path d="M469.7 19h-17.5l-16.5 48.6L419.2 19h-69.5v15.5h21V147.8h16.2V34.5h20.6l19.9 55.9v57.2h16V90.9" fill="#C52026"></path>
+<path d="M469.7 18.3h-18.1l-.2.5L435 67.4h1.4L420 18.8l-.2-.5H348.9v17h21.8l-.8-.8V148.6h17.8V34.5l-.8.8h20.7l-.7-.5 19.9 55.9v-.3V148.5h17.6V91v.3l26.3-71.9.4-1h-1.4zm-27 72.6v56.7l.8-.8h-16l.8.8V90.2l-19.9-55.9-.2-.5h-22v114.1l.8-.8h-16.2l.8.8V33.8h-21.8l.8.8V19l-.8.8h69.6l-.7-.5L435 67.9l.7 2.1.7-2.1 16.5-48.6-.7.5h17.6l-.7-1-26.3 71.9v.2z" fill="#FFF"></path>
+</g>
+<g>
+<path d="M.8 95.9v22.5c0 19.5 12 31.2 32.1 31.2 31.4 0 31.4-26.2 31.4-36.1 0-20.1-7.2-27.6-21.7-42.4-20.6-21-22.7-26-22.7-38.2 0-14.7 5.2-17.7 13.6-17.7 12.2 0 13.2 7.9 13.2 18.3V49h15.6V35.8c0-13.1 0-35.1-29-35.1C4.1.8 4.1 26.1 4.1 34.5c0 20.7 9.4 30.1 25 45.8 15.6 15.4 19.3 20.5 19.3 35.1 0 14.2-4 19.4-14.7 19.4-4.3 0-10.2-.9-13.6-5.3-3.4-4.4-3.4-9.4-3.4-19.4V95.9H.8z" fill="#C52026"></path>
+<path d="M0 95.9v22.5c0 20 12.3 31.9 32.9 31.9 32.1 0 32.1-26.7 32.1-36.8 0-20.4-7.3-27.9-21.9-42.9-20.4-20.8-22.4-25.7-22.4-37.7 0-14.2 4.7-16.9 12.8-16.9 11.5 0 12.4 7.3 12.4 17.5v16.3H63v-14C63 22.4 63 0 33.3 0c-30 0-30 25.9-30 34.5 0 21 9.5 30.5 25.3 46.3C44.1 96 47.7 101 47.7 115.3c0 13.8-3.7 18.7-14 18.7-4.1 0-9.8-.9-13.1-5-3.3-4.2-3.3-9.2-3.3-19V95.1H0v.8zm15.8 0V110c0 10.2 0 15.3 3.6 19.9 3.7 4.6 9.8 5.6 14.2 5.6 11.1 0 15.5-5.7 15.5-20.2 0-14.8-3.7-20-19.5-35.6C14.2 64.2 4.8 54.9 4.8 34.5c0-8.2 0-33 28.5-33 28.3 0 28.3 21.5 28.3 34.3v13.1l.8-.8H46.6l.8.8V33.5c0-10.4-1-19-13.9-19-8.6 0-14.3 3.1-14.3 18.4 0 12.5 2.1 17.6 22.9 38.8 14.3 14.7 21.5 22 21.5 41.9 0 9.7 0 35.3-30.6 35.3-19.7 0-31.4-11.4-31.4-30.4V95.9l-.8.8h15.8l-.8-.8z" fill="#FFF"></path>
+</g>
+<g>
+<path d="M194.4 115.3c0 10.1 0 21.6 9.9 29.1 4.5 3.4 11 5.4 17.7 5.4 17.9 0 28.2-11 28.2-30.1V19H234v92.7c0 12.6-.4 15.9-2.1 18.2l-.1.1-.1.1c-2.4 3.6-6.9 4.1-9.3 4.1-11.3 0-12.2-7.2-12.2-17.5V19h-16v96.3z" fill="#C52026"></path>
+<path d="M193.6 115.3c0 10.3 0 22 10.2 29.7 4.6 3.5 11.3 5.6 18.2 5.6 18.4 0 28.9-11.2 28.9-30.8V18.2h-17.8v93.5c0 12.3-.4 15.6-2 17.7l-.1.1-.1.1c-2.2 3.3-6.4 3.8-8.7 3.8-10.6 0-11.4-6.6-11.4-16.7V18.2h-17.6v97.1zm.8-95.5h16l-.8-.8v97.7c0 10.3 1 18.2 12.9 18.2 2.6 0 7.3-.6 9.9-4.4v-.1-.1c1.9-2.5 2.3-5.8 2.3-18.6V19l-.8.8h16.2l-.8-.8v100.7c0 18.6-10 29.3-27.4 29.3-6.6 0-12.9-1.9-17.3-5.3-9.6-7.3-9.6-18.6-9.6-28.5V19l-.6.8z" fill="#FFF"></path>
+</g>
+</svg>
+</a>
+</div>
+<div class="main-header__top-nav-actions"><nav class="top-nav"><div class="quick-search-wrapper"><a class="top-nav__search-link" href="/search" id="top-nav-search-link"><span class="top-nav__search-link-label">search</span></a><div class="quick-search" id="quick-search" role="search">
+<form action="/search" id="quick-search-form" method="get" name="quick-search">
+<label alt="search" class="quick-search__label" for="q">Search</label>
+<input id="q" name="q" onfocus="this.value = ''" placeholder="Search" tabindex="1" type="search" value="Search"/>
+<button class="quick-search__button">
+      search
+    </button>
+<button class="quick-search__close-button">
+      close search
+    </button>
+</form>
+<section class="editorial-content header-below-search">
+<div class="editorial-content__details">
+</div>
+</section>
+</div>
+</div><div class="cart-social-wrapper" id="cart-social-wrapper"><a class="top-nav__cart-link" href="/cart"><span class="top-nav__cart-link-label">cart</span></a><div class="main-header__social-links"><a class="facebook" href="http://www.facebook.com/SECmagazine" target="_blank"><span class="facebook__text">facebook</span></a>
+<a alt="twitter" class="twitter" href="http://www.twitter.com/SecurityMag" target="_blank"><span class="twitter__text">twitter</span></a>
+<a class="linkedin" href="https://www.linkedin.com/company/security-magazine" target="_blank"><span class="linkedin__text">linkedin</span></a>
+<a class="youtube" href="http://www.youtube.com/user/SecurityMag" target="_blank"><span class="youtube__text">youtube</span></a></div></div></nav></div><div class="main-header__mobile-action"><a class="search-nav-link" href="#" id="search-nav-link"></a><a class="main-header__hamburger-nav-link" href="#" id="hamburger-nav-link"></a></div></div><nav class="main-nav main-nav--horizontal"><div class="wrapper"><div class="site-logo">
+<a href="/">
+<svg class="svg-logo" preserveaspectratio="xMinYMax meet" role="image" viewbox="0 0 470.8 151.5" xmlns="http://www.w3.org/2000/svg">
+<title>Security Magazine logo</title>
+<path d="M123.8 147.6v-15.3H89.4V88.2l28.4.1V73.1H89.5V34.4h34.4V19H73.4v128.6" fill="#C52026"></path>
+<path d="M124.5 147.6v-16.1H89.4l.8.8V88.2l-.8.8h29.2V72.3H89.5l.8.8V34.4l-.7.8h35.1v-17H72.6V148.4H124.6v-.8zm-50.4 0V19l-.8.8h50.6l-.8-.8v15.3l.7-.8H88.7v40.2h29.1l-.8-.8V88l.8-.8H88.6V132.9H123.8l-.8-.8v15.3l.8-.8H73.4l.7 1z" fill="#FFF"></path>
+<path d="M128.6 116.2c0 12 1.6 18.2 6.2 23.8 5.2 6.2 12.4 9.3 21.3 9.3 13 0 28.5-5 28.5-28.7V98.1h-16.3v22.5c0 9-3.3 13-10.8 13-11.7 0-12.9-7.5-12.9-25.9V49c0-13.9 6.4-15.8 12.7-15.8 3.7 0 6.7 1.7 8.2 4.5 1.6 3.1 1.6 6.1 1.6 24.1v3.9h16.2V44.9c0-11-3.8-18.8-11.3-23.2-4.2-2.6-9.6-4-15.5-4-8.8 0-15.6 2.7-20.5 8.1 0 0-7.6 6.3-7.3 24.9v65.5z" fill="#C52026"></path>
+<path d="M127.9 116.2c0 12.2 1.7 18.5 6.3 24.3 5.4 6.4 12.7 9.6 21.9 9.6 13.4 0 29.3-5.1 29.3-29.5V97.3H167.5v23.3c0 8.6-3 12.3-10.1 12.3-10.5 0-12.1-5.7-12.1-25.1V49c0-13.2 5.7-15 12-15 3.4 0 6.2 1.5 7.5 4.1 1.5 2.9 1.6 6 1.6 23.8v4.7h17.8V44.9c0-11.2-3.9-19.3-11.7-23.8-4.4-2.7-9.9-4.1-15.9-4.1-9.1 0-16 2.7-21.1 8.4l.1-.1c-.3.3-7.9 6.8-7.6 25.4-.1 0-.1 65.5-.1 65.5zm1.5-65.5c-.3-17.9 7-24.2 7.1-24.3h.1v-.1c4.8-5.3 11.3-7.8 19.9-7.8 5.7 0 11 1.3 15.1 3.9 7.3 4.3 11 11.9 11 22.6v20.8l.8-.8h-16.2l.8.8v-3.9c0-18.1 0-21.2-1.7-24.4-1.5-3.1-4.8-4.9-8.8-4.9-6.3 0-13.5 1.9-13.5 16.5V108c0 18.5 1.3 26.6 13.6 26.6 7.9 0 11.6-4.4 11.6-13.8V98.1l-.8.8h16.3l-.8-.8v22.5c0 23.1-15.1 28-27.8 28-8.7 0-15.7-3-20.8-9-4.4-5.5-6-11.6-6-23.4.1 0 .1-65.5.1-65.5z" fill="#FFF"></path>
+<path d="M276.3 73.8V34h11.8c6.4 0 10.3.8 10.3 12.2v18.7c0 5.4-1.8 8.9-10.8 8.9h-11.3zm23.2 13.1c10.4-3.5 15.7-11.5 15.7-24.1V44c0-16.5-9.4-24.9-27.8-24.9h-27.2v128.6h16.2V88.8h6.6l22.1 58.9h17.2l-22.8-60.8z" fill="#C52026"></path>
+<path d="M277.1 73.8V34l-.8.8h11.8c6.1 0 9.6.5 9.6 11.4v18.7c0 5.1-1.7 8.2-10.1 8.2h-11.3l.8.7zm10.6.7c10.2 0 11.6-4.7 11.6-9.7V46.2c0-12-4.6-12.9-11.1-12.9H275.6v41.3H287.7z" fill="#FFF"></path>
+<path d="M299.7 87.6c10.7-3.6 16.2-11.9 16.2-24.8V44c0-17-9.6-25.7-28.6-25.7h-28v130.1h17.8V88.8l-.8.8h6.6l-.7-.5 22.1 58.9.2.5h18.8l-.4-1-22.7-60.8-.5.9zm22.5 59.3H305l.7.5-22.1-58.9-.2-.5H275.5V147.7l.8-.8h-16.2l.8.8V19l-.8.8h27.2c18 0 27.1 8.1 27.1 24.2v18.8c0 12.1-5.1 20-15.2 23.3l-.7.2.3.7 22.7 60.8.7-.9z" fill="#FFF"></path>
+<path d="M325.9 19h16.5v128.6h-16.5z" fill="#C52026"></path>
+<path d="M325.9 148.4h17.3V18.2h-18.1V148.4h.8zm0-128.6h16.5l-.8-.8v128.6l.8-.8h-16.5l.8.8V19l-.8.8z" fill="#FFF"></path>
+<g>
+<path d="M469.7 19h-17.5l-16.5 48.6L419.2 19h-69.5v15.5h21V147.8h16.2V34.5h20.6l19.9 55.9v57.2h16V90.9" fill="#C52026"></path>
+<path d="M469.7 18.3h-18.1l-.2.5L435 67.4h1.4L420 18.8l-.2-.5H348.9v17h21.8l-.8-.8V148.6h17.8V34.5l-.8.8h20.7l-.7-.5 19.9 55.9v-.3V148.5h17.6V91v.3l26.3-71.9.4-1h-1.4zm-27 72.6v56.7l.8-.8h-16l.8.8V90.2l-19.9-55.9-.2-.5h-22v114.1l.8-.8h-16.2l.8.8V33.8h-21.8l.8.8V19l-.8.8h69.6l-.7-.5L435 67.9l.7 2.1.7-2.1 16.5-48.6-.7.5h17.6l-.7-1-26.3 71.9v.2z" fill="#FFF"></path>
+</g>
+<g>
+<path d="M.8 95.9v22.5c0 19.5 12 31.2 32.1 31.2 31.4 0 31.4-26.2 31.4-36.1 0-20.1-7.2-27.6-21.7-42.4-20.6-21-22.7-26-22.7-38.2 0-14.7 5.2-17.7 13.6-17.7 12.2 0 13.2 7.9 13.2 18.3V49h15.6V35.8c0-13.1 0-35.1-29-35.1C4.1.8 4.1 26.1 4.1 34.5c0 20.7 9.4 30.1 25 45.8 15.6 15.4 19.3 20.5 19.3 35.1 0 14.2-4 19.4-14.7 19.4-4.3 0-10.2-.9-13.6-5.3-3.4-4.4-3.4-9.4-3.4-19.4V95.9H.8z" fill="#C52026"></path>
+<path d="M0 95.9v22.5c0 20 12.3 31.9 32.9 31.9 32.1 0 32.1-26.7 32.1-36.8 0-20.4-7.3-27.9-21.9-42.9-20.4-20.8-22.4-25.7-22.4-37.7 0-14.2 4.7-16.9 12.8-16.9 11.5 0 12.4 7.3 12.4 17.5v16.3H63v-14C63 22.4 63 0 33.3 0c-30 0-30 25.9-30 34.5 0 21 9.5 30.5 25.3 46.3C44.1 96 47.7 101 47.7 115.3c0 13.8-3.7 18.7-14 18.7-4.1 0-9.8-.9-13.1-5-3.3-4.2-3.3-9.2-3.3-19V95.1H0v.8zm15.8 0V110c0 10.2 0 15.3 3.6 19.9 3.7 4.6 9.8 5.6 14.2 5.6 11.1 0 15.5-5.7 15.5-20.2 0-14.8-3.7-20-19.5-35.6C14.2 64.2 4.8 54.9 4.8 34.5c0-8.2 0-33 28.5-33 28.3 0 28.3 21.5 28.3 34.3v13.1l.8-.8H46.6l.8.8V33.5c0-10.4-1-19-13.9-19-8.6 0-14.3 3.1-14.3 18.4 0 12.5 2.1 17.6 22.9 38.8 14.3 14.7 21.5 22 21.5 41.9 0 9.7 0 35.3-30.6 35.3-19.7 0-31.4-11.4-31.4-30.4V95.9l-.8.8h15.8l-.8-.8z" fill="#FFF"></path>
+</g>
+<g>
+<path d="M194.4 115.3c0 10.1 0 21.6 9.9 29.1 4.5 3.4 11 5.4 17.7 5.4 17.9 0 28.2-11 28.2-30.1V19H234v92.7c0 12.6-.4 15.9-2.1 18.2l-.1.1-.1.1c-2.4 3.6-6.9 4.1-9.3 4.1-11.3 0-12.2-7.2-12.2-17.5V19h-16v96.3z" fill="#C52026"></path>
+<path d="M193.6 115.3c0 10.3 0 22 10.2 29.7 4.6 3.5 11.3 5.6 18.2 5.6 18.4 0 28.9-11.2 28.9-30.8V18.2h-17.8v93.5c0 12.3-.4 15.6-2 17.7l-.1.1-.1.1c-2.2 3.3-6.4 3.8-8.7 3.8-10.6 0-11.4-6.6-11.4-16.7V18.2h-17.6v97.1zm.8-95.5h16l-.8-.8v97.7c0 10.3 1 18.2 12.9 18.2 2.6 0 7.3-.6 9.9-4.4v-.1-.1c1.9-2.5 2.3-5.8 2.3-18.6V19l-.8.8h16.2l-.8-.8v100.7c0 18.6-10 29.3-27.4 29.3-6.6 0-12.9-1.9-17.3-5.3-9.6-7.3-9.6-18.6-9.6-28.5V19l-.6.8z" fill="#FFF"></path>
+</g>
+</svg>
+</a>
+</div>
+<div class="navigation" id="primaryNav"><ul class="level1"><li class="level1-li first"><a class="link2" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: MAGAZINE|url: /publications/3" data-eventname="nav-menu-primaryNav" href="/publications/3">MAGAZINE</a><ul class="level2"><li class="level2-li first"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: eMagazine|url: /emagazine" data-eventname="nav-menu-primaryNav" href="/emagazine">eMagazine</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: This Month's Content|url: /publications/3" data-eventname="nav-menu-primaryNav" href="/publications/3">This Month's Content</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Contact Us|url: /contactus" data-eventname="nav-menu-primaryNav" href="/contactus">Contact Us</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Editorial Guidelines|url: /editorial-guidelines" data-eventname="nav-menu-primaryNav" href="/editorial-guidelines">Editorial Guidelines</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Advertise|url: /advertise" data-eventname="nav-menu-primaryNav" href="/advertise">Advertise</a></li><li class="level2-li last"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Subscribe|url: https://bnp.dragonforms.com/BNP6090_VTdigital?pk=X_W_HOME" data-eventname="nav-menu-primaryNav" href="https://bnp.dragonforms.com/BNP6090_VTdigital?pk=X_W_HOME">Subscribe</a></li></ul></li><li class="level1-li"><a class="link2" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: NEWS|url: /topics/2189-security-newswire" data-eventname="nav-menu-primaryNav" href="/topics/2189-security-newswire">NEWS</a><ul class="level2"><li class="level2-li first"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Security Newswire
+|url: /topics/2189-security-newswire" data-eventname="nav-menu-primaryNav" href="/topics/2189-security-newswire">Security Newswire
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: COVID-19|url: /topics/2911-coronavirus-coverage" data-eventname="nav-menu-primaryNav" href="/topics/2911-coronavirus-coverage">COVID-19</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Technologies|url: /topics/2785-technologies" data-eventname="nav-menu-primaryNav" href="/topics/2785-technologies">Technologies</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Security Blog
+|url: /blogs/14" data-eventname="nav-menu-primaryNav" href="/blogs/14">Security Blog
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Newsletter|url: /newsletters" data-eventname="nav-menu-primaryNav" href="/newsletters">Newsletter</a></li><li class="level2-li last"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Web Exclusives
+|url: /articles/topic/2150-web-exclusives" data-eventname="nav-menu-primaryNav" href="/articles/topic/2150-web-exclusives">Web Exclusives
+</a></li></ul></li><li class="level1-li"><a class="link2" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: COLUMNS|url: /topics/2644-columns" data-eventname="nav-menu-primaryNav" href="/topics/2644-columns">COLUMNS</a><ul class="level2"><li class="level2-li first"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Career Intelligence 
+|url: /topics/2780-career-intelligence" data-eventname="nav-menu-primaryNav" href="/topics/2780-career-intelligence">Career Intelligence 
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Security Talk|url: /topics/2613-security-talk" data-eventname="nav-menu-primaryNav" href="/topics/2613-security-talk">Security Talk</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: The Corner Office 
+|url: /topics/2782-the-corner-office" data-eventname="nav-menu-primaryNav" href="/topics/2782-the-corner-office">The Corner Office 
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Leadership &amp; Management|url: /topics/2250-leadership-management" data-eventname="nav-menu-primaryNav" href="/topics/2250-leadership-management">Leadership &amp; Management</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Cyber Tactics
+|url: /topics/2654-cyber-tactics" data-eventname="nav-menu-primaryNav" href="/topics/2654-cyber-tactics">Cyber Tactics
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Overseas and Secure|url: /topics/2648-overseas-and-secure" data-eventname="nav-menu-primaryNav" href="/topics/2648-overseas-and-secure">Overseas and Secure</a></li><li class="level2-li last"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: The Risk Matrix|url: https://www.securitymagazine.com/topics/2873-the-risk-matrix" data-eventname="nav-menu-primaryNav" href="https://www.securitymagazine.com/topics/2873-the-risk-matrix">The Risk Matrix</a></li></ul></li><li class="level1-li"><a class="link2" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: MANAGEMENT|url: /topics/2786-management" data-eventname="nav-menu-primaryNav" href="/topics/2786-management">MANAGEMENT</a><ul class="level2"><li class="level2-li first"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Leadership Management
+|url: /topics/2227-security-leadership-and-management" data-eventname="nav-menu-primaryNav" href="/topics/2227-security-leadership-and-management">Leadership Management
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Enterprise Services
+|url: /topics/2231-enterprise-services" data-eventname="nav-menu-primaryNav" href="/topics/2231-enterprise-services">Enterprise Services
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Security Education &amp; Training
+|url: /topics/2614-education-training" data-eventname="nav-menu-primaryNav" href="/topics/2614-education-training">Security Education &amp; Training
+</a></li><li class="level2-li last"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: More|url: /topics/2786-management" data-eventname="nav-menu-primaryNav" href="/topics/2786-management">More</a></li></ul></li><li class="level1-li"><a class="link2" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: PHYSICAL|url: /topics/2787-physical" data-eventname="nav-menu-primaryNav" href="/topics/2787-physical">PHYSICAL</a><ul class="level2"><li class="level2-li first"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Access Management
+|url: /topics/2232-access-management" data-eventname="nav-menu-primaryNav" href="/topics/2232-access-management">Access Management
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Video Surveillance
+|url: /topics/2234-video-surveillance" data-eventname="nav-menu-primaryNav" href="/topics/2234-video-surveillance">Video Surveillance
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Identity Management
+|url: /topics/2233-identity-management" data-eventname="nav-menu-primaryNav" href="/topics/2233-identity-management">Identity Management
+</a></li><li class="level2-li last"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: More|url: /topics/2787-physical" data-eventname="nav-menu-primaryNav" href="/topics/2787-physical">More</a></li></ul></li><li class="level1-li"><a class="link2" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: CYBER|url: /topics/2788-cyber" data-eventname="nav-menu-primaryNav" href="/topics/2788-cyber">CYBER</a></li><li class="level1-li"><a class="link2" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: SECTORS|url: /topics/2789-sectors" data-eventname="nav-menu-primaryNav" href="/topics/2789-sectors">SECTORS</a><ul class="level2"><li class="level2-li first"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Education: University
+|url: /topics/2241-education-university" data-eventname="nav-menu-primaryNav" href="/topics/2241-education-university">Education: University
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Hospitals &amp; Medical Centers
+|url: /topics/2247-hospitals-medical-centers" data-eventname="nav-menu-primaryNav" href="/topics/2247-hospitals-medical-centers">Hospitals &amp; Medical Centers
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Critical Infrastructure
+|url: /topics/2238-infrastructure-electric-gas-water" data-eventname="nav-menu-primaryNav" href="/topics/2238-infrastructure-electric-gas-water">Critical Infrastructure
+</a></li><li class="level2-li last"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: More|url: /topics/2789-sectors" data-eventname="nav-menu-primaryNav" href="/topics/2789-sectors">More</a></li></ul></li><li class="level1-li"><a class="link2" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: EXCLUSIVES|url: /#" data-eventname="nav-menu-primaryNav" href="/#">EXCLUSIVES</a><ul class="level2"><li class="level2-li first"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Top Cybersecurity Leaders|url: /topics/2959-top-cybersecurity-leaders" data-eventname="nav-menu-primaryNav" href="/topics/2959-top-cybersecurity-leaders">Top Cybersecurity Leaders</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: The Security Benchmark Report survey|url: /securitybenchmarkreport" data-eventname="nav-menu-primaryNav" href="/securitybenchmarkreport">The Security Benchmark Report survey</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Most Influential People in Security
+|url: /mostinfluential" data-eventname="nav-menu-primaryNav" href="/mostinfluential">Most Influential People in Security
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Top Guard and Security Officer Companies|url: /top-guarding-and-security-officer-companies" data-eventname="nav-menu-primaryNav" href="/top-guarding-and-security-officer-companies">Top Guard and Security Officer Companies</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: The Security Leadership Issue
+|url: /leadership" data-eventname="nav-menu-primaryNav" href="/leadership">The Security Leadership Issue
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Annual Innovations, Technology, &amp; Services Report
+|url: /innovations" data-eventname="nav-menu-primaryNav" href="/innovations">Annual Innovations, Technology, &amp; Services Report
+</a></li><li class="level2-li last"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Women in Security|url: /leadership" data-eventname="nav-menu-primaryNav" href="/leadership">Women in Security</a></li></ul></li><li class="level1-li"><a class="link2" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: EVENTS|url: /events" data-eventname="nav-menu-primaryNav" href="/events">EVENTS</a><ul class="level2"><li class="level2-li first"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Industry Events
+|url: /events" data-eventname="nav-menu-primaryNav" href="/events">Industry Events
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Webinars
+|url: /events/category/2141" data-eventname="nav-menu-primaryNav" href="/events/category/2141">Webinars
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Solutions by Sector|url: /events/category/2940" data-eventname="nav-menu-primaryNav" href="/events/category/2940" target="_blank">Solutions by Sector</a></li><li class="level2-li last"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Security 500 Conference|url: http://www.security500.com/" data-eventname="nav-menu-primaryNav" href="http://www.security500.com/" target="_blank">Security 500 Conference</a></li></ul></li><li class="level1-li"><a class="link2" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: MORE|url: /#" data-eventname="nav-menu-primaryNav" href="/#">MORE</a><ul class="level2"><li class="level2-li first"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Podcasts|url: https://www.securitymagazine.com/media/podcasts/2594" data-eventname="nav-menu-primaryNav" href="https://www.securitymagazine.com/media/podcasts/2594">Podcasts</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Videos
+|url: /videos" data-eventname="nav-menu-primaryNav" href="/videos">Videos
+</a><ul class="level3"><li class="level3-li first"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Cybersecurity &amp; Geopolitical Vodcast|url: /cyber-and-geopolitical-vodcast" data-eventname="nav-menu-primaryNav" href="/cyber-and-geopolitical-vodcast">Cybersecurity &amp; Geopolitical Vodcast</a></li><li class="level3-li last"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: ISC West 2019|url: /ISC-west-2019-Videos" data-eventname="nav-menu-primaryNav" href="/ISC-west-2019-Videos">ISC West 2019</a></li></ul></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Photo Galleries|url: /media/photos/" data-eventname="nav-menu-primaryNav" href="/media/photos/">Photo Galleries</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Polls
+|url: /polls" data-eventname="nav-menu-primaryNav" href="/polls">Polls
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Classifieds &amp; Job Listings
+|url: /classifieds" data-eventname="nav-menu-primaryNav" href="/classifieds">Classifieds &amp; Job Listings
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: White Papers
+|url: /security-white-papers" data-eventname="nav-menu-primaryNav" href="/security-white-papers">White Papers
+</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Store|url: /products" data-eventname="nav-menu-primaryNav" href="/products">Store</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Sponsor Insights |url: /topics/2745-sponsored-content" data-eventname="nav-menu-primaryNav" href="/topics/2745-sponsored-content">Sponsor Insights </a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Continuing Education|url: https://engineeringcenter.bnpmedia.com/library.php?g=security" data-eventname="nav-menu-primaryNav" href="https://engineeringcenter.bnpmedia.com/library.php?g=security" target="_blank">Continuing Education</a></li><li class="level2-li last"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Call for Entries |url: /contests-and-forms" data-eventname="nav-menu-primaryNav" href="/contests-and-forms">Call for Entries </a></li></ul></li><li class="level1-li last"><a class="link2" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: INFOCENTERS|url: /#" data-eventname="nav-menu-primaryNav" href="/#">INFOCENTERS</a><ul class="level2"><li class="level2-li first"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Access Control Turnstiles|url: /infocenter/access-control-turnstiles" data-eventname="nav-menu-primaryNav" href="/infocenter/access-control-turnstiles">Access Control Turnstiles</a></li><li class="level2-li"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text:  Leverage the Power of Your VMS |url: /infocenter/video-management" data-eventname="nav-menu-primaryNav" href="/infocenter/video-management"> Leverage the Power of Your VMS </a></li><li class="level2-li last"><a class="link1" data-background-image="" data-eventaction="primaryNav-link" data-eventcategory="click" data-eventlabel="text: Put the Smart In Building Security|url: /infocenter/put-the-smart-in-building-security" data-eventname="nav-menu-primaryNav" href="/infocenter/put-the-smart-in-building-security">Put the Smart In Building Security</a></li></ul></li></ul></div><nav class="user-actions" id="user-actions"><ul class="user-actions__list"><li class="user-actions__signin"><a class="user-actions__signin-link" href="https://bnp.dragonforms.com/init.do?pk=RSIGN&amp;returnurl=https://www.securitymagazine.com/user/postlogin?redirect=https://www.securitymagazine.com/&amp;omedasite=BNP6289_SECMAG522login">Sign In</a></li><li class="user-actions__register"><a class="user-actions__register-link" href="https://bnp.dragonforms.com/init.do?pk=RREGI&amp;returnurl=http://www.securitymagazine.com/user/postlogin?redirect=https://www.securitymagazine.com/&amp;omedasite=BNP6289_SECMAG522create">Create Account</a></li><li class="user-actions__signout"><a class="user-actions__signout-link" href="/user/logout">Sign Out</a></li><li class="user-actions__account user-actions__account-link">My Account</li></ul></nav></div></nav></header>
+<div class="ad-leaderboard-container">
+<div class="advertisement" id="div-gpt-ad-leaderboard"></div>
+</div>
+<div class="container">
+<div class="main-body page-taxonomies-show" id="section-2">
+<div class="breadcrumbs" id="breadcrumbs"><a class="" href="/">Home</a> » <a class="" href="/topics">Topics</a> » Management</div>
+<section class="box2 taxonomy-detail">
+<h1 class="page-title">
+    Management
+    <div class="rss">
+<a href="/rss/topic/2786">
+<img alt="%{topic} RSS Feed" height="16" src="/images/icons/rss.gif" topic="Management" width="16"/>Subscribe
+</a> </div>
+</h1>
+<div class="taxonomy-description-container">
+<div class="taxonomy-description taxonomy-description-container__description">
+    Solutions for security enterprise leadership and management to enable the business.  
+  </div>
+</div>
+<div class="featured-on-topic-pages" id="featured-on-topic-pages">
+<div class="featured-on-topic-pages__articles">
+</div>
+</div>
+<div class="taxonomy-list">
+<h3 class="page-title taxonomy-list__title">Topics</h3>
+<div class="records">
+<article class="record single-taxonomy">
+<h2 class="headline single-taxonomy__title">
+<a class="url single-taxonomy__title-link" href="/topics/2231-security-enterprise-services" title="Security Enterprise Services">Security Enterprise Services</a>
+</h2>
+<div class="abstract single-taxonomy__description">From security officers to mass notification to workplace violence mitigation, enterprise services work to add value to your organization.</div>
+</article>
+<article class="record single-taxonomy">
+<h2 class="headline single-taxonomy__title">
+<a class="url single-taxonomy__title-link" href="/topics/2227-security-leadership-and-management" title="Security Leadership and Management">Security Leadership and Management</a>
+</h2>
+<div class="abstract single-taxonomy__description">Solutions for security executives to lead and manage their security staff, mitigate risk for their enterprise and show security's value in the C-suite.</div>
+</article>
+<article class="record single-taxonomy">
+<h2 class="headline single-taxonomy__title">
+<a class="url single-taxonomy__title-link" href="/topics/2229-logical-security" title="Logical Security">Logical Security</a>
+</h2>
+<div class="abstract single-taxonomy__description">Learn how to better manage authentication with Logical Security features and news.</div>
+</article>
+<article class="record single-taxonomy">
+<h2 class="headline single-taxonomy__title">
+<a class="url single-taxonomy__title-link" href="/topics/2230-security-business-resilience" title="Security &amp; Business Resilience">Security &amp; Business Resilience</a>
+</h2>
+<div class="abstract single-taxonomy__description">How an enterprise can prepare for and recover after an emergency, disaster or pandemic.</div>
+</article>
+<article class="record single-taxonomy">
+<h2 class="headline single-taxonomy__title">
+<a class="url single-taxonomy__title-link" href="/topics/2614-security-education-training" title="Security Education &amp; Training">Security Education &amp; Training</a>
+</h2>
+<div class="abstract single-taxonomy__description">What pitfalls can complicate background checks? How can you build a better whistleblower program? Learn a different skill monthly with Education &amp; Training.</div>
+</article>
+<article class="record single-taxonomy">
+<h2 class="headline single-taxonomy__title">
+<a class="url single-taxonomy__title-link" href="/topics/2772-profiles-in-excellence" title="Profiles in Excellence">Profiles in Excellence</a>
+</h2>
+<div class="abstract single-taxonomy__description">The security industry is changing, as is the profile of a successful security executive. Maintaining the status quo is no longer an option, and ignorance of risks is no longer an excuse for not mitigating them. This topic in Security features game-changing security directors or industry leaders in different sectors. So who is breaking new ground in the security industry, making great strides forward in risk management while better supporting the enterprise as a whole? If you know someone (or are someone) who fits this bill – let us know! Send your recommendations and suggestions for future Profiles in Excellence to <em>Security</em> Associate Editor Maria Henriquez at <a href="mailto:henriquezm@bnpmedia.com  ">henriquezm@bnpmedia.com</a>.</div>
+</article>
+</div>
+</div>
+<div class="taxonomy-detail-lists box1"> <div class="navigation">
+<ul class="level1">
+<li class="level1-li">
+<a class="current" href="#articles">Articles</a>
+</li>
+<li class="level1-li">
+<a href="#events">Events</a>
+</li>
+</ul>
+</div>
+<div class="records articles-list">
+<h3 class="feature-title articles-list__title">ARTICLES</h3>
+<div class="articles-list__row">
+<article class="record article-summary">
+<div class="image"><a class="url" href="https://www.securitymagazine.com/articles/96016-public-engagements-influence-on-your-security-career" rel="" target="" title="Public engagement’s influence on your security career"><img alt="SEC0921-career-Feat-slide1_900px" border="0" height="168" src="https://www.securitymagazine.com/ext/resources/Issues/2021/September/Career-Intelligence/SEC0921-career-Feat-slide1_900px.jpg?height=168&amp;t=1630611100&amp;width=275" title="SEC0921-career-Feat-slide1_900px" width="274"/></a></div>
+<div class="article-summary__details has-image">
+<div class="kicker article-summary__kicker">Career Intelligence</div>
+<h2 class="headline article-summary__headline"><a href="https://www.securitymagazine.com/articles/96016-public-engagements-influence-on-your-security-career">Public engagement’s influence on your security career</a></h2>
+<div class="post-meta">
+<div class="author-bylines"><a class="author-bylines__author-link" data-eventaction="author-link" data-eventcategory="click" data-eventlabel="author: 1916|url: /authors/1916-jerry-brennan" data-eventname="author-link" href="/authors/1916-jerry-brennan">
+<figure class="author-bylines__author-image">
+<img alt="Brennan 2016 200px" src="//www.securitymagazine.com/ext/resources/authors/Brennan-2016-200px.jpg?1457469775"/>
+</figure>
+<span class="author-bylines__author-link-name">Jerry J Brennan</span>
+</a><a class="author-bylines__author-link" data-eventaction="author-link" data-eventcategory="click" data-eventlabel="author: 2164|url: /authors/2164-joanne-r-pollock" data-eventname="author-link" href="/authors/2164-joanne-r-pollock">
+<figure class="author-bylines__author-image">
+<img alt="Pollock 2016 200px" src="//www.securitymagazine.com/ext/resources/authors/Pollock-2016-200px.jpg?1457468754"/>
+</figure>
+<span class="author-bylines__author-link-name">Joanne R. Pollock</span>
+</a></div>
+<div class="date article-summary__post-date">September 3, 2021</div>
+</div>
+<div class="abstract article-summary__teaser"><p>As in-person engagement has slowed or ceased because of the COVID-19 pandemic, the industry has shifted and security professionals still have ways of engaging, networking, advancing their security careers, and maintaining their professional reputations—virtually or as a hybrid. Here’s how.</p><br/></div><a class="more" href="https://www.securitymagazine.com/articles/96016-public-engagements-influence-on-your-security-career" title="Public engagement’s influence on your security career">Read More</a>
+</div>
+</article>
+<article class="record article-summary">
+<div class="image"><a class="url" href="https://www.securitymagazine.com/articles/96012-emerging-technology-evolving-threats-part-ii-the-asymmetry-effect" rel="" target="" title="Emerging technology, evolving threats — Part II: The asymmetry effect"><img alt="SEC0921-cyber-Feat-slide1_900px.jpg" border="0" height="168" src="https://www.securitymagazine.com/ext/resources/2021/09/SEC0921-cyber-Feat-slide1_900px.jpg?height=168&amp;t=1630614540&amp;width=275" title="SEC0921-cyber-Feat-slide1_900px.jpg" width="274"/></a></div>
+<div class="article-summary__details has-image">
+<div class="kicker article-summary__kicker">Cyber Tactics</div>
+<h2 class="headline article-summary__headline"><a href="https://www.securitymagazine.com/articles/96012-emerging-technology-evolving-threats-part-ii-the-asymmetry-effect">Emerging technology, evolving threats — Part II: The asymmetry effect</a></h2>
+<div class="post-meta">
+<div class="author-bylines"><a class="author-bylines__author-link" data-eventaction="author-link" data-eventcategory="click" data-eventlabel="author: 1766|url: /authors/1766-john-mcclurg" data-eventname="author-link" href="/authors/1766-john-mcclurg">
+<figure class="author-bylines__author-image">
+<img alt="Headshot johnmcclurg" src="//www.securitymagazine.com/ext/resources/Default-images/authors/HEADSHOT_JohnMcClurg.jpg?1564924388"/>
+</figure>
+<span class="author-bylines__author-link-name">John McClurg</span>
+</a></div>
+<div class="date article-summary__post-date">September 2, 2021</div>
+</div>
+<div class="abstract article-summary__teaser"><p>A single application may have hundreds of thousands of vulnerabilities. Increasingly, cybercriminals are targeting people just as much if not more than the systems that underlie an infrastructure, which is why the trusted insider conundrum is exacting renewed attention. In most instances, they represent a cheaper and more accessible conduit to achieve one’s objective. What’s to be done?</p><br/></div><a class="more" href="https://www.securitymagazine.com/articles/96012-emerging-technology-evolving-threats-part-ii-the-asymmetry-effect" title="Emerging technology, evolving threats — Part II: The asymmetry effect">Read More</a>
+</div>
+</article>
+<article class="record article-summary">
+<div class="image"><a class="url" href="https://www.securitymagazine.com/blogs/14-security-blog/post/96011-five-trends-complicating-industrial-automation-cybersecurity-and-how-a-standards-based-approach-is-the-solution" rel="" target="" title="Five trends complicating industrial automation cybersecurity and how a standards-based approach is the solution"><img alt="technology-network-cyber-freepik.jpg" border="0" height="168" src="https://www.securitymagazine.com/ext/resources/images/technology-network-cyber-freepik.jpg?height=168&amp;t=1630614541&amp;width=275" title="technology-network-cyber-freepik" width="413"/></a></div>
+<div class="article-summary__details has-image">
+<h2 class="headline article-summary__headline"><a href="https://www.securitymagazine.com/blogs/14-security-blog/post/96011-five-trends-complicating-industrial-automation-cybersecurity-and-how-a-standards-based-approach-is-the-solution">Five trends complicating industrial automation cybersecurity and how a standards-based approach is the solution</a></h2>
+<div class="post-meta">
+<div class="author-bylines"><a class="author-bylines__author-link" data-eventaction="author-link" data-eventcategory="click" data-eventlabel="author: 3647|url: /authors/3647-jennifer-halsey" data-eventname="author-link" href="/authors/3647-jennifer-halsey">
+<span class="author-bylines__author-link-name">Jennifer Halsey</span>
+</a></div>
+<div class="date article-summary__post-date">September 2, 2021</div>
+</div>
+<div class="abstract article-summary__teaser"><p style="color: rgb(14, 16, 26); margin-top:0pt; margin-bottom:0pt;"><span data-preserver-spaces="true" style="color: rgb(14, 16, 26); margin-top:0pt; margin-bottom:0pt;">Five trends, in particular, are complicating industrial automation cybersecurity and driving the increased need for a standards-based approach.</span></p><br/></div><a class="more" href="https://www.securitymagazine.com/blogs/14-security-blog/post/96011-five-trends-complicating-industrial-automation-cybersecurity-and-how-a-standards-based-approach-is-the-solution" title="Five trends complicating industrial automation cybersecurity and how a standards-based approach is the solution">Read More</a>
+</div>
+</article>
+<div class="advertisement" id="div-gpt-ad-article-list-mrect"></div>
+<div class="advertisement" id="div-gpt-ad-article-list-mrect-mobile"></div>
+<article class="record article-summary">
+<div class="image"><a class="url" href="https://www.securitymagazine.com/articles/96010-lets-help-developers-address-open-source-software-security" rel="" target="" title="Let’s help developers address open source software security"><img alt="programming-cyber-freepik.jpg" border="0" height="168" src="https://www.securitymagazine.com/ext/resources/images/programming-cyber-freepik.jpg?height=168&amp;t=1630614540&amp;width=275" title="programming-cyber-freepik" width="274"/></a></div>
+<div class="article-summary__details has-image">
+<h2 class="headline article-summary__headline"><a href="https://www.securitymagazine.com/articles/96010-lets-help-developers-address-open-source-software-security">Let’s help developers address open source software security</a></h2>
+<div class="post-meta">
+<div class="author-bylines"><a class="author-bylines__author-link" data-eventaction="author-link" data-eventcategory="click" data-eventlabel="author: 3646|url: /authors/3646-chris-eng" data-eventname="author-link" href="/authors/3646-chris-eng">
+<figure class="author-bylines__author-image">
+<img alt="Chris eng" src="//www.securitymagazine.com/ext/resources/authors/chris-eng.jpg?1630589274"/>
+</figure>
+<span class="author-bylines__author-link-name">Chris Eng</span>
+</a></div>
+<div class="date article-summary__post-date">September 2, 2021</div>
+</div>
+<div class="abstract article-summary__teaser"><p><span style="color: rgb(14, 16, 26); letter-spacing: normal; orphans: 2; text-align: left; white-space: normal; widows: 2; word-spacing: 0px;">By staying on top of open source trends, scanning frequently and working with security counterparts to get the information needed, developers can fix more third-party library flaws faster to develop more secure applications in the future.</span>
+</p><br/></div><a class="more" href="https://www.securitymagazine.com/articles/96010-lets-help-developers-address-open-source-software-security" title="Let’s help developers address open source software security">Read More</a>
+</div>
+</article>
+<article class="record article-summary">
+<div class="image"><a class="url" href="https://www.securitymagazine.com/articles/96008-cisos-are-changing-their-ways-amid-their-toughest-environment-ever" rel="" target="" title="CISOs are changing their ways amid their toughest environment ever"><img alt="test" border="0" height="168" src="https://www.securitymagazine.com/ext/resources/images/security-executives-freepik.jpg?height=168&amp;t=1630614540&amp;width=275" title="test" width="274"/></a></div>
+<div class="article-summary__details has-image">
+<h2 class="headline article-summary__headline"><a href="https://www.securitymagazine.com/articles/96008-cisos-are-changing-their-ways-amid-their-toughest-environment-ever">CISOs are changing their ways amid their toughest environment ever</a></h2>
+<div class="post-meta">
+<div class="author-bylines"><a class="author-bylines__author-link" data-eventaction="author-link" data-eventcategory="click" data-eventlabel="author: 3192|url: /authors/3192-robert-ackerman" data-eventname="author-link" href="/authors/3192-robert-ackerman">
+<figure class="author-bylines__author-image">
+<img alt="Bob ackerman" src="//www.securitymagazine.com/ext/resources/authors/Bob-Ackerman.jpg?1609956702"/>
+</figure>
+<span class="author-bylines__author-link-name">Robert R. Ackerman Jr.</span>
+</a></div>
+<div class="date article-summary__post-date">September 2, 2021</div>
+</div>
+<div class="abstract article-summary__teaser"><p><span style="color: rgb(14, 16, 26); letter-spacing: normal; orphans: 2; text-align: left; white-space: normal; widows: 2; word-spacing: 0px;">A CISOs first 90 days on the job provide a window of opportunity for establishing their credibility and earning a vote of confidence from leadership. This requires, among other things, thoroughly assessing a corporation’s organization, technology, governance and the processes it embraces.</span>
+</p><br/></div><a class="more" href="https://www.securitymagazine.com/articles/96008-cisos-are-changing-their-ways-amid-their-toughest-environment-ever" title="CISOs are changing their ways amid their toughest environment ever">Read More</a>
+</div>
+</article>
+<article class="record article-summary">
+<div class="image"><a class="url" href="https://www.securitymagazine.com/articles/96004-how-to-improve-employee-retention-in-the-security-industry" rel="" target="" title="How to improve employee retention in the security industry"><img alt="employee-retention-freepik.jpg" border="0" height="168" src="https://www.securitymagazine.com/ext/resources/images/employee-retention-freepik.jpg?height=168&amp;t=1630503924&amp;width=275" title="employee-retention-freepik" width="274"/></a></div>
+<div class="article-summary__details has-image">
+<h2 class="headline article-summary__headline"><a href="https://www.securitymagazine.com/articles/96004-how-to-improve-employee-retention-in-the-security-industry">How to improve employee retention in the security industry</a></h2>
+<div class="post-meta">
+<div class="author-bylines"><a class="author-bylines__author-link" data-eventaction="author-link" data-eventcategory="click" data-eventlabel="author: 3644|url: /authors/3644-jason-morjaria" data-eventname="author-link" href="/authors/3644-jason-morjaria">
+<figure class="author-bylines__author-image">
+<img alt="Jason morjaria" src="//www.securitymagazine.com/ext/resources/authors/Jason-Morjaria.PNG?1630503939"/>
+</figure>
+<span class="author-bylines__author-link-name">Jason Morjaria</span>
+</a></div>
+<div class="date article-summary__post-date">September 1, 2021</div>
+</div>
+<div class="abstract article-summary__teaser"><p style="color: rgb(14, 16, 26); margin-top:0pt; margin-bottom:0pt;"><span data-preserver-spaces="true" style="color: rgb(14, 16, 26); margin-top:0pt; margin-bottom:0pt;">If you want to improve your security hiring and employee retention practices, here are three great tips.</span></p><br/></div><a class="more" href="https://www.securitymagazine.com/articles/96004-how-to-improve-employee-retention-in-the-security-industry" title="How to improve employee retention in the security industry">Read More</a>
+</div>
+</article>
+<div class="advertisement" id="div-gpt-ad-sidebar-sky-mobile"></div>
+<article class="record article-summary">
+<div class="image"><a class="url" href="https://www.securitymagazine.com/articles/96003-3-ways-partners-can-advise-customers-through-cybersecurity-needs" rel="" target="" title="3 ways partners can advise customers through cybersecurity needs"><img alt="cyber-security-network-freepik" border="0" height="168" src="https://www.securitymagazine.com/ext/resources/images/cybersecurity680-network-freepik.jpg?height=168&amp;t=1630501819&amp;width=275" width="274"/></a></div>
+<div class="article-summary__details has-image">
+<h2 class="headline article-summary__headline"><a href="https://www.securitymagazine.com/articles/96003-3-ways-partners-can-advise-customers-through-cybersecurity-needs">3 ways partners can advise customers through cybersecurity needs</a></h2>
+<div class="post-meta">
+<div class="author-bylines"><a class="author-bylines__author-link" data-eventaction="author-link" data-eventcategory="click" data-eventlabel="author: 3643|url: /authors/3643-marco-sanchez" data-eventname="author-link" href="/authors/3643-marco-sanchez">
+<span class="author-bylines__author-link-name">Marco Sanchez</span>
+</a></div>
+<div class="date article-summary__post-date">September 1, 2021</div>
+</div>
+<div class="abstract article-summary__teaser"><p>Many companies aren’t focused on cybersecurity disciplines directly, nor do they know how to optimize their cybersecurity. Therefore, it becomes the customers’ IT and technology partners’ job to focus on the basics, creating a faster and more fluid response for their clients. Let’s look at three ways partners can advise customers on their cybersecurity needs. </p><br/></div><a class="more" href="https://www.securitymagazine.com/articles/96003-3-ways-partners-can-advise-customers-through-cybersecurity-needs" title="3 ways partners can advise customers through cybersecurity needs">Read More</a>
+</div>
+</article>
+<article class="record article-summary">
+<div class="image"><a class="url" href="https://www.securitymagazine.com/articles/95986-5-minutes-with-kevin-dooley-sr-director-of-security-and-transportation-for-the-san-diego-padres" rel="" target="" title="5 minutes with Kevin Dooley, Sr. Director of Security and Transportation for the San Diego Padres"><img alt="Kevin-Dooley.jpg" border="0" height="168" src="https://www.securitymagazine.com/ext/resources/images/Kevin-Dooley.jpg?height=168&amp;t=1630430334&amp;width=275" title="Kevin Dooley" width="274"/></a></div>
+<div class="article-summary__details has-image">
+<h2 class="headline article-summary__headline"><a href="https://www.securitymagazine.com/articles/95986-5-minutes-with-kevin-dooley-sr-director-of-security-and-transportation-for-the-san-diego-padres">5 minutes with Kevin Dooley, Sr. Director of Security and Transportation for the San Diego Padres</a></h2>
+<div class="post-meta">
+<div class="author-bylines"><a class="author-bylines__author-link" data-eventaction="author-link" data-eventcategory="click" data-eventlabel="author: 2584|url: /authors/2584-maria-henriquez" data-eventname="author-link" href="/authors/2584-maria-henriquez">
+<figure class="author-bylines__author-image">
+<img alt="Maria henriquez" src="//www.securitymagazine.com/ext/resources/Default-images/Responsive-Defaults/thumb/Maria-Henriquez.jpg?1603464954"/>
+</figure>
+<span class="author-bylines__author-link-name">Maria Henriquez</span>
+</a></div>
+<div class="date article-summary__post-date">August 31, 2021</div>
+</div>
+<div class="abstract article-summary__teaser"><p style="color: rgb(14, 16, 26); margin-top:0pt; margin-bottom:0pt;"><span data-preserver-spaces="true" style="color: rgb(14, 16, 26); margin-top:0pt; margin-bottom:0pt;"><em>Security </em>speaks to K</span><span data-preserver-spaces="true" style="color: rgb(14, 16, 26); margin-top:0pt; margin-bottom:0pt;">evin Dooley, Senior Director of Security and Transportation for the San Diego Padres, about the approach his team is taking to fan and player safety. </span></p><br/></div><a class="more" href="https://www.securitymagazine.com/articles/95986-5-minutes-with-kevin-dooley-sr-director-of-security-and-transportation-for-the-san-diego-padres" title="5 minutes with Kevin Dooley, Sr. Director of Security and Transportation for the San Diego Padres">Read More</a>
+</div>
+</article>
+<article class="record article-summary">
+<div class="image"><a class="url" href="https://www.securitymagazine.com/articles/95982-fccs-proposed-ban-on-chinese-camera-and-video-surveillance-components" rel="" target="" title="FCC’s proposed ban on Chinese camera and video surveillance components"><img alt="security-cctv-camera-freepik.jpg" border="0" height="168" src="https://www.securitymagazine.com/ext/resources/images/security-cctv-camera-freepik.jpg?height=168&amp;t=1630423268&amp;width=275" title="security-cctv-camera-freepik" width="274"/></a></div>
+<div class="article-summary__details has-image">
+<h2 class="headline article-summary__headline"><a href="https://www.securitymagazine.com/articles/95982-fccs-proposed-ban-on-chinese-camera-and-video-surveillance-components">FCC’s proposed ban on Chinese camera and video surveillance components</a></h2>
+<div class="post-meta">
+<div class="author-bylines"><a class="author-bylines__author-link" data-eventaction="author-link" data-eventcategory="click" data-eventlabel="author: 2584|url: /authors/2584-maria-henriquez" data-eventname="author-link" href="/authors/2584-maria-henriquez">
+<figure class="author-bylines__author-image">
+<img alt="Maria henriquez" src="//www.securitymagazine.com/ext/resources/Default-images/Responsive-Defaults/thumb/Maria-Henriquez.jpg?1603464954"/>
+</figure>
+<span class="author-bylines__author-link-name">Maria Henriquez</span>
+</a></div>
+<div class="date article-summary__post-date">August 31, 2021</div>
+</div>
+<div class="abstract article-summary__teaser"><p>Following the National Defense Authorization Act (NDAA) 2019 Section 889 and the ban of cameras and components made by certain Chinese companies, the Federal Communications Commission (FCC) has <a href="https://www.fcc.gov/document/fcc-proposes-ban-devices-deemed-threat-national-security" target="_blank">proposed</a> a rule to ban products from Chinese electronics companies. </p><br/></div><a class="more" href="https://www.securitymagazine.com/articles/95982-fccs-proposed-ban-on-chinese-camera-and-video-surveillance-components" title="FCC’s proposed ban on Chinese camera and video surveillance components">Read More</a>
+</div>
+</article>
+<div class="advertisement" id="div-gpt-ad-sidebar-mrect-mobile"></div>
+<article class="record article-summary">
+<div class="image"><a class="url" href="https://www.securitymagazine.com/articles/95985-can-cisos-afford-to-have-data-breach-fatigue" rel="" target="" title="Can CISOs afford to have data breach fatigue?"><img alt="CISOs can't afford cyber burnout" border="0" height="168" src="https://www.securitymagazine.com/ext/resources/2021/08/31/wooden-figure-980784_1920.jpg?height=168&amp;t=1630417371&amp;width=275" title="Threat landscape and cyber burnout" width="274"/></a></div>
+<div class="article-summary__details has-image">
+<h2 class="headline article-summary__headline"><a href="https://www.securitymagazine.com/articles/95985-can-cisos-afford-to-have-data-breach-fatigue">Can CISOs afford to have data breach fatigue?</a></h2>
+<div class="post-meta">
+<div class="author-bylines"><a class="author-bylines__author-link" data-eventaction="author-link" data-eventcategory="click" data-eventlabel="author: 3553|url: /authors/3553-anurag-gurtu" data-eventname="author-link" href="/authors/3553-anurag-gurtu">
+<span class="author-bylines__author-link-name">Anurag Gurtu</span>
+</a></div>
+<div class="date article-summary__post-date">August 31, 2021</div>
+</div>
+<div class="abstract article-summary__teaser"><p>With any number of warnings and false alarms happening continuously, security professionals need to know how to avoid breach fatigue and focus on what’s most important to protect their organization.</p><br/></div><a class="more" href="https://www.securitymagazine.com/articles/95985-can-cisos-afford-to-have-data-breach-fatigue" title="Can CISOs afford to have data breach fatigue?">Read More</a>
+</div>
+</article>
+</div>
+<div class="see_all"><a class="next_page" href="/articles/topic/2786?page=2" rel="next">More Articles Tagged with 'Management'</a></div>
+</div>
+<div class="records event-list">
+<h3 class="feature-title event-list__title">EVENTS</h3>
+<div class="event-list__row">
+<div class="record event-list__event Webinar">
+<h3 class="event-type-title event-list__type"><a href="/events/category/2141-webinar">Webinar</a></h3>
+<div class="properties">
+<div class="date">
+      9/23/20 to 9/23/21</div>
+<div class="venue"></div>
+<div class="address1"></div>
+<div class="address2"></div>
+<div class="city"></div>
+<div class="country"></div>
+<div class="author">Contact: <span class="first"><a href="mailto:webinars@bnpmedia.com">Vania</a></span></div>
+</div>
+<h2 class="headline event-list__headline"><a href="/events/2398-tech-solutions-for-safer-buildings" title="Tech Solutions for Safer Buildings">Tech Solutions for Safer Buildings</a></h2>
+<div class="abstract event-list__teaser"><p><span style="color:#FF0000;"><strong>ON DEMAND: </strong></span>Join our subject matter experts as they explore how the right systems can help identify, analyze and report potential incidents and help building owners sustain compliance and create safer spaces.</p> <a class="more" href="/events/2398-tech-solutions-for-safer-buildings" title="Tech Solutions for Safer Buildings">Read More</a></div>
+</div>
+<div class="record event-list__event Webinar">
+<h3 class="event-type-title event-list__type"><a href="/events/category/2141-webinar">Webinar</a></h3>
+<div class="properties">
+<div class="date">
+      11/17/20 to 11/17/21</div>
+<div class="venue"></div>
+<div class="address1"></div>
+<div class="address2"></div>
+<div class="city"></div>
+<div class="country"></div>
+<div class="author">Contact: <span class="first"><a href="mailto:webinars@bnpmedia.com">Vania</a></span></div>
+</div>
+<h2 class="headline event-list__headline"><a href="/events/2433-how-video-management-systems-can-optimize-your-security-operations" title="How Video Management Systems Can Optimize Your Security Operations">How Video Management Systems Can Optimize Your Security Operations</a></h2>
+<div class="abstract event-list__teaser"><p><span style="color:#FF0000;"><strong>ON DEMAND:</strong></span> This webinar will guide you through how VMS can optimize your security operations at the enterprise level and examine how Valerus, Vicon’s ONVIF-compliant, full-featured solution can improve security response times via AI-driven analytics as well as expedite forensic searches and investigations.</p>
+<a class="more" href="/events/2433-how-video-management-systems-can-optimize-your-security-operations" title="How Video Management Systems Can Optimize Your Security Operations">Read More</a></div>
+</div>
+<div class="record event-list__event Webinar">
+<h3 class="event-type-title event-list__type"><a href="/events/category/2141-webinar">Webinar</a></h3>
+<div class="properties">
+<div class="date">
+      2/23/21 to 2/23/22</div>
+<div class="venue"></div>
+<div class="address1"></div>
+<div class="address2"></div>
+<div class="city"></div>
+<div class="country"></div>
+<div class="author">Contact: <span class="first"><a href="mailto:webinars@bnpmedia.com">Vania</a></span></div>
+</div>
+<h2 class="headline event-list__headline"><a href="/events/2811-security-supply-chain-compromises-an-interactive-simulation" title="Security Supply Chain Compromises: An Interactive Simulation">Security Supply Chain Compromises: An Interactive Simulation</a></h2>
+<div class="abstract event-list__teaser"><p><span style="color:#FF0000;"><strong>On Demand: </strong></span>This interactive crisis sim webinar is inspired by the real-life events of SUNBURST. In this scenario, you’ll focus on making decisions that balance the risks to your organization based on available facts.</p> <a class="more" href="/events/2811-security-supply-chain-compromises-an-interactive-simulation" title="Security Supply Chain Compromises: An Interactive Simulation">Read More</a></div>
+</div>
+<div class="record event-list__event Webinar Solutions by Sector">
+<h3 class="event-type-title event-list__type"><a href="/events/category/2141-webinar">Webinar</a> <a href="/events/category/2940-solutions-by-sector">Solutions by Sector</a></h3>
+<div class="properties">
+<div class="date">
+      5/25/21 to 5/25/22</div>
+<div class="venue"></div>
+<div class="address1"></div>
+<div class="address2"></div>
+<div class="city"></div>
+<div class="country"></div>
+<div class="author">Contact: <span class="first"><a href="mailto:webinars@bnpmedia.com">Vania</a></span></div>
+</div>
+<h2 class="headline event-list__headline"><a href="/events/2832-career-focus-the-evolving-role-of-the-security-executive" title="Career Focus: The Evolving Role of the Security Executive">Career Focus: The Evolving Role of the Security Executive</a></h2>
+<div class="abstract event-list__teaser"><p><span style="color:#FF0000;"><strong>ON DEMAND:</strong></span> How can you advance your career in the security industry with the skills and competencies necessary to benefit your organization? What will the security executive and the security function of the future look like? Join us as we hear from veterans in the security industry about their experiences, their lessons learned, and best practices for advancing their careers.</p>
+<a class="more" href="/events/2832-career-focus-the-evolving-role-of-the-security-executive" title="Career Focus: The Evolving Role of the Security Executive">Read More</a></div>
+</div>
+<div class="record event-list__event Webinar">
+<h3 class="event-type-title event-list__type"><a href="/events/category/2141-webinar">Webinar</a></h3>
+<div class="properties">
+<div class="date">
+      6/24/21 to 6/24/22</div>
+<div class="venue"></div>
+<div class="address1"></div>
+<div class="address2"></div>
+<div class="city"></div>
+<div class="country"></div>
+<div class="author">Contact: <span class="first"><a href="mailto:webinars@bnpmedia.com">Vania</a></span></div>
+</div>
+<h2 class="headline event-list__headline"><a href="/events/2889-security-superheroes-your-employees-need-more-than-traditional-security-now" title="Security Superheroes: Your Employees Need More Than Traditional Security Now">Security Superheroes: Your Employees Need More Than Traditional Security Now</a></h2>
+<div class="abstract event-list__teaser"><p><span style="color:#FF0000;"><strong>ON DEMAND: </strong></span>Protecting employees from potential exposure could be a daunting task, but with the right property technology, your office space can become an interactive and responsive asset that helps you ensure new health protocol compliance.</p>
+<a class="more" href="/events/2889-security-superheroes-your-employees-need-more-than-traditional-security-now" title="Security Superheroes: Your Employees Need More Than Traditional Security Now">Read More</a></div>
+</div>
+</div>
+<div class="see_all event-list__see-all"></div>
+</div>
+<script>
+//<![CDATA[
+        $(document).ready(function() {
+          var current_tab = $("#section-2 .box1 .navigation ul.level1 li a.current");
+          var idx = $("#section-2 .box1 .navigation ul.level1 li a").index(current_tab);
+          if (idx < 0) idx = 0;
+          $("#section-2 .box1 .navigation ul.level1").tabs("#section-2 .box1 div.records", { initialIndex: idx });
+        });
+
+//]]>
+</script></div>
+<div class="taxonomy-detail__bottom-ads">
+<div class="taxonomy-detail__bottom-left-ad">
+<div id="div-gpt-ad-bottom-left-mrect"></div>
+</div>
+<div class="taxonomy-detail__bottom-right-ad">
+<div id="div-gpt-ad-bottom-right-mrect"></div>
+</div>
+</div>
+</section>
+</div>
+<aside class="interior-sidebar">
+<div class="wrapper">
+<div class="advertisement" id="div-gpt-ad-sidebar-sky"></div>
+<div class="subscribe-now subscribe-now--dropdown" id="subscribe-now">
+<a class="subscribe-now__subscribe-link" data-eventaction="interior-subscribe-now-link" data-eventcategory="click" data-eventlabel="#" data-eventname="interior-subscribe-now-link" href="#">Subscribe For Free!</a>
+<nav class="subscribe-now__nav">
+<nav class="navigation" id="subscriptions"><div class="navigation"><ul class="navigation-level1__items"><li class="navigation-level1__item"><a class="navigation__link" data-eventaction="subscriptions-link" data-eventcategory="click" data-eventlabel="eMagazine Subscriptions|https://bnp.dragonforms.com/BNP6090_Vtdigital&amp;PK=X_W_HOME" data-eventname="subscriptions" href="https://bnp.dragonforms.com/BNP6090_Vtdigital&amp;PK=X_W_HOME" target="_blank">eMagazine Subscriptions</a></li><li class="navigation-level1__item"><a class="navigation__link" data-eventaction="subscriptions-link" data-eventcategory="click" data-eventlabel="Security eNewsletter &amp; Other eNews Alerts|/eNewsletters" data-eventname="subscriptions" href="/eNewsletters">Security eNewsletter &amp; Other eNews Alerts</a></li><li class="navigation-level1__item"><a class="navigation__link" data-eventaction="subscriptions-link" data-eventcategory="click" data-eventlabel="Online Registration|https://bnp.dragonforms.com/BNP6289_SECMAG522create&amp;pk=RHOME" data-eventname="subscriptions" href="https://bnp.dragonforms.com/BNP6289_SECMAG522create&amp;pk=RHOME">Online Registration</a></li><li class="navigation-level1__item"><a class="navigation__link" data-eventaction="subscriptions-link" data-eventcategory="click" data-eventlabel="Mobile App|/apps" data-eventname="subscriptions" href="/apps">Mobile App</a></li><li class="navigation-level1__item"><a class="navigation__link" data-eventaction="subscriptions-link" data-eventcategory="click" data-eventlabel="Subscription Customer Service|/customerservice" data-eventname="subscriptions" href="/customerservice">Subscription Customer Service</a></li></ul></div></nav> </nav>
+</div>
+<hr class="divider"/>
+<section class="editorial-content video-brightcove-home">
+<div class="editorial-content__details">
+<div class="editorial-content__body">
+<div class="records videos">
+<div data-autoplay="true" data-carousel="true" data-max-thumbnails-visible="4" data-max-videos-visible="4" data-player-url="/videos" data-playlist-id="660964958001" data-randomize-videos="true" data-video-logo="/images/video/logo.png" data-video-play-arrow="/images/video/play_arrow3.png">
+</div>
+</div>
+</div>
+</div>
+</section>
+<a class="view-more" data-eventaction="interior-sidebar-view-more-link" data-eventcategory="click" data-eventlabel="/videos" data-eventname="interior-sidebar-view-more-link" href="/videos">More Videos</a>
+<hr class="divider"/>
+<div class="advertisement" id="div-gpt-ad-sidebar-mrect"></div>
+<section class="sponsored-content-widget" id="sponsored-content-widget">
+<h1 class="sponsored-content-widget__title"><a class="sponsored-content-widget__title-link" href="/topics/2745-sponsored-content">Sponsored Content</a><a class="sponsored-content-widget__help-icon" href="#" id="sponsored-content-help-icon"><svg height="25" viewbox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg">
+<g fill="none" fill-rule="evenodd">
+<circle cx="12.5" cy="12.5" fill="#D9E0F2" r="12.5"></circle>
+<path d="M14.0605469,7.81982422 C14.4501953,7.81982422 14.7817383,7.68139648 15.0551758,7.40454102 C15.3286133,7.12768555 15.465332,6.79443359 15.465332,6.40478516 C15.465332,6.01513672 15.3286133,5.68359375 15.0551758,5.41015625 C14.7817383,5.13671875 14.4501953,5 14.0605469,5 C13.6708984,5 13.3376465,5.13671875 13.060791,5.41015625 C12.7839355,5.68359375 12.6455078,6.01513672 12.6455078,6.40478516 C12.6455078,6.79443359 12.7839355,7.12768555 13.060791,7.40454102 C13.3376465,7.68139648 13.6708984,7.81982422 14.0605469,7.81982422 Z M11.4868164,19.5810547 C12.1635742,19.5810547 12.7993164,19.2939453 13.394043,18.7197266 C13.7563477,18.3710938 14.2792969,17.6943359 14.9628906,16.6894531 L14.9628906,16.6894531 L14.5014648,16.3920898 C14.262207,16.7885742 13.9853516,17.1679688 13.6708984,17.5302734 C13.3564453,17.8925781 13.0932617,18.0737305 12.8813477,18.0737305 C12.7993164,18.0737305 12.7241211,18.0515137 12.6557617,18.0070801 C12.5874023,17.9626465 12.5532227,17.8652344 12.5532227,17.7148438 C12.5532227,17.5644531 12.6147461,17.2363281 12.737793,16.7304688 C12.7856445,16.5322266 12.8779297,16.1767578 13.0146484,15.6640625 L13.0146484,15.6640625 L14.6450195,9.68603516 L13.7426758,9.86035156 C13.4282227,9.921875 12.8933105,9.99536133 12.1379395,10.0808105 C11.3825684,10.1662598 10.8066406,10.2226562 10.4101562,10.25 L10.4101562,10.25 L10.4101562,10.8037109 C10.8818359,10.8242188 11.206543,10.8686523 11.3842773,10.9370117 C11.5620117,11.0053711 11.6508789,11.1796875 11.6508789,11.4599609 C11.6508789,11.5078125 11.645752,11.559082 11.635498,11.6137695 C11.6252441,11.668457 11.6132812,11.7231445 11.5996094,11.777832 L11.5996094,11.777832 L10.3383789,16.4946289 C10.2426758,16.8432617 10.1708984,17.1235352 10.1230469,17.3354492 C10.0410156,17.7045898 10,17.9746094 10,18.1455078 C10,18.6308594 10.1520996,18.9914551 10.4562988,19.2272949 C10.760498,19.4631348 11.1040039,19.5810547 11.4868164,19.5810547 Z" fill="#4565AE" fill-rule="nonzero"></path>
+</g>
+</svg>
+</a></h1><div class="sponsored-content-widget__help"><a href="https://www.securitymagazine.com/topics/2745-sponsored-content" rel="nofollow"><p>
+                Sponsored Content is a special paid section where industry companies provide high quality, objective, non-commercial content around topics of interest to the <em>Security</em> audience. All Sponsored Content is supplied by the advertising company. Interested in participating in our Sponsored Content section? <a href="/contactus">Contact your local rep</a>.</p></a><a class="sponsored-content-widget__help-close" href="#">close</a></div><ul class="sponsored-content-widget__items">
+<li class="sponsored-content-widget__item">
+<article class="sponsored-content-widget__article -has-image -has-sponsor"><figure class="sponsored-content-widget__image"><a class="sponsored-content-widget__thumbnail-link" data-eventaction="sponsored-content-widget-image" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/articles/95964-exploring-how-network-audio-adds-value-to-our-world" data-eventname="sponsored-content-widget" href="https://www.securitymagazine.com/articles/95964-exploring-how-network-audio-adds-value-to-our-world"><img alt="Axis native city street image" class="sponsored-content-widget__image-thumb" src="https://www.securitymagazine.com/ext/resources/Native-Advertising/Axis/concon_c3003_closeup_citystreet_1702_900x428__N4UXY9YP6P__.jpg?crop=true&amp;height=257&amp;t=1630517450&amp;width=420" title="Axis native city street image"/></a></figure><div class="sponsored-content-widget__details sponsored-content-widget__details-1"><div class="sponsored-content-widget__sponsor"><a data-eventaction="sponsored-content-widget-sponsor-link" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/topics/2783-axis" data-eventname="sponsored-content-widget" href="https://www.securitymagazine.com/topics/2783-axis" rel="nofollow" title="Sponsored by Axis"><span class="sponsored-content-widget__by">Sponsored by</span><span class="sponsored-content-widget__name">Axis</span></a></div><h1 class="sponsored-content-widget__headline"><a class="sponsored-content-widget__article-title-link" data-eventaction="sponsored-content-widget-headline" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/articles/95964-exploring-how-network-audio-adds-value-to-our-world" data-eventname="sponsored-content-widget" href="https://www.securitymagazine.com/articles/95964-exploring-how-network-audio-adds-value-to-our-world">Exploring how network audio adds value to our world</a></h1></div></article>
+</li>
+<li class="sponsored-content-widget__item">
+<article class="sponsored-content-widget__article -has-image -has-sponsor"><figure class="sponsored-content-widget__image"><a class="sponsored-content-widget__thumbnail-link" data-eventaction="sponsored-content-widget-image" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/articles/95534-what-are-the-advantages-of-end-to-end-solutions-for-financial-institutions" data-eventname="sponsored-content-widget" href="https://www.securitymagazine.com/articles/95534-what-are-the-advantages-of-end-to-end-solutions-for-financial-institutions"><img alt="Axis bank line" class="sponsored-content-widget__image-thumb" src="https://www.securitymagazine.com/ext/resources/Native-Advertising/Axis/web_secmag_feature_image_bank_line_900x550_2106.jpg?crop=true&amp;height=257&amp;t=1624991820&amp;width=420" title="Axis bank line"/></a></figure><div class="sponsored-content-widget__details sponsored-content-widget__details-1"><div class="sponsored-content-widget__sponsor"><a data-eventaction="sponsored-content-widget-sponsor-link" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/topics/2783-axis" data-eventname="sponsored-content-widget" href="https://www.securitymagazine.com/topics/2783-axis" rel="nofollow" title="Sponsored by Axis"><span class="sponsored-content-widget__by">Sponsored by</span><span class="sponsored-content-widget__name">Axis</span></a></div><h1 class="sponsored-content-widget__headline"><a class="sponsored-content-widget__article-title-link" data-eventaction="sponsored-content-widget-headline" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/articles/95534-what-are-the-advantages-of-end-to-end-solutions-for-financial-institutions" data-eventname="sponsored-content-widget" href="https://www.securitymagazine.com/articles/95534-what-are-the-advantages-of-end-to-end-solutions-for-financial-institutions">What are the advantages of end-to-end solutions for financial institutions?</a></h1></div></article>
+</li>
+<li class="sponsored-content-widget__item">
+<article class="sponsored-content-widget__article -has-image -has-sponsor"><figure class="sponsored-content-widget__image"><a class="sponsored-content-widget__thumbnail-link" data-eventaction="sponsored-content-widget-image" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/articles/95447-why-temperature-monitoring-is-critical-in-a-post-pandemicherd-immunity-environment" data-eventname="sponsored-content-widget" href="https://www.securitymagazine.com/articles/95447-why-temperature-monitoring-is-critical-in-a-post-pandemicherd-immunity-environment"><img alt="MS227-Security_Native_Digital_900x500" class="sponsored-content-widget__image-thumb" src="https://www.securitymagazine.com/ext/resources/Native-Advertising/FeverWarn/MS227-Security_Native_Digital_900x500.jpg?crop=true&amp;height=257&amp;t=1624024436&amp;width=420" title="MS227-Security_Native_Digital_900x500"/></a></figure><div class="sponsored-content-widget__details sponsored-content-widget__details-1"><div class="sponsored-content-widget__sponsor"><a data-eventaction="sponsored-content-widget-sponsor-link" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/topics/2956-feverwarn" data-eventname="sponsored-content-widget" href="https://www.securitymagazine.com/topics/2956-feverwarn" rel="nofollow" title="Sponsored by FeverWarn"><span class="sponsored-content-widget__by">Sponsored by</span><span class="sponsored-content-widget__name">FeverWarn</span></a></div><h1 class="sponsored-content-widget__headline"><a class="sponsored-content-widget__article-title-link" data-eventaction="sponsored-content-widget-headline" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/articles/95447-why-temperature-monitoring-is-critical-in-a-post-pandemicherd-immunity-environment" data-eventname="sponsored-content-widget" href="https://www.securitymagazine.com/articles/95447-why-temperature-monitoring-is-critical-in-a-post-pandemicherd-immunity-environment">Why temperature monitoring is critical in a post-pandemic/herd immunity environment</a></h1></div></article>
+</li>
+</ul>
+</section>
+<section class="popular-stories" id="popular-stories">
+<h1 class="popular-stories__title">Popular Stories</h1>
+<div class="popular-stories__items">
+<div class="popular-stories__item">
+<a class="popular-stories__link" data-eventaction="popular-stories-headline" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/articles/95793-data-breaches-in-the-first-half-of-2021-exposed-188-billion-records" data-eventname="popular-stories-headline" href="https://www.securitymagazine.com/articles/95793-data-breaches-in-the-first-half-of-2021-exposed-188-billion-records" title="Data breaches in the first half of 2021 exposed 18.8 billion records">
+<div class="popular-stories__image">
+<img alt="cyber-security--data-freepik" src="https://www.securitymagazine.com/ext/resources/images/cyber-security--data-freepik.jpg?crop=true&amp;height=100&amp;t=1625146516&amp;width=100"/>
+</div>
+<h1 class="popular-stories__headline">
+          Data breaches in the first half of 2021 exposed 18.8 billion records
+        </h1>
+</a>
+</div>
+<div class="popular-stories__item">
+<a class="popular-stories__link" data-eventaction="popular-stories-headline" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/articles/95880-the-tokyo-olympics-are-a-cybersecurity-success-story" data-eventname="popular-stories-headline" href="https://www.securitymagazine.com/articles/95880-the-tokyo-olympics-are-a-cybersecurity-success-story" title="The Tokyo Olympics are a cybersecurity success story">
+<div class="popular-stories__image">
+<img alt="TokyoOlympics unsplash" src="https://www.securitymagazine.com/ext/resources/images/TokyoOlympics-unsplash.jpg?crop=true&amp;height=100&amp;t=1629204715&amp;width=100"/>
+</div>
+<h1 class="popular-stories__headline">
+          The Tokyo Olympics are a cybersecurity success story
+        </h1>
+</a>
+</div>
+<div class="popular-stories__item">
+<a class="popular-stories__link" data-eventaction="popular-stories-headline" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/articles/95875-dhs-issues-terrorism-advisory-ahead-of-20th-anniversary-of-911-terror-attacks" data-eventname="popular-stories-headline" href="https://www.securitymagazine.com/articles/95875-dhs-issues-terrorism-advisory-ahead-of-20th-anniversary-of-911-terror-attacks" title="DHS issues terrorism advisory ahead of 20th Anniversary of 9/11 terror attacks">
+<div class="popular-stories__image">
+<img alt="911-memorial freepik" src="https://www.securitymagazine.com/ext/resources/images/911-memorial-freepik.jpg?crop=true&amp;height=100&amp;t=1629127697&amp;width=100"/>
+</div>
+<h1 class="popular-stories__headline">
+          DHS issues terrorism advisory ahead of 20th Anniversary of 9/11 terror attacks
+        </h1>
+</a>
+</div>
+<div class="popular-stories__item">
+<a class="popular-stories__link" data-eventaction="popular-stories-headline" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/articles/95980-court-rules-truck-companies-have-duty-to-perform-due-diligence-when-hiring" data-eventname="popular-stories-headline" href="https://www.securitymagazine.com/articles/95980-court-rules-truck-companies-have-duty-to-perform-due-diligence-when-hiring" title="Court rules truck companies have duty to perform due diligence when hiring">
+<div class="popular-stories__image">
+<img alt="Hiring practices must perform due diligency" src="https://www.securitymagazine.com/ext/resources/2021/08/30/license-2859796_1280.png?crop=true&amp;height=100&amp;t=1630337384&amp;width=100"/>
+</div>
+<h1 class="popular-stories__headline">
+          Court rules truck companies have duty to perform due diligence when hiring
+        </h1>
+</a>
+</div>
+<div class="popular-stories__item">
+<a class="popular-stories__link" data-eventaction="popular-stories-headline" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/articles/95883-t-mobiles-data-breach-affects-nearly-all-its-us-customers" data-eventname="popular-stories-headline" href="https://www.securitymagazine.com/articles/95883-t-mobiles-data-breach-affects-nearly-all-its-us-customers" title="T-Mobile's data breach affects nearly all its US customers">
+<div class="popular-stories__image">
+<img alt="TMobile-unsplash" src="https://www.securitymagazine.com/ext/resources/images/TMobile-unsplash.jpg?crop=true&amp;height=100&amp;t=1629211783&amp;width=100"/>
+</div>
+<h1 class="popular-stories__headline">
+          T-Mobile's data breach affects nearly all its US customers
+        </h1>
+</a>
+</div>
+</div>
+</section>
+<section class="editorial-content interior-sidebar-1">
+<div class="editorial-content__details">
+<div class="editorial-content__body">
+<p><a href="https://onlinexperiences.com/Launch/QReg/ShowUUID=CCB0430B-BA29-4FFA-96F5-2505042A0AFA&amp;LangLocaleID=1033&amp;AffiliateData=CustomContent" target="_blank"><img alt="8.18_SEC_HONEYWELL_360x184_customcontent" src="/ext/resources/images/Custom-content/2021-CC/818_SEC_HONEYWELL_360x184_customcontent.png"/></a></p>
+</div>
+</div>
+</section>
+<section class="box5 featured-upcoming-events">
+<div class="records featured-upcoming-events__wrapper">
+<h3 class="feature-title featured-upcoming-events__title">Events</h3>
+<div class="record featured-upcoming-events__event">
+<div class="date featured-upcoming-events__date">September 16, 2021</div>
+<h2 class="headline featured-upcoming-events__headline">
+<a class="url" data-eventaction="featured-upcoming-events-headline" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/events/2978-security-teams-add-value-or-risk-extinction" data-eventname="featured-upcoming-events-headline" href="https://www.securitymagazine.com/events/2978-security-teams-add-value-or-risk-extinction" title="Security Teams: Add Value or Risk Extinction">Security Teams: Add Value or Risk Extinction</a>
+</h2>
+<div class="abstract description featured-upcoming-events__description">In this webinar, learn how enterprise security leaders can position their programs from obsolete to indispensable. Striving to own business continuity and risk and resiliency as part of the security program positions security teams as a valuable business enabler.</div>
+</div>
+<div class="record featured-upcoming-events__event">
+<div class="date featured-upcoming-events__date">September 21, 2021</div>
+<h2 class="headline featured-upcoming-events__headline">
+<a class="url" data-eventaction="featured-upcoming-events-headline" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/events/2982-6-key-components-for-a-proactive-end-to-end-security-solution" data-eventname="featured-upcoming-events-headline" href="https://www.securitymagazine.com/events/2982-6-key-components-for-a-proactive-end-to-end-security-solution" title="6 Key Components for a Proactive End-to-End Security Solution">6 Key Components for a Proactive End-to-End Security Solution</a>
+</h2>
+<div class="abstract description featured-upcoming-events__description">Join us to learn how analytics, network cameras, audio, intercoms, and access control work together to create an end-to-end solution in our powerful, yet easy-to-use video management software. 
+</div>
+</div>
+<div class="abstract description featured-upcoming-events__actions">
+<a class="more" data-eventaction="featured-upcoming-events-more-link" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/events" data-eventname="featured-upcoming-events-more-link" href="https://www.securitymagazine.com/events">View All</a>
+<a class="more" data-eventaction="featured-upcoming-events-more-submit-link" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/events/new" data-eventname="featured-upcoming-events-more-submit-link" href="https://www.securitymagazine.com/events/new">Submit An Event</a>
+</div>
+</div>
+</section>
+<section class="featured-poll">
+<h1 class="featured-poll__title">Poll</h1>
+<h3 class="feature-title">Which <span>metric comparing peer organizations to yours would be most beneficial for your security program?</span></h3>
+<form accept-charset="UTF-8" action="/polls/82/vote" method="post"><input name="utf8" type="hidden" value="✓"/><input name="authenticity_token" type="hidden" value="hHDRmjxg7hg8ddJRBq4kNgRE9626Rt2BpQM8WMYC5W0hCfZ4ag/o5UNnZB9tKnGXbNAGfT5ir1a1OnNgbITCaA=="/>
+<div class="question">Which metric comparing peer organizations to yours would be most beneficial for your security program?</div>
+<div class="answers">
+<div class="answer">
+<span>
+<input data-eventaction="poll-answer-radio-button" data-eventcategory="click" data-eventlabel="origin: interior-sidebar|question: 110|answer: 429|index:0" data-eventname="poll-answer-radio-button" id="question_110_answer_429" name="question[110][answer]" type="radio" value="429"/>
+</span>
+<label data-eventaction="poll-answer-label" data-eventcategory="click" data-eventlabel="question: 110|answer: 429|index:0" data-eventname="poll-answer-label" for="question_110_answer_429">Comparing security spend as a percentage of overall revenue</label>
+</div>
+<div class="answer">
+<span>
+<input data-eventaction="poll-answer-radio-button" data-eventcategory="click" data-eventlabel="origin: interior-sidebar|question: 110|answer: 426|index:1" data-eventname="poll-answer-radio-button" id="question_110_answer_426" name="question[110][answer]" type="radio" value="426"/>
+</span>
+<label data-eventaction="poll-answer-label" data-eventcategory="click" data-eventlabel="question: 110|answer: 426|index:1" data-eventname="poll-answer-label" for="question_110_answer_426">Allocation of security spend per employee</label>
+</div>
+<div class="answer">
+<span>
+<input data-eventaction="poll-answer-radio-button" data-eventcategory="click" data-eventlabel="origin: interior-sidebar|question: 110|answer: 428|index:2" data-eventname="poll-answer-radio-button" id="question_110_answer_428" name="question[110][answer]" type="radio" value="428"/>
+</span>
+<label data-eventaction="poll-answer-label" data-eventcategory="click" data-eventlabel="question: 110|answer: 428|index:2" data-eventname="poll-answer-label" for="question_110_answer_428">Knowing the number contract and proprietary security guards at peer organizations</label>
+</div>
+<div class="answer">
+<span>
+<input data-eventaction="poll-answer-radio-button" data-eventcategory="click" data-eventlabel="origin: interior-sidebar|question: 110|answer: 427|index:3" data-eventname="poll-answer-radio-button" id="question_110_answer_427" name="question[110][answer]" type="radio" value="427"/>
+</span>
+<label data-eventaction="poll-answer-label" data-eventcategory="click" data-eventlabel="question: 110|answer: 427|index:3" data-eventname="poll-answer-label" for="question_110_answer_427">All of the above</label>
+</div>
+</div>
+<input class="button" data-eventaction="poll-answer-submit" data-eventcategory="click" data-eventlabel="question: 82" data-eventname="poll-submit" name="commit" type="submit" value="Submit"/>
+</form>
+<a class="first more" data-eventaction="poll-show-results-link" data-eventcategory="click" data-eventlabel="/polls/82-which-metric-comparing-peer-organizations-to-yours-would-be-most-beneficial-for-your-security-program/results" data-eventname="poll-show-results-link" href="/polls/82-which-metric-comparing-peer-organizations-to-yours-would-be-most-beneficial-for-your-security-program/results">View Results</a>
+<a class="more" data-eventaction="poll-archive-link" data-eventcategory="click" data-eventlabel="https://www.securitymagazine.com/polls" data-eventname="poll-archive-link" href="https://www.securitymagazine.com/polls">Poll Archive</a>
+</section>
+<section class="featured-products">
+<h1 class="featured-products__title">Products</h1>
+<div class="featured-products__container">
+<article class="featured-product featured-product--has-image">
+<figure class="featured-product__image">
+<a class="featured-product__thumbnail" data-eventaction="featured-product-image" data-eventcategory="click" data-eventlabel="/products/517-effective-security-management" data-eventname="featured-product-image" href="/products/517-effective-security-management"><img alt="Effective Security Management, 7th Edition" src="//www.securitymagazine.com/ext/resources/images/2020/thumb/9780128147948.jpg?1582918358"/></a>
+</figure>
+<h1 class="featured-product__headline">
+<a class="featured-product__headline-link" data-eventaction="featured-product-headline-link" data-eventcategory="click" data-eventlabel="/products/517-effective-security-management" data-eventname="featured-product-headline-link" href="/products/517-effective-security-management">Effective Security Management, 7th Edition</a>
+</h1>
+<div class="featured-product__teaser"><p>
+<span _fck_bookmark="1" style="display: none;"> </span><span style="margin: 0px; padding: 0px; border: 0px; font-family: Arial, Helvetica, sans-serif; font-style: inherit; font-stretch: inherit; line-height: 15px; vertical-align: baseline; color: rgb(102, 102, 102);">Effective Security Management, 5e,</span><span style="color: rgb(102, 102, 102); font-family: Arial, Helvetica, sans-serif; line-height: 15px;"> teaches practicing security professionals how to build their careers by mastering the fundamentals of good management. Charles Sennewald brings a time-tested blend of common sense, wisdom, and humor to this bestselling introduction to workplace dynamics. </span></p></div>
+</article>
+</div>
+<a class="featured-products__more-link" data-eventaction="featured-product-more-link" data-eventcategory="click" data-eventlabel="/products" data-eventname="featured-product-more-link" href="/products">See More Products</a>
+</section>
+<section class="editorial-content interior-sidebar-2">
+<div class="editorial-content__details">
+<div class="editorial-content__body">
+<!-- <p><div style="text-align: center;"><a href="/security-500-survey"><img alt="Security 500 360" src="/ext/resources/images/Custom-content/2020-CC/SEC-500/360.png" /></a></div> -->
+<style type="text/css">
+
+.digitalEditionContainer{
+padding: 8px;
+border: 1px solid #696969;
+vertical-align: top;
+background-color: #eeeeee;
+overflow: hidden;
+max-width: 360px;
+margin: auto;
+}
+
+.digitalEditionText{
+margin: 30px 8px 0px 0px;
+padding: 0px;
+color: #c52026;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size: 28px;
+line-height: 1;
+}
+
+@media screen and (max-width: 700px){
+  .digitalEditionText{
+    font-size: 22px;
+  }
+}
+
+</style>
+<div class="digitalEditionContainer">
+<a data-eventaction="inside-bottom-right-ec" data-eventcategory="click" data-eventlabel="/digitaledition" data-eventname="ec-unique-name-link" href="/digital-edition-archives" target="_blank">
+<img alt="Security Magazine - Digital Edition" src="/ext/resources/Default-images/Responsive-Defaults/Security-Magazine-iPad.png" style="float: right; height: 130px;"/>
+<img alt="Beverage Industry - Logo" src="/ext/resources/Default-images/Responsive-Defaults/Security-Magazine-Logo.jpg" style="height: 75px;"/>
+<div class="digitalEditionText">
+	Digital Edition
+	</div>
+</a>
+</div>
+--&gt; --&gt;
+        </div>
+</div>
+</section>
+</div>
+</aside>
+</div>
+<section class="editorial-content home-promotion-area" style="background-image: url('https://www.securitymagazine.com/ext/resources/2021/01/07/sec-background-3-2000x355px.jpg?1610029762')"><div class="home-promotion-area__lines-left"><span class="home-promotion-area__line-one"></span><span class="home-promotion-area__line-two"></span><span class="home-promotion-area__line-three"></span><span class="home-promotion-area__line-four"></span><span class="home-promotion-area__line-five"></span></div><div class="home-promotion-area__lines-right"><span class="home-promotion-area__line-five"></span><span class="home-promotion-area__line-four"></span><span class="home-promotion-area__line-three"></span><span class="home-promotion-area__line-two"></span><span class="home-promotion-area__line-one"></span></div><div class="home-promotion-area__wrapper"><h1 class="home-promotion-area__headline">Get our new eMagazine delivered to your inbox every month.</h1><h2 class="home-promotion-area__sub-headline">Stay in the know on the latest enterprise risk and security industry trends.</h2><a class="home-promotion-area__link" href="https://bnp.dragonforms.com/BNP6090_VTdigital?pk=W.HOME">SUBSCRIBE TODAY!</a></div></section><div class="main-footer" id="main-footer"><div class="wrapper"><nav class="main-footer-nav-v2"><nav class="navigation" id="main-footer-nav-v2"><div class="navigation"><ul class="navigation-level1__items"><li class="navigation-level1__item"><a class="navigation__link -has-children" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="Want More|/wantmore" data-eventname="main-footer-nav-v2" href="/wantmore">Want More</a><ul class="navigation-level2__items"><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="Connect|/connect" data-eventname="main-footer-nav-v2" href="/connect">Connect</a></li><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="Partners|/partners" data-eventname="main-footer-nav-v2" href="/partners">Partners</a></li><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="Subscribe|https://bnp.dragonforms.com/BNP6090_VTdigital?pk=W.HOME" data-eventname="main-footer-nav-v2" href="https://bnp.dragonforms.com/BNP6090_VTdigital?pk=W.HOME" target="_blank">Subscribe</a></li></ul></li><li class="navigation-level1__item"><a class="navigation__link -has-children" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="Resources|#" data-eventname="main-footer-nav-v2" href="#">Resources</a><ul class="navigation-level2__items"><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="Editorial Guidelines|/editorial-guidelines" data-eventname="main-footer-nav-v2" href="/editorial-guidelines">Editorial Guidelines</a></li><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="Security Group
+|/security-group" data-eventname="main-footer-nav-v2" href="/security-group">Security Group
+</a></li><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="Market Research|https://clearseasresearch.com/" data-eventname="main-footer-nav-v2" href="https://clearseasresearch.com/" target="_blank">Market Research</a></li><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="Custom Content &amp; Marketing Services|https://bnpengage.com/" data-eventname="main-footer-nav-v2" href="https://bnpengage.com/" target="_blank">Custom Content &amp; Marketing Services</a></li><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="Survey And Sample|http://www.myclearopinionpanel.com/contact-us/" data-eventname="main-footer-nav-v2" href="http://www.myclearopinionpanel.com/contact-us/">Survey And Sample</a></li></ul></li><li class="navigation-level1__item"><a class="navigation__link -has-children" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="Privacy|https://www.bnpmedia.com/privacy" data-eventname="main-footer-nav-v2" href="https://www.bnpmedia.com/privacy" target="_blank">Privacy</a><ul class="navigation-level2__items"><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="PRIVACY POLICY|https://www.bnpmedia.com/privacy" data-eventname="main-footer-nav-v2" href="https://www.bnpmedia.com/privacy" target="_blank">PRIVACY POLICY</a></li><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="TERMS &amp; CONDITIONS|http://www.bnpmedia.com/terms" data-eventname="main-footer-nav-v2" href="http://www.bnpmedia.com/terms" target="_blank">TERMS &amp; CONDITIONS</a></li><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="DO NOT SELL MY PERSONAL INFORMATION|https://www.bnpmedia.com/do-not-sell" data-eventname="main-footer-nav-v2" href="https://www.bnpmedia.com/do-not-sell" target="_blank">DO NOT SELL MY PERSONAL INFORMATION</a></li><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="PRIVACY REQUEST|https://www.bnpmedia.com/data-request" data-eventname="main-footer-nav-v2" href="https://www.bnpmedia.com/data-request" target="_blank">PRIVACY REQUEST</a></li><li class="navigation-level2__item"><a class="navigation__link" data-eventaction="main-footer-nav-v2-link" data-eventcategory="click" data-eventlabel="ACCESSIBILITY|https://www.bnpmedia.com/accessibility" data-eventname="main-footer-nav-v2" href="https://www.bnpmedia.com/accessibility" target="_blank">ACCESSIBILITY</a></li></ul></li></ul></div></nav></nav></div><div class="main-footer__copyright"><div class="wrapper"><p class="copyright">Copyright ©2021. All Rights Reserved BNP Media.</p><p class="epub-credit">Design, CMS, Hosting &amp; Web Development :: <a href="http://www.epublishing.com" target="_blank">ePublishing</a></p></div></div></div>
+</div>
+<div id="div-gpt-ad-slider"></div>
+</div>
+<script async="async">
+//<![CDATA[
+require(['bundle/main.bundle']);
+//]]>
+</script>
+<script src="/javascripts/pages/taxonomy.js"></script>
+<iframe frameborder="0" height="0" name="Trade Desk Tracking - IP1713744_Security Magazine RT_Core" scrolling="no" src="//insight.adsrvr.org/tags/h83y0ff/j7ic26x/iframe" width="0"></iframe>
+<script>require(['jquery','jquery-cookie'], function($){
+  $(function() {
+    var $cookiePolicy = $('.cookie-policy');
+
+    if(!$.cookie("cookie_policy")){
+      $cookiePolicy.show();
+      $cookiePolicy.on('click', '#cookie-policy-close', function(evt) {
+        evt.preventDefault();
+        $.cookie('cookie_policy', 'true', { expires: 30 });
+        $cookiePolicy.remove();
+      });
+      $(document).on('epub.afterMenu', $cookiePolicy, function() {
+        $cookiePolicy.prependTo($('.mm-page'));
+      });
+    }
+  });
+});</script>
+</body></html>

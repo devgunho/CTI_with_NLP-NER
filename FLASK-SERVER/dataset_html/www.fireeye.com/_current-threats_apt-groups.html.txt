@@ -1,0 +1,3485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en">
+<head>
+<title>Advanced Persistent Threat Groups (APT Groups) | FireEye</title>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="Advanced Persistent Threat Groups (APT Groups) | FireEye" name="title"/>
+<meta content="23 Jun 2021 02:11:13 UTC" http-equiv="Last-Modified"/>
+<link href="https://www.fireeye.com/current-threats/apt-groups.html" hreflang="en" rel="alternate"/>
+<link href="https://www.fireeye.de/current-threats/apt-groups.html" hreflang="de" rel="alternate"/>
+<link href="https://www.fireeye.fr/current-threats/apt-groups.html" hreflang="fr" rel="alternate"/>
+<link href="https://www.fireeye.jp/current-threats/apt-groups.html" hreflang="ja" rel="alternate"/>
+<link href="https://www.fireeye.kr/current-threats/apt-groups.html" hreflang="ko" rel="alternate"/>
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{"GTM-MDPBTTG":true});
+</script>
+<script src="https://www.googleoptimize.com/optimize.js?id=GTM-MDPBTTG"></script>
+<link href="https://www.fireeye.com/current-threats/apt-groups.html" rel="canonical"/>
+<meta content="en" name="language"/>
+<meta content="en" name="locale"/>
+<meta content="on" http-equiv="cleartype"/>
+<meta content="True" name="HandheldFriendly"/>
+<meta content="320" name="MobileOptimized"/>
+<meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport"/>
+<meta content="FireEye pays special attention to advanced persistent threats (APT) groups that receive direction and support from an established nation state." name="description"/>
+<meta content="Advanced Persistent Threat Groups (APT Groups) | FireEye" itemprop="name"/>
+<meta content="FireEye pays special attention to advanced persistent threats (APT) groups that receive direction and support from an established nation state." itemprop="description"/>
+<meta content="https://www.fireeye.com/content/dam/fireeye-www/fw/images/fireeye-2-color-square.png" itemprop="image"/>
+<meta content="@FireEye" name="twitter:site"/>
+<meta content="Advanced Persistent Threat Groups (APT Groups) | FireEye" name="twitter:title"/>
+<meta content="FireEye pays special attention to advanced persistent threats (APT) groups that receive direction and support from an established nation state." name="twitter:description">
+<meta content="@FireEye" name="twitter:creator"/>
+<meta content="https://www.fireeye.com/content/dam/fireeye-www/fw/images/fireeye-2-color-square.png" name="twitter:image">
+<meta content="Advanced Persistent Threat Groups (APT Groups) | FireEye" property="og:title">
+<meta content="website" property="og:type"/>
+<meta content="https://www.fireeye.com/current-threats/apt-groups.html" property="og:url"/>
+<meta content="https://www.fireeye.com/content/dam/fireeye-www/fw/images/fireeye-2-color-square.png" property="og:image"/>
+<meta content="FireEye pays special attention to advanced persistent threats (APT) groups that receive direction and support from an established nation state." property="og:description"/>
+<meta content="FireEye" property="og:site_name"/>
+<meta content="45127269202" property="fb:admins"/>
+<script src="/etc.clientlibs/clientlibs/granite/jquery.min.js" type="text/javascript"></script>
+<script src="/etc.clientlibs/clientlibs/granite/jquery/granite/csrf.min.js" type="text/javascript"></script>
+<script src="/etc/designs/fireeye-www/clientlibs_nav.min.js" type="text/javascript"></script>
+<script src="//play.vidyard.com/v0/api.js"></script>
+<script type="text/javascript">
+var fdc=fdc||{};
+var cookiesOK = $.cookie("ec-privacy");
+jQuery(window).load(function()
+        {
+            if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) 
+            {
+                jQuery("a.contactlinks").contents().unwrap();
+                jQuery("#contact_us").find("a").contents().first().unwrap();
+                jQuery("#contact_apac").find("a").contents().first().unwrap();
+                jQuery("#contact_emea").find("a").contents().first().unwrap();
+
+
+            }
+        });
+
+var onAccept = function () {
+    $.cookie("ec-privacy", "accept", { path: "/", expires: 365 });
+    jQuery("#cookie-privacy-banner").hide();
+};
+
+var onDecline = function () {
+    $.cookie("ec-privacy", "decline", { path: "/", expires: 365 });
+    jQuery("#cookie-privacy-banner").hide();
+};
+
+var ipLocation = (function () {
+    var banner ="#cookie-privacy-banner";
+
+    /* Show the privacy notification banner. */
+    var showBanner = function (banner) {
+        jQuery(banner).show();
+    };
+
+    /* Suppress the privacy notification banner. */
+    var hideBanner = function (banner) {
+        jQuery(banner).hide();
+    };
+
+    /* These are the country codes for the countries subject to EC privacy laws.
+     * We will check to see if a visitor is coming from one of these countries.
+     * If they are, we display a privacy notification banner. If not, we
+     * do nothing. */
+    var countries = {
+        "AT": true,"BE": true,"BG": true,"HR": true,"CY": true,"CZ": true,"DK": true,
+        "EE": true,"FI": true,"FR": true,"DE": true,"GR": true,"HU": true,"IE": true,
+        "IT": true,"LV": true,"LT": true,"LU": true,"MT": true,"NL": true,"PL": true,
+        "PT": true,"RO": true,"SK": true,"SI": true,"ES": true,"SE": true,"GB": true
+    };
+    var defaultSite = "US";
+
+    var onSuccess = function (geoipResponse) {
+        fdc.geoipResponse = geoipResponse;
+        /* There's no guarantee that a successful response object
+         * has any particular property, so we need to code defensively. */
+        if (!geoipResponse.country.iso_code) {
+            hideBanner(banner);
+            return;
+        }
+        
+        // For testing purposes:
+        if (location.host.indexOf("stage") >= 0 && geoipResponse.country.iso_code === "SG") {
+            geoipResponse.country.iso_code = "ES"
+        }
+
+        /* ISO country codes are in upper case. */
+        var code = geoipResponse.country.iso_code;
+
+        if ((countries[code]) && (cookiesOK == undefined)) {
+            showBanner(banner);
+        }
+        else {
+            hideBanner(banner);
+        }
+    };
+
+    /* We don't really care what the error is. */
+    var onError = function (error) {
+        fdc.geoipResponse = error;
+        hideBanner(banner);
+    };
+
+    return function () {
+        geoip2.country( onSuccess, onError );
+    };
+}());
+
+ipLocation();
+
+if (cookiesOK != "decline") {
+	window.Configuration = window.Configuration || { PUBLISHER: 'fireeye', TRACKING_SERVER: 'fireeye.sc.omtrdc.net', MCID: '12390CDB53E9CC840A490D4E@AdobeOrg', NAMESPACE: 'fireeye' };
+}
+
+</script>
+<script type="text/javascript">
+    if (!String.prototype.includes) {
+        String.prototype.includes = function() {
+            return String.prototype.indexOf.apply(this, arguments) !== -1;
+        };
+    }
+var userAgent = navigator.userAgent,
+gomezAgent = userAgent.includes("GomezAgent"),
+prtgAgent = userAgent.includes("PRTG Network Monitor");
+
+if (gomezAgent || prtgAgent) {
+    cookiesOK = "decline";
+}
+
+if (cookiesOK != "decline") {
+    // Google Analytics was here. Now it's in Tealium and GTM.
+}
+// Temporary patch for AA issue.
+if(typeof _satellite == "undefined") {
+    _satellite = {};
+    _satellite.track = function(){};
+}
+</script>
+<style>
+@media ( max-width : 959px) {
+    .g04 .megamenu .n03-sub_table .n03-sub_cell, .g04 .megamenu .separator {
+        display: block;
+    }
+    .g04 .megamenu .n03_list-item-sub>.megamenu-cta {
+        padding: 0;
+    }
+    .g04 .megamenu .n03-sub_cell.n03-sub_cell-utility {
+        padding: 11px 0 11px 10px;
+    }
+}
+
+@media ( min-width : 48em) {
+    .cta-bar .n01 .n01_cell {
+        width: auto;
+    }
+}
+
+/* styles for the CTA bar test */
+.n01.n01v1 .n01_cell {
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+.n01.n01v1 .n01_cell .ficon, .n01.n01v1 .n01_cell .n01_label, .n01.n01v1 .n01_text
+    {
+    color: #fff;
+}
+
+@media ( min-width : 48em) {
+    .n01.n01v1 .n01_cell {
+        background-color: transparent;
+        border: none;
+    }
+    .n01.n01v1 .n01_link {
+        background-color: #222;
+        border: 1px solid #444;
+        border-right: 0;
+    }
+}
+/* fix for new footer */
+.g03v1 .g03-s-i:after {
+    left: -3px;
+}
+/* fix for tables */
+span.nowrap {
+    white-space: nowrap;
+}
+/* fix for blog cta */
+.blog-cta {
+    border: 1px solid #dadadb;
+    background-color: #ebebed;
+    margin-bottom: 10px;
+    line-height: 0;
+}
+</style>
+<link href="https://cloud.typography.com/6746836/6977592/css/fonts.css" rel="stylesheet" type="text/css"/>
+<link href="/content/dam/fireeye-www/fw/css/patch.css?v=1" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+var addthis_config = addthis_config||{};
+    addthis_config.data_track_clickback = false;
+var addthis_share = {
+   url: window.location.href
+};
+</script>
+<style>
+/* fix for IE */
+.uc-he01v1 .uc-he01_container .background {
+    max-height: 470px;
+    position: absolute;
+}
+.uc-he01v2 .uc-he01_container .background {
+    position: absolute;
+}
+@media (max-width: 48em) {
+    .uc-he01v1 .uc-he01_container .background {
+        max-height: 320px;
+    }
+}
+@media (min-width: 54em) {
+    .uc-he01v1 .uc-he01_container .background {
+        max-height: 600px;
+    }
+}
+</style>
+<style>
+/* Update the images used in the Table component. */
+.c09v1 .tablesorter-default .header, .c09v1 .tablesorter-default .tablesorter-header {
+background-position-x: calc(100% - 4px);
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAYAAAC58NwRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjc2NDE0RUUyNjc2QjExRThBNEFDQTFFRUMyNzIyRjM4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjc2NDE0RUUzNjc2QjExRThBNEFDQTFFRUMyNzIyRjM4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTg5MzI0RkY2NzZCMTFFOEE0QUNBMUVFQzI3MjJGMzgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTg5MzI1MDA2NzZCMTFFOEE0QUNBMUVFQzI3MjJGMzgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz567IGQAAAApklEQVR42mL8//8/A0kApAELlgJiG2xyTDjMcQFiayDmRJfApkEbiJWgiq2J0eCCxLYBYkF8GjAUAIEvLg2C2JwAdZ42Ng022DyJ7kwmJFOM8YS+INRABkZSI45sDSAnxRFQuweIj8D8cA+Iz+JR/B6kGD2UQALf8ZiOEawgU45iUQyy/SqumD4C1YgMNhNKS3vwGYBNw1WoM75jdSKpGYjkiAMIMAAPu279CuYueAAAAABJRU5ErkJggg==)
+}
+.c09v1 .tablesorter-default thead .headerSortUp,.c09v1 .tablesorter-default thead .tablesorter-headerSortUp,.c09v1 .tablesorter-default thead .tablesorter-headerAsc{background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAYAAAC58NwRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjU4OTMyNEY5Njc2QjExRThBNEFDQTFFRUMyNzIyRjM4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjU4OTMyNEZBNjc2QjExRThBNEFDQTFFRUMyNzIyRjM4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTg5MzI0Rjc2NzZCMTFFOEE0QUNBMUVFQzI3MjJGMzgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTg5MzI0Rjg2NzZCMTFFOEE0QUNBMUVFQzI3MjJGMzgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5TuQesAAAAp0lEQVR42mL8//8/A0kApAELNgbicmxyuDTsBuJ3QCxIjIbQ/wjQQYyGu/9RgRI+DeX/McFuXBqUoO7GBkKxaZj5Hze4i67B5T9hAA5mRlIjjmwNSkAcR0DtHiA+wgTl3APis3gUvwcpBjGYkARBAt/xmM6ArgFkylEsikG2X8WmAWbLezSxzcgcJnzWYzMAm4arUGd8x+pEHPlBCohtsMmRHHEAAQYAbP+KkOIl8zUAAAAASUVORK5CYII=)}
+.c09v1 .tablesorter-default thead .headerSortDown,.c09v1 .tablesorter-default thead .tablesorter-headerSortDown,.c09v1 .tablesorter-default thead .tablesorter-headerDesc{background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAYAAAC58NwRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjU4OTMyNEZENjc2QjExRThBNEFDQTFFRUMyNzIyRjM4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjU4OTMyNEZFNjc2QjExRThBNEFDQTFFRUMyNzIyRjM4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTg5MzI0RkI2NzZCMTFFOEE0QUNBMUVFQzI3MjJGMzgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTg5MzI0RkM2NzZCMTFFOEE0QUNBMUVFQzI3MjJGMzgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6nOhWUAAAAqElEQVR42mL8//8/AymACYe4FBDbkKLBBYitgZiTGA3aQKwEVWxNjAYXJDbIWYL4NGAoAAJfXBoEsTkB6jxtbBpssHkS3ZlMSKYY4wl+QVgwM1Ir4ghqALnxPwFcDlYJchIUz/yPG9yFqUPWoATE73BoCMWmAYTLsSjejawGXQMD1HpkoERIQyiS4g50eWwaGKDOAPlHEF2OBUdwV0CD+j26BMkxDRBgALvSCpUQlZEGAAAAAElFTkSuQmCC)}
+.c09v1 .tablesorter-default thead .sorter-false {
+    background-image: none;
+}
+@media (max-width: 41.9125em){
+    .c09.c09v1.has-data-label tr>:not(:first-child):before {
+        width: auto; min-width: 35%;
+    }
+}
+</style>
+<script>
+$(document).ready(function(){
+    if(typeof(ipLocation) !== "undefined" && typeof fdc.geoipResponse === "undefined"){ipLocation();}
+    if(typeof fdc.geoipResponse !== "undefined"){showCountryNotification(fdc.geoipResponse);}
+    if(typeof fdc.geoipResponse !== "undefined" && typeof fdc.geoipResponse.country !== "undefined" && fdc.geoipResponse.country.is_in_european_union && ($.cookie("ec-privacy") == undefined)){jQuery("#cookie-privacy-banner").show();}
+});
+function showCountryNotification(geoipResponse) {
+	if (!geoipResponse.country || !geoipResponse.country.iso_code) {
+        return;
+    }
+	var code = geoipResponse.country.iso_code,
+	    langIndex = code === "FR" ? 2 : code === "DE" ? 3 : code === "JP" ? 4 : code === "KR" ? 5 : 1;
+	if (langIndex > 1) {
+		$('.c08_modal.lang').addClass("is-open");
+		$('.c08_modal.lang .col:nth-child(' + (langIndex - 1) + ')').show();
+		$('.c08_modal.lang, .c08_modal.lang [data-behavior="dismiss-c08"]').click(function(){
+		    $.cookie("country-notification", "decline", { path: "/", expires: 365 });
+		    closec08();
+		});
+		$('.c08_modal.lang .c08').click(function(e){
+		    e.stopPropagation();
+		});
+		if (($.cookie("country-notification") === "decline") || $(".g01_options_list li:nth-child(" + langIndex + ") a").attr("href").indexOf(".html") < 0) {
+		    closec08();
+		} else {
+		    $(".c08_modal.lang .btn").eq(langIndex - 2).attr("href", $(".g01_options_list li:nth-child(" + langIndex + ") a").attr("href"));
+		}
+	}
+}
+</script>
+<script>    
+     var _6SenseJsonObj = localStorage.getItem('_6senseCompanyDetails'),
+         _6SenseTime = localStorage.getItem('_6senseCompanyDetails-timestamp'),
+         isJsonStale = _6SenseTime === null ? true : Date.now() - parseInt(_6SenseTime) > 86400000; // 86400000 = 1 day in ms
+     
+     window._6si = window._6si || [];
+     window._6si.push(['enableEventTracking', true]);
+     window._6si.push(['setToken', '1322340356018696d853e0ac6f7ce3a2']);
+     window._6si.push(['setEndpoint', 'b.6sc.co']);
+     if(_6SenseJsonObj === null || isJsonStale){
+       window._6si.push(['enableCompanyDetails', true]);
+       window._6si.push(['setEpsilonKey', '325d6d60e24c7cfc3a782839d85ce08c8d3bb27c']);
+       localStorage.setItem('_6senseCompanyDetails-timestamp', Date.now());
+     }  
+    (function () {
+          var gd = document.createElement('script');
+      gd.type = 'text/javascript';
+      gd.async = true;
+      gd.src = '//j.6sc.co/6si.min.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gd, s);
+     })();
+</script>
+<script>
+    var jsonObj;
+
+    function targetPageParams() { 
+        jsonObj = localStorage.getItem('_6senseCompanyDetails');
+        if(jsonObj) {
+        	var jsonVal = JSON.parse(jsonObj);
+            return { 
+                "companyRevenueRange": jsonVal.company.revenue_range, 
+                "companyCountry": jsonVal.company.country, 
+                "companyIndustry": jsonVal.company.industry,
+                "companyName": jsonVal.company.name,
+                "companyRegion": jsonVal.company.region,
+                "companyDomain": jsonVal.company.domain,
+                "segments": JSON.stringify(jsonVal.segments)
+            }; 
+        }
+     }; 
+</script>
+<script>
+$(document).ready(function(){
+    $(".loadmore").on("click", function(){$(".list.parbase").addClass("no-max-height");});
+    // Don't show title text for textures.
+    $(".texture img").attr("title", "");
+});
+</script>
+<style>
+.no-max-height .c11v9 h4{
+    max-height: none !important;
+}
+.g04 #header-search .search-field_submit:after {
+    font-size: 9px;
+}
+.c11v8.hideLinkText .btn {
+    display: inline-block;
+}
+/* CTA fix */
+.g04 .megamenu-tab .has-inner-cta .n03-sub_container {
+    padding: 0;
+    margin: 0 0 0 10px;
+    max-width: 1210px;
+}
+.g04 .megamenu-tab .has-inner-cta .col-wrap {
+    padding: 40px 0;
+}
+.g04 .n03-sub_container[data-columns="1"] .megamenu-cta {
+    width: 50%;
+}
+.g04 .n03-sub_container[data-columns="2"] .megamenu-cta {
+    width: 33.9%;
+}
+.g04 .has-inner-cta > [data-columns="2"] .n03-sub_cell {
+    width: calc(50% - 60px);
+}
+.g04 .n03-sub_container[data-columns="3"] .megamenu-cta {
+    width: 25%;
+}
+.g04 .n03-sub_container[data-columns="4"] .megamenu-cta {
+    width: 20%;
+}
+.g04 .megamenu-cta h5 {
+    line-height: 1.4;
+}
+html .g04 header .megamenu-cta h5 {
+    font-weight: 500;
+    font-size: 15px;
+    color: #44474d;
+}
+html .g04 header .megamenu-cta p {
+    font-weight: 300;
+    color: #44474d;
+}
+.g04 .n03-sub_table > .megamenu-cta {
+    background: none;
+    padding: 0;
+}
+.g04 .megamenu-cta .n03_utility {
+    border: none;
+    height: 100%;
+}
+.g04 .megamenu-cta .n03_utility_cell {
+    display: block;
+    width: auto;
+    margin-left: 30px;
+}
+/* Un/re-comment to add/remove in the line to the left of the CTA in the megamenu. */
+.g04 .n03-sub_table .col-wrap:not(:last-child) .separator.disabled {
+    border-right-color: #ebebed;
+}
+
+/* Put a grid over the texture from a neighboring grid. */
+.force {
+    z-index: 15;
+    position: relative;
+}
+/* Remove the gradient above the tiles on blog pages and reduce the space there. */
+.iparsys + .l_container>div.gradient-top {
+    background-image: none;
+}
+.iparsys + .l_container>.gradient-top>div>.g {
+    padding: 0;
+}
+@media (min-width: 35em) {
+    .entries .highlightFirst .c11v9 .c11-image-div {
+        border-left: 1px solid #dadadb;
+        border-right: 1px solid #dadadb;
+    }
+}
+@media (max-width: 1024px) {
+    .uc-he01v2 .panel .asset .image img {
+        max-height: 200px;
+	max-width: 300px;
+    }
+}
+/* mobile view for MegaMenu CTA. */
+@media (max-width: 1024px) {
+    .g04 .megamenu-tab.open .n03_list-item-sub.has-inner-cta {
+        padding-bottom: 0;
+    }
+    .g04 .has-inner-cta > [data-columns="2"] .n03-sub_cell,
+    .g04 .n03-sub_container[data-columns="2"] .megamenu-cta {
+        width: 100%;
+        display: block;
+    }
+    .g04 .megamenu-tab .has-inner-cta .n03-sub_container {
+        margin: 0;
+    }
+    .g04 .megamenu-tab .has-inner-cta .n03-sub_container .col-wrap {
+        padding: 0;
+    }
+    .g04 .megamenu-cta .n03_utility_cell {
+        margin-left: 15px;
+        margin-right: 22px;
+    }
+    .g04 .megamenu-cta .n03_utility_cell:nth-child(1) {
+        padding-bottom: 0;
+    }
+    .g04 .megamenu-cta .n03_utility_cell:nth-child(2) {
+        padding-top: 0;
+    }
+    .g04 .megamenu-cta .n03_utility_cell h5,
+    .g04 .megamenu-cta .n03_utility_cell p {
+        font-size: 12px;
+    }
+    .content-2-par .megamenus .n03-sub_table .megamenu-cta {
+        border-radius: 0;
+    }
+}
+/* Training pages side design. */
+  .training-side-box {background: url('/content/dam/fireeye-www/brand/homepage-banner-images/hpb-bg-testimonial-red.jpg') left no-repeat; background-size: cover; padding:30px; border: 1px solid #dadadb; margin-bottom: 20px;}
+  .training-side-text {color: #ffffff;}
+  .training-side-text a:hover {color: #ffffff; text-decoration: underline;}
+
+/* Avoid column breaks in ordered lists. */
+  .c00 ol > li {page-break-inside: avoid; margin-bottom: 15px;}
+
+/* Safari needs this on html to stop side scrolling, not just on the body. */
+html {overflow-x:hidden;}
+/* Make sure the footer is above a texture that precedes it. */
+#g03-footer {z-index: 725;}
+/* Allow border for linked images. */
+.border>a>img {border: 1px solid #dadadb;}
+/* Allows for easy scrollable text boxes on blog pages right in the Blog Text component. */
+table.limitedHeight td {
+    height: 350px;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 0;
+}
+/* Fix for edge case in Safari where page title in breadcrumbs wraps when the title is just the right length. */
+.g02_list_item:last-child span {
+    min-width: 360px;
+    display: block;
+}
+/* fix issue of hidden Event Spotlights having margin when used with .row-count-2 */
+.parsys > .spotlight-event.section:empty {
+    display: none;
+}
+@media (min-width: 60em) {
+.row-count-2 .parsys>div:nth-child(even):not(:empty) {
+    margin-right: 40px;
+}
+}
+/* Don't also vertically center a nested column. */
+.l_container.vertically-center .g > div:not(.stacked) > .g-content .g > div > .g-content {
+    top: auto;
+    transform: none;
+    position: unset;
+}
+</style>
+<link href="/etc/designs/fireeye-www/clientlibs_fw-2019.min.css" rel="stylesheet" type="text/css"/>
+<style>
+/* fix for IE */
+.uc-he01v1 .uc-he01_container .background {
+    max-height: 470px;
+    position: absolute;
+}
+@media (max-width: 48em) {
+    .uc-he01v1 .uc-he01_container .background {
+        max-height: 320px;
+    }
+}
+@media (min-width: 54em) {
+    .uc-he01v1 .uc-he01_container .background {
+        max-height: 600px;
+    }
+}
+</style>
+<script>
+    var companyDetails6Sense = localStorage.getItem('_6senseCompanyDetails');
+
+    if(null != companyDetails6Sense || companyDetails6Sense != "" || companyDetails6Sense != undefined){
+		var jsonVal = JSON.parse(companyDetails6Sense);
+
+        var companyRevenueRange = jsonVal.company.revenue_range;
+        var companyCountry = jsonVal.company.country;
+        var companyIndustry = jsonVal.company.industry;
+        var companyName = jsonVal.company.name;
+        var companyRegion = jsonVal.company.region;
+        var companyDomain = jsonVal.company.domain;
+    	var segments = JSON.stringify(jsonVal.segments);
+    	
+        window.dataLayer=window.dataLayer ||[];
+        window.dataLayer.push({
+                "company_industry" : companyIndustry,
+                "company_name" : companyName,
+                "company_revenue" : companyRevenueRange,
+                "company_country" : companyCountry,
+                "company_region" : companyRegion,
+            	"company_domain" : companyDomain,
+            	"segments" : segments
+        });
+    }
+
+</script>
+<script>
+//window.utag_cfg_ovrd = {noview : true};
+//data to be passed when window load is complete 
+//Code need to be in Headlibs
+var utag_data={
+    "page_name":document.title, 
+    //"page_path": "/content/fireeye-www/en_US/current-threats/apt-groups",
+    //"page_url": "https://www.fireeye.com/current-threats/apt-groups.html",
+    //"hashed_user_id":ut.visitor_id, //ut is populated by utag.js and thus is not available yet.
+    //"customer_country":(fdc.geoipResponse && fdc.geoipResponse.country && fdc.geoipResponse.country.iso_code) ? fdc.geoipResponse.country.iso_code : "",
+    //disabled the customer country since it was giving empty value and Tests were failing
+    "tealium_event":"content_category_1", //default event
+    "page_type":"content_category_1"
+}
+</script>
+<script>utag_data.content_cat_1 = "Resources";utag_data.content_cat_2 = "Advanced Persistent Threat Groups";</script>
+<script type="text/javascript">
+    var pathname=window.location.pathname;
+
+    var urldepth=window.location.pathname;
+    // Normal page with content_Category_1
+    if(urldepth=="/")
+    {}
+    else
+    if(urldepth.match(/\/.+?/g).length==1)
+    {
+        utag_data.tealium_event="content_category_1";
+        utag_data.page_type="content_category_1";
+    }
+    // Normal page with content_Category_2
+    else 
+    if(urldepth.match(/\/.+?/g).length>=2)
+    {
+        utag_data.tealium_event="content_category_2";
+        utag_data.page_type="content_category_2";
+    }
+    //Check if page is datasheet
+    if(pathname.includes("datasheet"))
+    {
+            utag_data.tealium_event="data_sheets";
+        	utag_data.page_type="data_sheets";
+    }
+    //check if page is press release
+    /*if(pathname.endsWith("press-releases.html"))
+    {
+        utag_data.tealium_event="listing";
+    }
+    if((pathname.startsWith("/solutions"))&&(pathname.match(/\/.+?/g).length==3))
+    {
+        utag_data.tealium_event="landing";
+        }*/
+    //Check if page is a blog
+    if(pathname.startsWith("/blog"))
+    {
+        utag_data.tealium_event="blog";
+        utag_data.page_type="blog";
+    }
+    if(window.location.pathname.endsWith("contacts.html") || window.location.pathname.endsWith("contact-us.html"))
+    {
+        utag_data.tealium_event="contact";
+        utag_data.page_type="contact";
+    }
+    if(pathname.endsWith("customers.html"))
+    {
+        utag_data.tealium_event="filter";
+        utag_data.page_type="filter";
+    }
+    //Check if page is homepage
+    if(window.location.pathname==="/")
+    {
+        // utag_data.page_type='';
+        utag_data.tealium_event="home";
+        utag_data.page_type="home";
+        delete utag_data.content_cat_1;
+
+    }
+    else
+        //Check if page is job description page
+    if(window.location.pathname.endsWith("jobdescription.html"))
+        {
+            var jobdescription=getParameterByName("jobtitle");
+            var jobloc=getParameterByName("loc");
+            utag_data.job_description=jobdescription+":"+jobloc;
+            utag_data["tealium_event"]="job description";
+            utag_data.page_type="job description";
+
+        }
+        //Function to get query parameter
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MVGC8KK');</script>
+<link href="https://www.fireeye.com/content/dam/framework/touch-icon-iphone-60.png" rel="apple-touch-icon"/>
+<link href="https://www.fireeye.com/content/dam/framework/touch-icon-ipad-76.png" rel="apple-touch-icon" sizes="76x76"/>
+<link href="https://www.fireeye.com/content/dam/framework/touch-icon-iphone-120.png" rel="apple-touch-icon" sizes="120x120"/>
+<link href="https://www.fireeye.com/content/dam/framework/touch-icon-ipad-152.png" rel="apple-touch-icon" sizes="152x152"/>
+<link href="https://www.fireeye.com/content/dam/framework/touch-icon-iphone-180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://www.fireeye.com/content/dam/framework/touch-icon-192.png" rel="touch-icon" sizes="192x192"/>
+<link href="/content/dam/fireeye-www/fw/images/fireeye.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+<link href="/content/dam/fireeye-www/fw/images/fireeye.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+</meta></meta></meta></head>
+<body class="loc-en" data-redesign="redesign-2019" itemscope="" itemtype="http://schema.org/WebPage"><a name="top"></a><script type="text/javascript">window.Granite = window.Granite || {}; window.Granite.csrf = true;</script>
+<div class="clientcontext parbase"><script src="/etc.clientlibs/clientlibs/granite/utils.min.js" type="text/javascript"></script>
+<script src="/etc.clientlibs/clientlibs/granite/jquery/granite.min.js" type="text/javascript"></script>
+<script src="/etc.clientlibs/foundation/clientlibs/jquery.min.js" type="text/javascript"></script>
+<script src="/etc.clientlibs/foundation/clientlibs/shared.min.js" type="text/javascript"></script>
+<script src="/etc.clientlibs/clientlibs/granite/lodash/modern.min.js" type="text/javascript"></script>
+<script src="/etc.clientlibs/cq/personalization/clientlib/personalization/kernel.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $CQ(function() {
+        CQ_Analytics.SegmentMgr.loadSegments("\/etc\/segmentation");
+        CQ_Analytics.ClientContextUtils.init("\/etc\/clientcontext\/default", "\/content\/fireeye\u002Dwww\/en_US\/current\u002Dthreats\/apt\u002Dgroups");
+
+        
+    });
+</script>
+</div>
+<div class="masthead_v2 masthead-v2">
+<div class="g04 masthead g04v1">
+<div class="bottom-bar">
+<div class="tab">
+<span class="ficon ficon-warning"></span>
+<p><a class="contact_bar" href="/company/incident-response.html">Report an Incident</a></p>
+</div>
+<div class="tab">
+<span class="ficon ficon-phone2"></span>
+<p><a class="contact_bar" href="/company/contact-us.html">Contact Us</a></p>
+</div>
+</div>
+<div class="cta-bar">
+<div class="content-well">
+<ul>
+<li>
+<a class="contact_bar" href="/company/contact-us.html">
+<span class="g04_label">Contact Us</span><span class="g04_icon"><span class="ficon ficon-phone3"></span></span>
+</a>
+</li>
+<li id="liveagent_button_online_573a00000008kP3" style="display: none;">
+<a class="contact_bar" href="javascript://Chat" onclick="liveagent.startChat('573a00000008kP3')">
+<span class="g04_label">Chat with an Expert</span><span class="g04_icon"><span class="ficon ficon-chat"></span></span>
+</a>
+</li>
+<li class="red">
+<a class="contact_bar" href="/company/incident-response.html">
+<span class="g04_label">Report an Incident</span><span class="g04_icon"><span class="ficon ficon-incident"></span></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<script type="text/javascript">
+    if (!window._laq) { window._laq = []; }
+    window._laq.push(function(){
+    	liveagent.showWhenOnline('573a00000008kP3', document.getElementById('liveagent_button_online_573a00000008kP3'));
+    });
+</script>
+<script src="https://c.la2c2.salesforceliveagent.com/content/g/js/34.0/deployment.js" type="text/javascript"></script>
+<script type="text/javascript">
+    liveagent.init("https://d.la2c2.salesforceliveagent.com/chat", "572a0000000H8aJ", "00D3000000063LS");
+</script><header itemscope="" itemtype="http://schema.org/WPHeader" role="banner">
+<div class="language-and-search"> <div class="search">
+<div class="content-searchbox searchbox">
+<a class="g01_options-option option-search" data-behavior="showHeaderMenu focusField" data-for="q" href="#header-search">Search</a>
+<div class="option-menu option-menu_search" id="header-search">
+<form action="/search.html" method="get">
+<fieldset class="search-field" title="Search FireEye.com">
+<label class="search-field_label" for="q">Search FireEye.com</label>
+<input autocapitalize="off" autocomplete="off" autocorrect="off" class="input-text search-field_text" data-locale="en" id="q" name="q" placeholder="Search FireEye.com" spellcheck="false" type="text"/>
+<div id="searchboxsuggestions"></div>
+<button class="btn btn-secondary search-field_submit" type="submit">Go</button>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="logo-and-megamenu">
+<div class="logo" itemscope="" itemtype="https://schema.org/Brand">
+<a href="https://www.fireeye.com"><img alt="FireEye" class="fireeye" itemprop="logo" src="/content/dam/fireeye-www/fw/images/fe-logo-color.svg"/></a>
+</div>
+<nav class="megamenu">
+<ul><li class="megamenu-tab" data-curry="/current-threats.html" data-link="/products.html">
+<h4 class="megamenu-title">
+<a class="MegaMenus" href="/products.html" itemprop="url">Products</a>
+</h4>
+<div class="content-0-par parsys"><div class="megamenus section">
+<div class="n03_list-item-sub has-inner-cta">
+<div class="n03-sub_container" data-columns="2">
+<div class="n03-sub_table">
+<div class="col-wrap">
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">Enterprise Security</h4><ul><li itemprop="url"><a class="MegaMenus" href="/products/helix.html" itemprop="name">Helix Security Platform</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/products/network-security.html" itemprop="name">Network Security and Forensics</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/products/endpoint-security.html" itemprop="name">Endpoint Security</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/products/email-security.html" itemprop="name">Email Security</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/products/cloudvisory.html" itemprop="name">Cloudvisory</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/products/detection-on-demand.html" itemprop="name">Detection On Demand</a></li>
+</ul></div>
+</div>
+</div><div class="separator"></div>
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">Security For:</h4><ul><li itemprop="url"><a class="MegaMenus" href="/products/cloud-security.html" itemprop="name">Cloud</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/products/financial-services.html" itemprop="name">Financial Services</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/products/government.html" itemprop="name">Government</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/products/healthcare.html" itemprop="name">Healthcare</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/products/industrial-systems-and-critical-infrastructure-security.html" itemprop="name">Industrial &amp; Critical Infrastructure</a></li>
+</ul></div>
+<div class="htmlpassthru section">
+<style>
+  @media (max-width: 1024px) {
+    .megamenu-tab .parsys .megamenus .megamenu-cta {
+      display: none;
+    }
+  }
+  .content-0-par .megamenus .megamenu-cta {
+    background: url(/content/dam/fireeye-www/global/en/nav/bg-nav-customers.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 60px 0 0 60px;
+    border: 0 solid #ffffff;
+  }
+  .content-0-par .n03_utility {background-color: transparent;}
+  .n03_utility_cell {padding: 0 13px 0 0;}
+</style></div>
+</div>
+</div><div class="separator disabled"></div></div><div class="megamenu-cta">
+<div class="n03_utility">
+<div class="n03_utility_container">
+<div class="n03_utility_table">
+<div class="n03_utility_cell">
+<h5>FireEye XDR</h5>
+<p>Simplify threat detection and response with FireEye XDR.</p>
+</div>
+<div class="n03_utility_cell"><div class="button"><div class="text-center"><a class="btn btn-2E5799 compact" href="/products/xdr.html" id="learn-more-intel">Explore XDR now</a></div></div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="view-all-bar">
+<a class="MegaMenus" href="/products.html">
+VIEW ALL PRODUCTS</a>
+</div></div>
+</div>
+</div>
+</li><li class="megamenu-tab" data-curry="/current-threats.html" data-link="/mandiant.html">
+<h4 class="megamenu-title">
+<a class="MegaMenus" href="/mandiant.html" itemprop="url">Mandiant</a>
+</h4>
+<div class="content-1-par parsys"><div class="megamenus section">
+<div class="n03_list-item-sub">
+<div class="n03-sub_container" data-columns="3">
+<div class="n03-sub_table">
+<div class="col-wrap">
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title" itemprop="url"><a class="MegaMenus" href="/mandiant/advantage.html" itemprop="name">Mandiant Advantage</a></h4><ul><li itemprop="url"><a class="MegaMenus" href="/mandiant/automated-defense.html" itemprop="name">Automated Defense</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/mandiant/security-validation.html" itemprop="name">Security Validation</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/mandiant/threat-intelligence.html" itemprop="name">Threat Intelligence</a></li>
+</ul></div>
+</div>
+</div><div class="separator"></div>
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title" itemprop="url"><a class="MegaMenus" href="/mandiant/cyber-security-consulting.html" itemprop="name">Mandiant Consulting</a></h4><ul><li itemprop="url"><a class="MegaMenus" href="/mandiant/incident-response.html" itemprop="name">Incident Response</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/mandiant/cyber-security-consulting.html" itemprop="name">Cyber Security Consulting</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/services/training.html" itemprop="name">Cyber Security Training</a></li>
+</ul></div>
+<div class="htmlpassthru section">
+<style>
+  .content-1-par .megamenus .megamenu-cta {
+    background: url(/content/dam/fireeye-www/global/en/nav/bg-nav-mandiant.jpg) center no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 60px 0 0 60px;
+    border: 0 solid #ffffff;}
+  .content-1-par .n03_utility {background-color: transparent;}
+  .n03_utility_cell {padding: 0 13px 0 0;}
+
+</style></div>
+</div>
+</div><div class="separator"></div>
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">Mandiant Managed Offerings</h4><ul><li itemprop="url"><a class="MegaMenus" href="/mandiant/managed-detection-and-response.html" itemprop="name">Managed Defense</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/mandiant/expertise-on-demand.html" itemprop="name">Expertise on Demand</a></li>
+</ul></div>
+</div>
+</div><div class="separator disabled"></div></div></div>
+</div>
+<div class="view-all-bar">
+<a class="MegaMenus" href="/mandiant.html">
+ VIEW ALL Mandiant</a>
+</div></div>
+</div>
+</div>
+</li><li class="megamenu-tab" data-curry="/current-threats.html" data-link="/customers.html">
+<h4 class="megamenu-title">
+<a class="MegaMenus" href="/company/customers.html" itemprop="url">Customers</a>
+</h4>
+<div class="content-2-par parsys"><div class="megamenus section">
+<div class="n03_list-item-sub has-inner-cta">
+<div class="n03-sub_container" data-columns="2">
+<div class="n03-sub_table">
+<div class="col-wrap">
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">Customers</h4><ul><li itemprop="url"><a class="MegaMenus" href="/customers.html" itemprop="name">Customer Stories</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/company/customers.html" itemprop="name">Customer Success</a></li>
+<li itemprop="url"><a class="MegaMenus" href="https://csportal.fireeye.com/" itemprop="name" target="_blank">Customer Portal</a></li>
+</ul></div>
+<div class="megamenu-list section">
+<h4 class="n03-sub_title">Get Support</h4><ul><li itemprop="url"><a class="MegaMenus" href="/support/contacts.html" itemprop="name">Contact Support</a></li>
+</ul></div>
+</div>
+</div><div class="separator"></div>
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">Find Answers</h4><ul><li itemprop="url"><a class="MegaMenus" href="/support/programs.html" itemprop="name">Support Programs</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/support/notices.html" itemprop="name">Support Notices</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/support/products.html" itemprop="name">Supported Products</a></li>
+<li itemprop="url"><a class="MegaMenus" href="https://community.fireeye.com/" itemprop="name" target="_blank">Communities</a></li>
+<li itemprop="url"><a class="MegaMenus" href="https://docs.fireeye.com" itemprop="name" target="_blank">Documentation Portal</a></li>
+</ul></div>
+<div class="htmlpassthru section">
+<style>
+  .content-2-par .megamenus .megamenu-cta {
+    background: url(/content/dam/fireeye-www/global/en/nav/bg-nav-support.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 60px 0 12px 60px;
+    border: 0 solid #ffffff;}
+  .content-2-par .n03_utility {background-color: transparent;}
+  .n03_utility_cell {padding: 0 13px 0 0;}
+
+</style></div>
+</div>
+</div><div class="separator disabled"></div></div><div class="megamenu-cta">
+<div class="n03_utility">
+<div class="n03_utility_container">
+<div class="n03_utility_table">
+<div class="n03_utility_cell">
+<h5>Support</h5>
+<p>A global network of support experts available 24x7. We offer simple and flexible support programs to maximize the value of your FireEye products and services.</p>
+</div>
+<div class="n03_utility_cell"><div class="button"><div class="text-center"><a class="btn btn-2E5799 compact" href="/support.html">Get Support</a></div></div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li><li class="megamenu-tab" data-curry="/current-threats.html" data-link="/partners.html">
+<h4 class="megamenu-title">
+<a class="MegaMenus" href="/partners.html" itemprop="url">Partners</a>
+</h4>
+<div class="content-3-par parsys"><div class="megamenus section">
+<div class="n03_list-item-sub has-inner-cta">
+<div class="n03-sub_container" data-columns="2">
+<div class="n03-sub_table">
+<div class="col-wrap">
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">FireEye Partners</h4><ul><li itemprop="url"><a class="MegaMenus" href="/partners.html" itemprop="name">Partners Overview</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/partners/resellers.html" itemprop="name">FireEye Affinity Resellers</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/partners/strategic-technology-partners.html" itemprop="name">Technology Partners</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/partners/strategic-technology-partners/cyber-risk-insurance.html" itemprop="name">Cyber Risk Partners</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/partners/global-solution-providers.html" itemprop="name">Global Solution Providers</a></li>
+</ul></div>
+</div>
+</div><div class="separator"></div>
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">Partner Resources</h4><ul><li itemprop="url"><a class="MegaMenus" href="https://partners.fireeye.com/directory/" itemprop="name" target="_blank">Partner Locator</a></li>
+<li itemprop="url"><a class="MegaMenus" href="http://training.fireeye.com/" itemprop="name" target="_blank">Partner Education Center</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/support.html" itemprop="name">Support</a></li>
+</ul></div>
+<div class="megamenu-list section">
+<h4 class="n03-sub_title">Partnering with FireEye</h4><ul><li itemprop="url"><a class="MegaMenus" href="https://www2.fireeye.com/Partner-Request-LP-New.html" itemprop="name" target="_blank">Become a Partner</a></li>
+</ul></div>
+<div class="htmlpassthru section">
+<style>
+  .content-3-par .megamenus .megamenu-cta {
+    background: url(/content/dam/fireeye-www/global/en/nav/bg-nav-partners.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 60px 0 12px 60px;
+    border: 0 solid #ffffff;}
+  .content-3-par .n03_utility {background-color: transparent;}
+  .n03_utility_cell {padding: 0 13px 0 0;}
+
+</style></div>
+</div>
+</div><div class="separator disabled"></div></div><div class="megamenu-cta">
+<div class="n03_utility">
+<div class="n03_utility_container">
+<div class="n03_utility_table">
+<div class="n03_utility_cell">
+<h5>Partner Portal</h5>
+<p>Access for our registered Partners to help you be successful with FireEye.
+Collateral, deal registration, request for funds, training, enablement, and more.</p>
+</div>
+<div class="n03_utility_cell"><div class="button"><div class="text-center"><a class="btn btn-F99B1C compact mm-cta" href="https://partners.fireeye.com/" target="_blank">Partner Portal</a></div></div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li><li class="megamenu-tab is-current" data-curry="/current-threats.html" data-link="/current-threats.html">
+<h4 class="megamenu-title">
+<a class="MegaMenus" href="/current-threats.html" itemprop="url">Resources</a>
+</h4>
+<div class="content-4-par parsys"><div class="megamenus section">
+<div class="n03_list-item-sub" id="mandiant-mega-menu">
+<div class="n03-sub_container" data-columns="3">
+<div class="n03-sub_table">
+<div class="col-wrap">
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">Intelligence Briefings and Bulletins</h4><ul><li itemprop="url"><a class="MegaMenus" href="/current-threats/annual-threat-report.html" itemprop="name">Annual Threat Reports</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/current-threats/threat-intelligence-reports.html" itemprop="name">Threat Intelligence Reports</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/current-threats/reports-by-industry.html" itemprop="name">Threat Intelligence Reports by Industry</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/current-threats/apt-groups.html" itemprop="name">APT Groups</a></li>
+</ul></div>
+<div class="megamenu-list section">
+<h4 class="n03-sub_title">FireEye Blogs</h4><ul><li itemprop="url"><a class="MegaMenus" href="/blog.html" itemprop="name">Read the FireEye Blogs</a></li>
+</ul></div>
+</div>
+</div><div class="separator"></div>
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">Cyber Security</h4><ul><li itemprop="url"><a class="MegaMenus" href="/current-threats/what-is-cyber-security.html" itemprop="name">What is Cyber Security?</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/campaigns/security-effectiveness.html" itemprop="name">Security Effectiveness and Validation</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/campaigns/automated-defense.html" itemprop="name">Simplify Security Operations</a></li>
+<li itemprop="url"><a class="MegaMenus" href="https://vision.fireeye.com" itemprop="name" target="_blank">The Vision – Digital Magazine</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/company/webinars.html" itemprop="name">Webinars</a></li>
+</ul></div>
+</div>
+</div><div class="separator"></div>
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">Free Tools &amp; Apps</h4><ul><li itemprop="url"><a class="MegaMenus" href="/services/freeware.html" itemprop="name">Free Software Downloads</a></li>
+<li itemprop="url"><a class="MegaMenus" href="https://fireeye.market" itemprop="name" target="_blank">FireEye Market</a></li>
+</ul></div>
+<div class="megamenu-list section">
+<h4 class="n03-sub_title">Training</h4><ul><li itemprop="url"><a class="MegaMenus" href="/services/training.html" itemprop="name">Education and Training</a></li>
+</ul></div>
+</div>
+</div><div class="separator disabled"></div></div></div>
+</div>
+<div class="view-all-bar">
+<a class="MegaMenus" href="/current-threats.html">
+VIEW ALL RESOURCES</a>
+</div></div>
+</div>
+</div>
+</li><li class="megamenu-tab" data-curry="/current-threats.html" data-link="/company.html">
+<h4 class="megamenu-title">
+<a class="MegaMenus" href="/company.html" itemprop="url">Company</a>
+</h4>
+<div class="content-5-par parsys"><div class="megamenus section">
+<div class="n03_list-item-sub has-inner-cta">
+<div class="n03-sub_container" data-columns="2">
+<div class="n03-sub_table">
+<div class="col-wrap">
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">About Us</h4><ul><li itemprop="url"><a class="MegaMenus" href="/company.html" itemprop="name">Why FireEye?</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/company/awards.html" itemprop="name">Awards and Honors</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/company/leadership.html" itemprop="name">Leadership</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/company/board-of-directors.html" itemprop="name">Board of Directors</a></li>
+<li itemprop="url"><a class="MegaMenus" href="http://investors.fireeye.com" itemprop="name" target="_blank">Investor Relations</a></li>
+</ul></div>
+<div class="megamenu-list section">
+<h4 class="n03-sub_title">Contact</h4><ul><li itemprop="url"><a class="MegaMenus" href="/company/contact-us.html" itemprop="name">Contact FireEye</a></li>
+</ul></div>
+<div class="htmlpassthru section">
+<style>.g04 .megamenu-list a{padding-right:38px;line-height:1.358;padding-bottom:2px}@media (min-width:60em){.g04 .n03-sub_container{padding-bottom:23px}}@media(min-width:64em) and (max-width:64.5em){.g04 .megamenu-tab:first-child .megamenu-title{padding-left:14px}}@media (min-width:68em) and (max-width:69em){.g04 .megamenu-tab:first-child .megamenu-title{padding-left:30px}}</style></div>
+</div>
+</div><div class="separator"></div>
+<div class="n03-sub_cell">
+<div class="parsys"><div class="megamenu-list section">
+<h4 class="n03-sub_title">News and Events</h4><ul><li itemprop="url"><a class="MegaMenus" href="/company/newsroom.html" itemprop="name">Newsroom</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/company/press-releases.html" itemprop="name">Press Releases</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/company/events.html" itemprop="name">Events</a></li>
+</ul></div>
+<div class="megamenu-list section">
+<h4 class="n03-sub_title">Careers</h4><ul><li itemprop="url"><a class="MegaMenus" href="/company/jobs.html" itemprop="name">Job Opportunities</a></li>
+<li itemprop="url"><a class="MegaMenus" href="/company/jobs/internships.html" itemprop="name">Internships</a></li>
+</ul></div>
+<div class="htmlpassthru section">
+<style>
+  .content-5-par .megamenus .megamenu-cta {
+    background: url(/content/dam/fireeye-www/global/en/nav/bg-nav-vision.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 60px 0 12px 60px;
+    border: 0 solid #ffffff;}
+  .content-5-par .n03_utility {background-color: transparent;}
+  .n03_utility_cell {padding: 0 13px 0 0;}
+
+</style></div>
+</div>
+</div><div class="separator disabled"></div></div><div class="megamenu-cta">
+<div class="n03_utility">
+<div class="n03_utility_container">
+<div class="n03_utility_table">
+<div class="n03_utility_cell">
+<h5>The Vision</h5>
+<p>Read our digital magazine providing expert-authored stories, information, unique insights, and advice on cyber security.</p>
+</div>
+<div class="n03_utility_cell"><div class="button"><div class="text-center"><a class="btn btn-B2282D compact" href="https://vision.fireeye.com/" target="_blank">Get Your Copy</a></div></div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li></ul>
+</nav>
+</div>
+<span class="burger ficon ficon-menu"></span>
+</header>
+</div>
+</div>
+<div id="cookie-privacy-banner" style="display:none;">
+<div class="l_container">
+<div class="g">
+<div class="g-u-1">
+<div class="g-content">
+<div class="cookie-banner">
+<p class="cookie-text">
+To give you the best possible experience, this site uses cookies.  Find out more on <a href="/company/privacy.html" target="_blank">how we use cookies</a>.<button class="cookie-button highlighted" onclick="javascript:onAccept();" type="button">Accept</button>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="breadcrumbs breadcrumb">
+<div class="l_container is-full">
+<div class="g02 g02v0" id="g02-breadcrumbs">
+<div class="g02_container">
+<div class="g02_content">
+<ul class="list-inline g02_list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<li class="g02_list_item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a class="BreadCrumb" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta content="1" itemprop="position"/></li>
+<li class="g02_list_item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a class="BreadCrumb" href="/current-threats.html" itemprop="item"><span itemprop="name">Resources</span></a><meta content="2" itemprop="position"/></li>
+<li class="g02_list_item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><span itemprop="name">APT Groups<meta content="3" itemprop="position"/></span>
+</li></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<main class="l_main" role="main">
+<div class="content-par parsys"><div class="grid-100-full fdc-grids section">
+<div class="l_container g-m has-texture"><div class="texture left top-of-page">
+<div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_full_2048154618/image-texture"><img alt="Texture Top Left Grey 01" class="cq-dd-image" src="/content/dam/fireeye-www/texture/tx-top-left-grey-01.png" title="Texture Top Left Grey 01"/></div></div><div class="g g-m pad-top-80 g-alt"><div class="g-u-1 m_g-u-1">
+<div class="g-content">
+<div class="grid-100-mid parsys"><div class="text parbase section"><div class="c00 c00v0">
+<h1 class="title">Advanced Persistent Threat Groups</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="g g-m pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">Who's who of cyber threat actors</h2>
+<p class="type-ML light-text">FireEye pays special attention to
+advanced persistent threats (APT) groups that receive direction and
+support from an established nation state.</p>
+<p class="type-ML light-text">Like other attackers, APT groups try to
+steal data, disrupt operations or destroy infrastructure. Unlike most
+cyber criminals, APT attackers pursue their objectives over months or
+years. They adapt to cyber defenses and frequently retarget the same victim.</p>
+<p class="type-ML light-text">Just because you have APT-linked malware
+variants in your system doesn't mean that you're an APT target. But
+your security team should be aware of this list of the most active APT
+groups and take extra precautions when they detect malware linked to
+previous APT attacks.</p>
+</div>
+</div>
+<div class="button section"><a class="btn btn-44474D" href="https://content.fireeye.com/apt41/rpt-apt41" target="_blank">Read the latest report</a></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="asset-tile section"><div class="c11 c11v4">
+<div class="c11v4-container"><div class="c11-alert">
+<p class="btn-44474D">FREE Cyber Threat Intelligence</p>
+</div><div class="c11-image-div" style="background-image: url(/content/dam/fireeye-www/recommended/adv-logo-red.jpg)"><div class="c11-badge"></div>
+</div><div class="c11-text">
+<p>Know the threats that matter to you right now.</p>
+</div><div class="button section">
+<div class="cta button"><a class="btn btn-44474D" href="/mandiant/advantage.html">Sign Up Today</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="clear-all"></div></div>
+<div class="grid-100-full fdc-grids section">
+<div class="l_container force g-m background is-full background-repeat" style="background-color: #3D4F65;"><div class="gradient-simple-light"><div class="l_container"><div class="g g-m pad-top-20 pad-bottom-20 g-alt"><div class="g-u-1 m_g-u-1">
+<div class="g-content">
+<div class="grid-100-mid parsys"><div class="htmlpassthru section">
+<a class="anchor" name="groups"></a>
+<style>
+.reverse a:hover {color: #bcd2ea;}
+.c00, h3, .low {margin-bottom: 0px;}
+.sideline-right-red {margin-bottom: 20px;}
+</style></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="centered reverse">Suspected Attribution</h2>
+<p class="type-ML centered reverse low">
+<a class="reverse" href="#iran">Iran</a> | <a class="reverse" href="#china">China</a> | <a class="reverse" href="#north-korea">North Korea</a> | <a class="reverse" href="#russia">Russia</a> | <a class="reverse" href="#vietnam">Vietnam</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-100-full fdc-grids section">
+<div class="l_container force g-u-none g-m background-repeat"><div class="g g-m pad-top-40 pad-bottom-40"><div class="g-u-1 m_g-u-1">
+<div class="g-content">
+<div class="grid-100-mid parsys"><div class="text parbase section"><div class="c00 c00v0">
+<h2 class="centered">APT Group</h2>
+<p class="type-ML light-text centered">
+<a href="#apt41">APT41</a> | <a href="#apt40">APT40</a> | <a href="#apt39">APT39</a> | <a href="#apt38">APT38</a> | <a href="#apt37">APT37</a> | <a href="#apt34">APT34</a> | <a href="#apt33">APT33</a> | <a href="#apt32">APT32</a> | <a href="#apt30">APT30</a> | <a href="#apt29">APT29</a><br/> <a href="#apt28">APT28</a> | <a href="#apt19">APT19</a> | <a href="#apt18">APT18</a> | <a href="#apt17">APT17</a> | <a href="#apt16">APT16</a> | <a href="#apt12">APT12</a> | <a href="#apt10">APT10</a> | <a href="#apt5">APT5</a> | <a href="#apt3">APT3</a> | <a href="#apt1">APT1</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="clear-all"></div></div>
+<div class="grid-100-edge fdc-grids section">
+<div class="l_container is-full force"><div class="grid-100-full parsys"><div class="grid-100-full fdc-grids section">
+<div class="l_container g-m background is-full" style="background-color: #818C9B;"><div class="l_container"><div class="g g-m pad-top-20 pad-bottom-20 g-no-gutter"><div class="g-u-1 m_g-u-1">
+<div class="g-content">
+<div class="grid-100-mid parsys"><div class="htmlpassthru section">
+<a class="anchor" name="iran"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h3 class="guardians allcaps centered">Suspected Attribution: <span class="reverse">Iran</span></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt39"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT39</h2>
+<p>
+<b>Suspected attribution:</b> Iran</p>
+<p>
+<b>Target sectors:</b> While APT39's targeting scope is global, its
+activities are concentrated in the Middle East. APT39 has prioritized
+the telecommunications sector, with additional targeting of the travel
+industry and IT firms that support it and the high-tech industry.</p>
+<p>
+<b>Overview:</b> The group's focus on the telecommunications and
+travel industries suggests intent to perform monitoring, tracking, or
+surveillance operations against specific individuals, collect
+proprietary or customer data for commercial or operational purposes
+that serve strategic requirements related to national priorities, or
+create additional accesses and vectors to facilitate future campaigns.
+Government entities targeting suggests a potential secondary intent to
+collect geopolitical data that may benefit nation-state decision making.</p>
+<p>
+<b>Associated malware:</b> The group primarily leverages the SEAWEED
+and CACHEMONEY backdoors along with a specific variant of the POWBAT backdoor.</p>
+<p>
+<b>Attack vectors:</b> For initial compromise FireEye Intelligence has
+observed APT39 leverage spearphishing with malicious attachments
+and/or hyperlinks typically resulting in a POWBAT infection. In some
+cases previously compromised email accounts have also been leveraged,
+likely to abuse inherent trusts and increase the chances of a
+successful attack. APT39 frequently registers and leverages domains
+that masquerade as legitimate web services and organizations that are
+relevant to the intended target. Furthermore, this group has routinely
+identified and exploited vulnerable web servers of targeted
+organizations to install web shells, such as ANTAK and ASPXSPY, and
+used stolen legitimate credentials to compromise externally facing
+Outlook Web Access (OWA) resources. We have not observed APT39 exploit vulnerabilities.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge/grid-100-full/grid_66_33_full/grid-33-right/image"><img alt="APT39" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge/grid-100-full/grid_66_33_full/grid-33-right/image.img.png/1570420206786.png" title="APT39"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="/blog/threat-research/2019/01/apt39-iranian-cyber-espionage-group-focused-on-personal-information.html"><b>Blog</b> – APT39: An Iranian Cyber Espionage Group Focused on Personal Information</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt35"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT35</h2>
+<p>
+<b>Suspected attribution:</b> Iran</p>
+<p>
+<b>Target sectors:</b> U.S. Western Europe, and Middle Eastern
+military, diplomatic, and government personnel, organizations in the
+media, energy, and defense Industrial base, and engineering, business
+services, and telecommunications sectors.</p>
+<p>
+<b>Overview:</b> APT35 (aka Newscaster Team) is an Iranian
+government-sponsored cyber espionage team that conducts long-term,
+resource-intensive operations to collect strategic intelligence.
+Mandiant Threat Intelligence has observed APT35 operations dating back
+to 2014. APT35 has historically relied on marginally sophisticated
+tools, including publicly available webshells and penetration testing
+tools, suggesting a relatively nascent development capability.
+However, the breadth and scope of APT35's operations, particularly as
+it relates to its complex social engineering efforts, likely indicates
+that the group is well resourced in other areas.</p>
+<p>
+<b>Associated malware:</b> ASPXSHELLSV, BROKEYOLK, PUPYRAT, TUNNA,
+MANGOPUNCH, DRUBOT, HOUSEBLEND</p>
+<p>
+<b>Attack vectors:</b> APT35 typically relies on spearphishing to
+initially compromise an organization, often using lures related to
+health care, job postings, resumes, or password policies. However, we
+have also observed the group using compromised accounts with
+credentials harvested from prior operations, strategic web
+compromises, and password spray attacks against externally facing web
+applications as additional techniques to gain initial access.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge/grid-100-full/grid_66_33_full_1296867439/grid-33-right/image_854885653"><img alt="APT19" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge/grid-100-full/grid_66_33_full_1296867439/grid-33-right/image_854885653.img.png/1601074358788.png" title="APT19"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt34"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT34</h2>
+<p>
+<b>Suspected attribution:</b> Iran</p>
+<p>
+<b>Target sectors:</b> This threat group has conducted broad targeting
+across a variety of industries, including financial, government,
+energy, chemical, and telecommunications, and has largely focused its
+operations within the Middle East</p>
+<p>
+<b>Overview:</b> We believe APT34 is involved in a long-term cyber
+espionage operation largely focused on reconnaissance efforts to
+benefit Iranian nation-state interests and has been operational since
+at least 2014. We assess that APT34 works on behalf of the Iranian
+government based on infrastructure details that contain references to
+Iran, use of Iranian infrastructure, and targeting that aligns with
+nation-state interests.</p>
+<p>
+<b>Associated malware:</b> POWBAT, POWRUNER, BONDUPDATER</p>
+<p>
+<b>Attack vectors:</b> In its latest campaign, APT34 leveraged the
+recent Microsoft Office vulnerability CVE-2017-11882 to deploy
+POWRUNER and BONDUPDATER.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge/grid-100-full/grid_66_33_full_157309823/grid-33-right/image"><img alt="APT34" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge/grid-100-full/grid_66_33_full_157309823/grid-33-right/image.img.png/1570420177233.png" title="APT34"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="/blog/threat-research/2017/12/targeted-attack-in-middle-east-by-apt34.html"><b>Blog</b> – New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt33"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT33</h2>
+<p>
+<b>Suspected attribution:</b> Iran</p>
+<p>
+<b>Target sectors:</b> Aerospace, energy</p>
+<p>
+<b>Overview:</b> APT33 has targeted organizations, spanning multiple
+industries, headquartered in the U.S., Saudi Arabia and South Korea.
+APT33 has shown particular interest in organizations in the aviation
+sector involved in both military and commercial capacities, as well as
+organizations in the energy sector with ties to petrochemical production.</p>
+<p>
+<b>Associated malware:</b> SHAPESHIFT, DROPSHOT, TURNEDUP, NANOCORE,
+NETWIRE, ALFA Shell</p>
+<p>
+<b>Attack vectors:</b> APT33 sent spear-phishing emails to employees
+whose jobs related to the aviation industry. These emails included
+recruitment themed lures and contained links to malicious HTML
+application (.hta) files. The .hta files contained job descriptions
+and links to legitimate job postings on popular employment websites
+that would be relevant to the targeted individuals.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge/grid-100-full/grid_66_33_full_1332758264/grid-33-right/image"><img alt="APT33" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge/grid-100-full/grid_66_33_full_1332758264/grid-33-right/image.img.png/1570420165500.png" title="APT33"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="/blog/threat-research/2017/09/apt33-insights-into-iranian-cyber-espionage.html"><b>Blog</b> – APT33 Targets Aerospace and Energy Sectors and has Ties to Destructive Malware</a></li><li class="c01_item">
+<a href="https://www.brighttalk.com/webcast/10703/275683?utm_source=website&amp;utm_medium=aptpg&amp;utm_content=webinar" target="_blank"><b>Webinar</b> – Insights into Iranian Cyber Espionage Group </a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+</div>
+</div>
+<div class="clear-all"></div>
+</div>
+<div class="grid-100-edge fdc-grids section">
+<div class="l_container is-full"><div class="grid-100-full parsys"><div class="grid-100-full fdc-grids section">
+<div class="l_container g-m background is-full" style="background-color: #818C9B;"><div class="l_container"><div class="g g-m pad-top-20 pad-bottom-20 g-no-gutter"><div class="g-u-1 m_g-u-1">
+<div class="g-content">
+<div class="grid-100-mid parsys"><div class="htmlpassthru section">
+<a class="anchor" name="china"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h3 class="guardians allcaps centered">Suspected Attribution: <span class="reverse">China</span></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt41"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT41</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> APT41 has directly targeted organizations in at
+least 14 countries dating back to as early as 2012. The group’s
+espionage campaigns have targeted healthcare, telecoms, and the
+high-tech sector, and have historically included stealing intellectual
+property. Their cyber crime intrusions are most apparent among video
+game industry targeting, including the manipulation of virtual
+currencies, and attempted deployment of ransomware. APT41operations
+against higher education, travel services, and news/media firms
+provide some indication that the group also tracks individuals and
+conducts surveillance.</p>
+<p>
+<b>Overview:</b> APT41 is a prolific cyber threat group that carries
+out Chinese state-sponsored espionage activity in addition to
+financially motivated activity potentially outside of state control.</p>
+<p>
+<b>Associated malware:</b> APT41 has been observed using at least 46
+different code families and tools.</p>
+<p>
+<b>Attack vectors:</b> APT41 often relies on spear-phishing emails
+with attachments such as compiled HTML (.chm) files to initially
+compromise their victims. Once in a victim organization, APT41 can
+leverage more sophisticated TTPs and deploy additional malware. For
+example, in a campaign running almost a year, APT41 compromised
+hundreds of systems and used close to 150 unique pieces of malware
+including backdoors, credential stealers, keyloggers, and rootkits.
+APT41 has also deployed rootkits and Master Boot Record (MBR) bootkits
+on a limited basis to hide their malware and maintain persistence on
+select victim systems. </p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full/grid-33-right/image"><img alt="APT41" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full/grid-33-right/image.img.png/1570420225323.png" title="APT41"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="https://content.fireeye.com/apt41/rpt-apt41" target="_blank"><b>Report</b> – APT41: A Dual Espionage and Cyber Crime Operation</a></li><li class="c01_item">
+<a href="/blog/threat-research/2019/08/apt41-dual-espionage-and-cyber-crime-operation.html"><b>Blog</b> – APT41, A Dual Espionage and Cyber Crime Threat</a></li><li class="c01_item">
+<a href="https://www.brighttalk.com/webcast/7451/366611?utm_source=fireeye&amp;utm_medium=webinar-page" target="_blank"><b>Webinar</b> – Double Dragon: APT41, a Dual Espionage and Cyber Crime Operation </a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt40"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT40</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> APT40 is a Chinese cyber espionage group that
+typically targets countries strategically important to the Belt and
+Road Initiative. Although the group targets global organizations —
+especially those with a focus on engineering and defense — it also
+historically conducted campaigns against regional entities in areas
+such as Southeast Asia. Since at least January 2013, the group has
+conducted campaigns against a range of verticals including maritime
+targets, defense, aviation, chemicals, research/education, government,
+and technology organizations.</p>
+<p>
+<b>Overview:</b> FireEye Intelligence believes that APT40's operations
+are a cyber counterpart to China's efforts to modernize its naval
+capabilities; this is also manifested in targeting wide-scale research
+projects at universities and obtaining designs for marine equipment
+and vehicles. The group's operations tend to target
+government-sponsored projects and take large amounts of information
+specific to such projects, including proposals, meetings, financial
+data, shipping information, plans and drawings, and raw data.</p>
+<p>
+<b>Associated malware:</b> APT40 has been observed using at least 51
+different code families. Of these, 37 are non-public. At least seven
+of these non-public tools (BADSIGN, FIELDGOAL, FINDLOCK, PHOTO,
+SCANBOX, SOGU, and WIDETONE) are shared with other suspected
+China-nexus operators.</p>
+<p>
+<b>Attack vectors:</b> APT40 typically poses as a prominent individual
+who is probably of interest to a target to send spear-phishing emails.
+This includes pretending to be a journalist, an individual from a
+trade publication, or someone from a relevant military organization or
+non-governmental organization (NGO). In some instances, the group has
+leveraged previously compromised email addresses to send
+spear-phishing emails.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_898816132/grid-33-right/image"><img alt="APT40" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_898816132/grid-33-right/image.img.png/1570420215623.png" title="APT40"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="/blog/threat-research/2019/03/apt40-examining-a-china-nexus-espionage-actor.html"><b>Blog</b> – APT40: Examining a China-Nexus Espionage Actor</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt31"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT31</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Multiple, including government, international
+financial organization, and aerospace and defense organizations, as
+well as high tech, construction and engineering, telecommunications,
+media, and insurance.</p>
+<p>
+<b>Overview:</b> APT31 is a China-nexus cyber espionage actor focused
+on obtaining information that can provide the Chinese government and
+state-owned enterprises with political, economic, and military advantages.</p>
+<p>
+<b>Associated malware:</b> SOGU, LUCKYBIRD, SLOWGYRO, DUCKFAT</p>
+<p>
+<b>Attack vectors:</b> APT31 has exploited vulnerabilities in
+applications such as Java and Adobe Flash to compromise victim environments.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1976240110/grid-33-right/image_854885653"><img alt="APT31" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1976240110/grid-33-right/image_854885653.img.png/1601074527325.png" title="APT31"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt30"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT30</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Members of the Association of Southeast Asian
+Nations (ASEAN)</p>
+<p>
+<b>Overview:</b> APT30 is noted not only for sustained activity over a
+long period of time but also for successfully modifying and adapting
+source code to maintain the same tools, tactics and infrastructure
+since at least 2005. Evidence shows that the group prioritizes
+targets, most likely works in shifts in a collaborative environment
+and builds malware from a coherent development plan. The group has had
+the capability to infect air-gapped networks since 2005.</p>
+<p>
+<b>Associated malware:</b> SHIPSHAPE, SPACESHIP, FLASHFLOOD</p>
+<p>
+<b>Attack vectors:</b> APT30 uses a suite of tools that includes
+downloaders, backdoors, a central controller and several components
+designed to infect removable drives and cross air-gapped networks to
+steal data. APT30 frequently registers its own DNS domains for malware
+CnC activities.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1706622864/grid-33-right/image"><img alt="APT30" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1706622864/grid-33-right/image.img.png/1601074533619.png" title="APT30"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="/current-threats/apt-groups/rpt-apt30.html"><b>Report</b> – APT30 and the Mechanics of a Long-Running Cyber Espionage Operation: How a Cyber Threat Group Exploited Goverments and Commercial Entities across Southeast Asia and India for over a Decade</a></li><li class="c01_item">
+<a href="/blog/executive-perspective/2015/04/apt30_and_lessonsfo.html"><b>Blog</b> – APT30 and Lessons for ASEAN</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt27"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT27</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> APT27 has targeted multiple organizations
+headquartered around the globe, including North and South America,
+Europe, and the Middle East. These organizations fall into a range of
+different industries, including business services, high tech,
+government, and energy; however a notable number are in the aerospace
+and transport or travel industries.</p>
+<p>
+<b>Overview:</b> APT27 engages in cyber operations where the goal is
+intellectual property theft, usually focusing on the data and projects
+that make a particular organization competitive within its field.</p>
+<p>
+<b>Associated malware:</b> PANDORA, SOGU, ZXSHELL, GHOST, WIDEBERTH,
+QUICKPULSE, FLOWERPOT</p>
+<p>
+<b>Attack vectors:</b> APT27 often uses spear phishing as its initial
+compromise method. APT27 threat actors are not known for using
+original zero-day exploits, but they may leverage those exploits once
+they have been made public. In at least one case, APT27 actors used a
+compromised account at one victim organization to send a spear
+phishing email to other intended victims in the similar industries.
+Additionally, APT27 may compromise vulnerable web applications in
+order to gain an initial foothold.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1195845031/grid-33-right/image_854885653"><img alt="APT27" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1195845031/grid-33-right/image_854885653.img.png/1601074551665.png" title="APT27"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt26"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT26</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Aerospace, Defense, and Energy sectors, among others.</p>
+<p>
+<b>Overview:</b> APT26 engages in cyber operations where the goal is
+intellectual property theft, usually focusing on the data and projects
+that make a particular organization competitive within its field.</p>
+<p>
+<b>Associated malware:</b> SOGU, HTRAN, POSTSIZE, TWOCHAINS, BEACON</p>
+<p>
+<b>Attack vectors:</b> The group frequently uses strategic web
+compromises to gain access to target networks and custom backdoors
+once they are inside a victim environment.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1743336388/grid-33-right/image_854885653"><img alt="APT26" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1743336388/grid-33-right/image_854885653.img.png/1601074560148.png" title="APT26"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt25"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT25</h2>
+<p>
+<b>AKA:</b> Uncool, Vixen Panda, Ke3chang, Sushi Roll, Tor</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> The defense industrial base, media, financial
+services, and transportation sectors in the U.S. and Europe.</p>
+<p>
+<b>Overview:</b> APT25 engages in cyber operations where the goal is
+data theft.</p>
+<p>
+<b>Associated malware:</b> LINGBO, PLAYWORK, MADWOFL, MIRAGE,
+TOUGHROW, TOYSNAKE, SABERTOOTH</p>
+<p>
+<b>Attack vectors:</b> APT25 has historically used spear phishing in
+their operations, including messages containing malicious attachments
+and malicious hyperlinks. APT25 threat actors typically do not use
+zero-day exploits but may leverage those exploits once they have been
+made public.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_826393938/grid-33-right/image_854885653"><img alt="APT25" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_826393938/grid-33-right/image_854885653.img.png/1601074567918.png" title="APT25"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt24"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT24</h2>
+<p>
+<b>AKA:</b> PittyTiger</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> APT24 has targeted a wide variety of
+industries, including organizations in the government, healthcare,
+construction and engineering, mining, nonprofit, and
+telecommunications industries.</p>
+<p>
+<b>Overview:</b> This group is known to have targeted organizations
+headquartered in countries including the U.S. and Taiwan. APT24 has
+historically used the RAR archive utility to encrypt and compress
+stolen data prior to transferring it out of the network. Data theft
+exfiltrated from this actor mainly focused on documents with political
+significance, suggesting its intent is to monitor the positions of
+various nation states on issues applicable to China’s ongoing
+territorial or sovereignty dispute.</p>
+<p>
+<b>Associated malware:</b> PITTYTIGER, ENFAL, TAIDOOR</p>
+<p>
+<b>Attack vectors:</b> APT24 has used phishing emails that use
+military, renewable energy, or business strategy themes as lures.
+Further, APT24 engages in cyber operations where the goal is
+intellectual property theft, usually focusing on the data and projects
+that make a particular organization competitive within its field.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_866796645/grid-33-right/image_854885653"><img alt="APT24" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_866796645/grid-33-right/image_854885653.img.png/1601074575125.png" title="APT24"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt23"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT23</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Media and government in the U.S. and the Philippines</p>
+<p>
+<b>Overview:</b> APT23 has stolen information that has political and
+military significance, rather than intellectual property. This
+suggests that APT23 may perform data theft in support of more
+traditional espionage operations.</p>
+<p>
+<b>Associated malware:</b> NONGMIN</p>
+<p>
+<b>Attack vectors:</b> APT23 has used spear phishing messages to
+compromise victim networks, including education-related phishing
+lures. APT23 actors are not known to use zero-day exploits, but this
+group has leveraged those exploits once they have been made public.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_363666655/grid-33-right/image_854885653"><img alt="APT23" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_363666655/grid-33-right/image_854885653.img.png/1601074582937.png" title="APT23"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt22"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT22</h2>
+<p>
+<b>AKA:</b> Barista</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> A broad set of political, military, and
+economic entities in East Asia, Europe, and the U.S.</p>
+<p>
+<b>Overview:</b> We believe APT22 has a nexus to China and has been
+operational since at least early 2014, carrying out intrusions and
+attack activity against public and private sector entities, including dissidents.</p>
+<p>
+<b>Associated malware:</b> PISCES, SOGU, FLATNOTE, ANGRYBELL,
+BASELESS, SEAWOLF, LOGJAM</p>
+<p>
+<b>Attack vectors:</b> APT22 threat actors have used strategic web
+compromises in order to passively exploit targets of interest. APT22
+actors have also identified vulnerable public-facing web servers on
+victim networks and uploaded webshells to gain access to the victim network.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1943346960/grid-33-right/image_854885653"><img alt="APT22" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1943346960/grid-33-right/image_854885653.img.png/1601074589347.png" title="APT22"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt21"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT21</h2>
+<p>
+<b>AKA:</b> Zhenbao</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Government</p>
+<p>
+<b>Overview:</b> APT21 leverages strategic Russian-language
+attachments themed with national security issues in lure documents.
+Historically, social engineering content is indicative of a cyber
+espionage operation attempting to gain unauthorized access to
+privileged information concerning state security in Russia. An
+analysis of APT21 techniques suggests that another of their focus
+areas is dissident groups which seek greater autonomy or independence
+from China, such as those from Tibet or Xinjiang.</p>
+<p>
+<b>Associated malware:</b> SOGU, TEMPFUN, Gh0st, TRAVELNET, HOMEUNIX, ZEROTWO</p>
+<p>
+<b>Attack vectors:</b> APT21 leverages spear phishing email messages
+with malicious attachment, links to malicious files, or web pages.
+They have also used strategic web compromises (SWCs) to target
+potential victims. APT21 frequently uses two backdoors known as
+TRAVELNET and TEMPFUN. Significantly, APT21 typically primarily uses
+custom backdoors, rarely using publicly available tools.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1751828274/grid-33-right/image_854885653"><img alt="APT21" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1751828274/grid-33-right/image_854885653.img.png/1601074596566.png" title="APT21"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt20"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT20</h2>
+<p>
+<b>AKA:</b> Twivy</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Construction and engineering, health care,
+non-profit organizations, defense industrial bas eand chemical
+research and production companies.</p>
+<p>
+<b>Overview:</b> APT20 engages in cyber operations where the goal is
+data theft. APT20 conducts intellectual property theft but also
+appears interested in stealing data from or monitoring the activities
+of individuals with particular political interests. Based on available
+data, we assess that this is a freelancer group with some nation state
+sponsorship located in China.</p>
+<p>
+<b>Associated malware:</b> QIAC, SOGU, Gh0st, ZXSHELL, Poison Ivy,
+BEACON, HOMEUNIX, STEW</p>
+<p>
+<b>Attack vectors:</b> APT20's use of strategic web compromises
+provides insight into a second set of likely targets. Many of APT20's
+SWCs have been hosted on web sites (including Chinese-language
+websites) that deal with issues such as democracy, human rights,
+freedom of the press, ethnic minorities in China, and other issues.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1766247480/grid-33-right/image_854885653"><img alt="APT20" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1766247480/grid-33-right/image_854885653.img.png/1601074604090.png" title="APT20"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt19"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT19</h2>
+<p>
+<b>Also known as:</b> Codoso Team</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Legal and investment</p>
+<p>
+<b>Overview:</b> A group likely composed of freelancers, with some
+degree of sponsorship by the Chinese government.</p>
+<p>
+<b>Associated malware:</b> BEACON, COBALTSTRIKE</p>
+<p>
+<b>Attack vectors:</b> In 2017, APT19 used three different techniques
+to attempt to compromise targets. In early May, the phishing lures
+leveraged RTF attachments that exploited the Microsoft Windows
+vulnerability described in CVE 2017-0199. Toward the end of May, APT19
+switched to using macro-enabled Microsoft Excel (XLSM) documents. In
+the most recent versions, APT19 added an application whitelisting
+bypass to the XLSM documents. At least one observed phishing lure
+delivered a Cobalt Strike payload.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1190178819/grid-33-right/image_854885653"><img alt="APT19" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1190178819/grid-33-right/image_854885653.img.png/1601074609389.png" title="APT19"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt18"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT18</h2>
+<p>
+<b>Also known as:</b> Wekby</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Aerospace and Defense, Construction and
+Engineering, Education, Health and Biotechnology, High Tech,
+Telecommunications, Transportation</p>
+<p>
+<b>Overview:</b> Very little has been released publicly about this group.</p>
+<p>
+<b>Associated malware:</b> Gh0st RAT</p>
+<p>
+<b>Attack vectors:</b> Frequently developed or adapted zero-day
+exploits for operations, which were likely planned in advance. Used
+data from Hacking Team leak, which demonstrated how the group can
+shift resources (i.e. selecting targets, preparing infrastructure,
+crafting messages, updating tools) to take advantage of unexpected
+opportunities like newly exposed exploits.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_2045569362/grid-33-right/image"><img alt="APT18" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_2045569362/grid-33-right/image.img.png/1570419994319.png" title="APT18"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="/blog/threat-research/2015/07/demonstrating_hustle.html"><b>Blog</b> – Demonstrating Hustle, Chinese APT Groups Quickly Use Zero-Day Vulnerability (CVE-2015-5119) Following Hacking Team Leak</a></li><li class="c01_item">
+<a href="https://www2.fireeye.com/WBNR-14Q3HealthcareWebinar.html" target="_blank"><b>Webinar</b> – State of the Hack: Spotlight on Healthcare</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt17"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT17</h2>
+<p>
+<b>Also known as:</b> Tailgator Team, Deputy Dog</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> U.S. government, and international law firms
+and information technology companies</p>
+<p>
+<b>Overview:</b> Conducts network intrusion against targeted organizations.</p>
+<p>
+<b>Associated malware:</b> BLACKCOFFEE</p>
+<p>
+<b>Attack vectors:</b> The threat group took advantage of the ability
+to create profiles and post in forums to embed encoded CnC for use
+with a variant of the malware it used. This technique can make it
+difficult for network security professionals to determine the true
+location of the CnC, and allow the CnC infrastructure to remain active
+for a longer period.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1645043553/grid-33-right/image"><img alt="APT17" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1645043553/grid-33-right/image.img.png/1570420022798.png" title="APT17"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="https://www2.fireeye.com/WEB-2015RPTAPT17.html" target="_blank"><b>Report</b> – Hiding in Plain Sight: FireEye and Microsoft Expose Obfuscation Tactic</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt16"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT16</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Japanese and Taiwanese organizations in the
+high-tech, government services, media and financial services industries</p>
+<p>
+<b>Overview:</b> China-based group concerned with Taiwan political and
+journalistic matters.</p>
+<p>
+<b>Associated malware:</b> IRONHALO, ELMER</p>
+<p>
+<b>Attack vectors:</b> Spearphishing emails sent to Taiwanese media
+organizations and webmail addresses. Lure documents contained
+instructions for registration and subsequent listing of goods on a
+Taiwanese auction website.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_2033789082/grid-33-right/image_2093882035"><img alt="APT16" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_2033789082/grid-33-right/image_2093882035.img.png/1570420035294.png" title="APT16"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt15"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT15</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Global targets in the trade, economic and
+financial, energy, and military sectors in support of Chinese
+government interests.</p>
+<p>
+<b>Overview:</b> APT15 has targeted organizations headquartered in
+multiple locations, including a number of European countries, the
+U.S., and South Africa. APT15 operators share resources, including
+backdoors as well as infrastructure, with other Chinese APTs.</p>
+<p>
+<b>Associated malware:</b> ENFAL, BALDEAGLE, NOISEMAKER, MIRAGE</p>
+<p>
+<b>Attack vectors:</b> APT15 typically uses well-developed
+spearphishing emails for Initial Compromise against global targets in
+various sectors that are of interest to the Chinese government.
+Significantly, APT15 use backdoors and infrastructure that is not
+unique to the group, making attribution challenging.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1603217941/grid-33-right/image_854885653"><img alt="APT15" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1603217941/grid-33-right/image_854885653.img.png/1601074617975.png" title="APT15"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt14"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT14</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Government, telecommunications, and
+construction and engineering.</p>
+<p>
+<b>Overview:</b> APT14 engages in cyber operations where the goal is
+data theft, with a possible focus on military and maritime equipment,
+operations, and policies. We believe that the stolen data, especially
+encryption and satellite communication equipment specifications, could
+be used to enhance military operations, such as intercepting signals
+or otherwise interfering with military satellite communication networks.</p>
+<p>
+<b>Associated malware:</b> Gh0st, POISONIVY, CLUBSEAT, GROOVY</p>
+<p>
+<b>Attack vectors:</b> APT14 threat actors do not tend to use zero-day
+exploits but may leverage those exploits once they have been made
+public. They may leverage a custom SMTP mailer tool to send their
+spear phishing messages. APT14 phishing messages are often crafted to
+appear to originate from trusted organizations.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_738449547/grid-33-right/image_854885653"><img alt="APT14" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_738449547/grid-33-right/image_854885653.img.png/1601074626114.png" title="APT14"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt12"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT12</h2>
+<p>
+<b>Also known as:</b> Calc Team</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Journalists, government, defense industrial base</p>
+<p>
+<b>Overview:</b> APT12 is believed to be a cyber espionage group
+thought to have links to the Chinese People's Liberation Army. APT12's
+targets are consistent with larger People's Republic of China (PRC)
+goals. Intrusions and campaigns conducted by this group are in-line
+with PRC goals and self-interest in Taiwan.</p>
+<p>
+<b>Associated malware:</b> RIPTIDE, HIGHTIDE, THREBYTE, WATERSPOUT</p>
+<p>
+<b>Attack vectors:</b> FireEye observed APT12 deliver these exploit
+documents via phishing emails from valid but compromised accounts.
+Based on past APT12 activity, we expect the threat group to continue
+to utilize phishing as a malware delivery method.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_243895138/grid-33-right/image"><img alt="APT12" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_243895138/grid-33-right/image.img.png/1570420047774.png" title="APT12"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="https://www2.fireeye.com/fireeye-mandiant-m-trends-report" target="_blank"><b>Report</b> – M-Trends 2014: Beyond the Breach</a></li><li class="c01_item">
+<a href="/blog/threat-research/2014/09/darwins-favorite-apt-group-2.html"><b>Blog</b> – Darwin’s Favorite APT Group</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt10"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT10</h2>
+<p>
+<b>Also known as:</b> Menupass Team</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Construction and engineering, aerospace, and
+telecom firms, and governments in the United States, Europe, and Japan</p>
+<p>
+<b>Overview:</b> APT10 is a Chinese cyber espionage group that FireEye
+has tracked since 2009. They have historically targeted construction
+and engineering, aerospace, and telecom firms, and governments in the
+United States, Europe, and Japan. We believe that the targeting of
+these industries has been in support of Chinese national security
+goals, including acquiring valuable military and intelligence
+information as well as the theft of confidential business data to
+support Chinese corporations.</p>
+<p>
+<b>Associated malware:</b> HAYMAKER, SNUGRIDE, BUGJUICE, QUASARRAT</p>
+<p>
+<b>Attack vectors:</b> This recent APT10 activity has included both
+traditional spear phishing and access to victim’s networks through
+managed service providers. (For more information on infection via
+service providers see M-Trends 2016). APT10 spear phishes have been
+relatively unsophisticated, leveraging .lnk files within archives,
+files with double extensions (e.g.
+[Redacted]_Group_Meeting_Document_20170222_doc_.exe) and in some cases
+simply identically named decoy documents and malicious launchers
+within the same archive. In addition to the spear phishes, FireEye
+Threat Intelligence has observed APT10 accessing victims through
+global service providers.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_968702396/grid-33-right/image"><img alt="APT10" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_968702396/grid-33-right/image.img.png/1570420058791.png" title="APT10"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="/blog/threat-research/2018/09/apt10-targeting-japanese-corporations-using-updated-ttps.html"><b>Blog</b> – APT10 Targeting Japanese Corporations Using Updated TTPs</a></li><li class="c01_item">
+<a href="/blog/threat-research/2017/04/apt10_menupass_grou.html"><b>Blog</b> – APT10 (MenuPass Group): New Tools, Global Campaign Latest Manifestation of Longstanding Threat</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt9"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT9</h2>
+<p>
+<b>Suspected attribution:</b> Based on available data, we assess that
+this is a freelancer group with some nation-state sponsorship,
+possibly China.</p>
+<p>
+<b>Target sectors:</b> Organizations headquartered in multiple
+countries and in industries such as health care and pharmaceuticals,
+construction and engineering, and aerospace and defense.</p>
+<p>
+<b>Overview:</b> APT9 engages in cyber operations where the goal is
+data theft, usually focusing on the data and projects that make a
+particular organization competitive within its field.</p>
+<p>
+<b>Associated malware:</b> SOGU, HOMEUNIX, PHOTO, FUNRUN, Gh0st, ZXSHEL</p>
+<p>
+<b>Attack vectors:</b> APT9 was historically very active in the
+pharmaceuticals and biotechnology industry. We have observed this
+actor use spearphishing, valid accounts, as well as remote services
+for Initial Access. On at least one occasion, Mandiant observed APT9
+at two companies in the biotechnology industry and suspect that APT9
+actors may have gained initial access to one of the companies by using
+a trusted relationship between the two companies. APT9 use a wide
+range of backdoors, including publicly available backdoors, as well as
+backdoors that are believed to be custom, but are used by multiple APT groups.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_713452954/grid-33-right/image_854885653"><img alt="APT9" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_713452954/grid-33-right/image_854885653.img.png/1601074635815.png" title="APT9"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt8"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT8</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> A broad range of industries, including media
+and entertainment, construction and engineering, and aerospace and defense.</p>
+<p>
+<b>Overview:</b> APT8 engages in cyber operations where the goal is
+intellectual property theft, usually focusing on the data and projects
+that make an organization competitive within its field. We assess that
+this is a freelancer group located in China with some nation-state
+sponsorship. APT8 has targeted organizations headquartered in multiple
+countries, including the U.S., Germany, the U.K., India, and Japan.</p>
+<p>
+<b>Associated malware:</b> HASH, FLYZAP, GOLFPRO, SAFEPUTT</p>
+<p>
+<b>Attack vectors:</b> APT8 actors often use spear phishing email
+messages with malicious attachments or links, or it exploits
+vulnerable Internet-facing web servers to compromise target
+organizations. In addition, in multiple intrusions APT8 actors sent
+malicious links to potential victims via chat or instant messaging programs.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1984588468/grid-33-right/image_854885653"><img alt="APT8" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1984588468/grid-33-right/image_854885653.img.png/1601074642876.png" title="APT8"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt7"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT7</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Construction, engineering, aerospace, and
+defense industrial base.</p>
+<p>
+<b>Overview:</b> APT7 engages in cyber operations where the goal is
+intellectual property theft, usually focusing on data and projects
+that make an organization competitive within its field. This group is
+known to have targeted organizations headquartered in the U.S. and U.K.</p>
+<p>
+<b>Associated malware:</b> DIGDUG, TRACKS</p>
+<p>
+<b>Attack vectors:</b> APT7 threat actors have used access to one
+organization to infiltrate another organization under the same
+corporate parent. This is a form of lateral movement, but in this case
+was also the initial compromise method for the second organization.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1799209207/grid-33-right/image_854885653"><img alt="APT7" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1799209207/grid-33-right/image_854885653.img.png/1601074650978.png" title="APT7"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt6"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT6</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Transportation, Automotive, Construction and
+Engineering, Telecommunications, Electronic, Construction and Materials.</p>
+<p>
+<b>Overview:</b> APT6 engages in cyber operations where the goal is
+data theft, most likely data and projects that make an organization
+competitive within its field. APT6 targeted organizations
+headquartered in the U.S and U.K.</p>
+<p>
+<b>Associated malware:</b> BELUGA, EXCHAIN, PUPTENT</p>
+<p>
+<b>Attack vectors:</b> APT6 utilizes several custom backdoors,
+including some used by other APT groups as well as those that are
+unique to the group.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1673955800/grid-33-right/image_854885653"><img alt="APT6" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1673955800/grid-33-right/image_854885653.img.png/1601074658480.png" title="APT6"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt5"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT5</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Regional telecommunication providers,
+Asia-based employees of global telecommunications and tech firms,
+high-tech manufacturing, and military application technology in the
+U.S., Europe, and Asia.</p>
+<p>
+<b>Overview:</b> APT5 has been active since at least 2007. APT5 has
+targeted or breached organizations across multiple industries, but its
+focus appears to be on telecommunications and technology companies,
+especially information about satellite communications. As early as
+2014, Mandiant Incident Response discovered APT5 making unauthorized
+code modifications to files in the embedded operating system of
+another technology platform. In 2015, APT5 compromised a U.S.
+telecommunications organization providing services and technologies
+for private and government entities. During this intrusion, the actors
+downloaded and modified some of the router images related to the
+company’s network routers. Also during this time, APT5 stole files
+related to military technology from a South Asian defense
+organization. Observed filenames suggest the actors were interested in
+product specifications, emails concerning technical products,
+procurement bids and proposals, and documents on unmanned aerial
+vehicles (UAVs).</p>
+<p>
+<b>Associated malware:</b> BRIGHTCREST, SWEETCOLA, SPIRITBOX, PALEJAB,
+WIDERIM, WINVAULT, HAPPYSAD, BIRDWORLD, FARCRY, CYFREE, FULLSILO,
+HELLOTHEWORLD, HAZELNUT, GIF89A, SCREENBIND, SHINYFUR, TRUCKBED,
+LEOUNCIA, FREESWIM, PULLTAB, HIREDHELP, NEDDYHORSE, PITCHFORK,
+BRIGHTCOMB, ENCORE, TABCTENG, SHORTLEASH, CLEANACT, BRIGHTCYAN,
+DANCEPARTY, HALFBACK, PUSHBACK, COOLWHIP, LOWBID, TIGHTROPE,
+DIRTYWORD, AURIGA, KEYFANG, Poison Ivy</p>
+<p>
+<b>Attack vectors:</b> It appears to be a large threat group that
+consists of several subgroups, often with distinct tactics and
+infrastructure. The group uses malware with keylogging capabilities to
+specifically target telecommunication companies' corporate networks,
+employees and executives. APT5 has shown significant interest in
+compromising networking devices and manipulating the underlying
+software that supports these appliances.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1057471178/grid-33-right/image"><img alt="APT5" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1057471178/grid-33-right/image.img.png/1570420067833.png" title="APT5"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="/content/dam/fireeye-www/current-threats/pdfs/rpt-southeast-asia-threat-landscape.pdf" target="_blank"><b>Report</b> – Southeast Asia: An Evolving Cyber Threat Landscape</a></li><li class="c01_item">
+<a href="http://www.rsaconference.com/writable/presentations/file_upload/tta-r02-nation-state-hacktivist-attacks-targeted-hits-on-asian-organizations_copy1.pdf" target="_blank"><b>Report</b> – Nation State and Hacktivist Attacks: Targeted Hits on Asian Organizations</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt4"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT4</h2>
+<p>
+<b>Also known as:</b> Maverick Panda, Sykipot Group, Wisp</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Aerospace and Defense, Industrial Engineering,
+Electronics, Automotive, Government, Telecommunications, and Transportation.</p>
+<p>
+<b>Overview:</b> APT4 appears to target the Defense Industrial Base
+(DIB) at a higher rate of frequency than other commercial
+organizations. However, APT4's history of targeted intrusions is wide
+in scope.</p>
+<p>
+<b>Associated malware:</b> GETKYS, LIFESAVER, CCHIP, SHYLILT,
+SWEETTOOTH, PHOTO, SOGO</p>
+<p>
+<b>Attack vectors:</b> APT4 actors often leverage spear phishing
+messages using U.S. government, Department of Defense, or defense
+industrial base themes. APT4 actors may repurpose valid content from
+government or U.S. DoD web sites within their message bodies to lend
+them legitimacy.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1323709951/grid-33-right/image_854885653"><img alt="APT4" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1323709951/grid-33-right/image_854885653.img.png/1601074665381.png" title="APT4"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt3"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT3</h2>
+<p>
+<b>Also known as:</b> UPS Team</p>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Aerospace and Defense, Construction and
+Engineering, High Tech, Telecommunications, Transportation</p>
+<p>
+<b>Overview:</b> The China-based threat group FireEye tracks as APT3
+is one of the more sophisticated threat groups that FireEye Threat
+Intelligence tracks, and they have a history of using browser-based
+exploits as zero-days (e.g., Internet Explorer, Firefox, and Adobe
+Flash Player). After successfully exploiting a target host, this group
+will quickly dump credentials, move laterally to additional hosts, and
+install custom backdoors. APT3’s command and control (CnC)
+infrastructure is difficult to track, as there is little overlap
+across campaigns.</p>
+<p>
+<b>Associated malware:</b> SHOTPUT, COOKIECUTTER, SOGU</p>
+<p>
+<b>Attack vectors:</b> The phishing emails used by APT3 are usually
+generic in nature, almost appearing to be spam. Attacks have exploited
+an unpatched vulnerability in the way Adobe Flash Player parses Flash
+Video (FLV) files. The exploit uses common vector corruption
+techniques to bypass Address Space Layout Randomization (ASLR), and
+uses Return-Oriented Programming (ROP) to bypass Data Execution
+Prevention (DEP). A neat trick to their ROP technique makes it simpler
+to exploit and will evade some ROP detection techniques. Shellcode is
+stored in the packed Adobe Flash Player exploit file alongside a key
+used for its decryption. The payload is xor encoded and hidden inside
+an image.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_360772093/grid-33-right/image"><img alt="APT3" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_360772093/grid-33-right/image.img.png/1601074670643.png" title="APT3"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="/blog/threat-research/2015/07/demonstrating_hustle.html"><b>Blog</b> – Demonstrating Hustle, Chinese APT Groups Quickly Use Zero-Day Vulnerability (CVE-2015-5119) Following Hacking Team Leak</a></li><li class="c01_item">
+<a href="/blog/threat-research/2014/04/new-zero-day-exploit-targeting-internet-explorer-versions-9-through-11-identified-in-targeted-attacks.html"><b>Blog</b> – New Zero-Day Exploit targeting Internet Explorer Versions 9 through 11 Identified in Targeted Attacks</a></li><li class="c01_item">
+<a href="/blog/threat-research/2014/11/operation_doubletap.html"><b>Blog</b> – Operation Double-Tap</a></li><li class="c01_item">
+<a href="/blog/threat-research/2015/06/operation-clandestine-wolf-adobe-flash-zero-day.html"><b>Blog</b> – Operation Clandestine Wolf: Adobe Flash Zero-Day in APT3 Phishing Campaign</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt2"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT2</h2>
+<p>
+<b>Suspected attribution:</b> China</p>
+<p>
+<b>Target sectors:</b> Military and Aerospace.</p>
+<p>
+<b>Overview:</b> This group was first observed in 2010. APT2 engages
+in cyber operations where the goal is intellectual property theft,
+usually focusing on the data and projects that make an organization
+competitive within its field</p>
+<p>
+<b>Associated malware:</b> MOOSE, WARP</p>
+<p>
+<b>Attack vectors:</b> Spearphishing emails that exploit CVE-2012-0158.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1043283270/grid-33-right/image_854885653"><img alt="APT19" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_1043283270/grid-33-right/image_854885653.img.png/1570420114791.png" title="APT19"/></div></div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt1"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT1</h2>
+<p>
+<b>Also known as:</b> Unit 61398, Comment Crew</p>
+<p>
+<b>Suspected attribution:</b> China’s People’s Liberation Army (PLA)
+General Staff Department’s (GSD) 3rd Department (总参三部二局), which is
+most commonly known by its Military Unit Cover Designator (MUCD) as
+Unit 61398 (61398部队).</p>
+<p>
+<b>Target sectors:</b> Information Technology, Aerospace, Public
+Administration, Satellites and Telecommunications, Scientific Research
+and Consulting, Energy, Transportation, Construction and
+Manufacturing, Engineering Services, High-tech Electronics,
+International Organizations, Legal Services Media, Advertising and
+Entertainment, Navigation, Chemicals, Financial Services, Food and
+Agriculture, Healthcare, Metals and Mining, Education</p>
+<p>
+<b>Overview:</b> APT1 has systematically stolen hundreds of terabytes
+of data from at least 141 organizations, and has demonstrated the
+capability and intent to steal from dozens of organizations
+simultaneously. The group focuses on compromising organizations across
+a broad range of industries in English-speaking countries. The size of
+APT1’s infrastructure implies a large organization with at least
+dozens, but potentially hundreds of human operators.</p>
+<p>
+<b>Associated malware:</b> TROJAN.ECLTYS, BACKDOOR.BARKIOFORK,
+BACKDOOR.WAKEMINAP, TROJAN.DOWNBOT, BACKDOOR.DALBOT, BACKDOOR.REVIRD,
+TROJAN.BADNAME, BACKDOOR.WUALESS</p>
+<p>
+<b>Attack vectors:</b> The most commonly observed method of initial
+compromise is spear phishing. The spear phishing emails contain either
+a malicious attachment or a hyperlink to a malicious file. The subject
+line and the text in the email body are usually relevant to the
+recipient. APT1 also creates webmail accounts using real peoples’
+names. While APT1 intruders occasionally use publicly available
+backdoors such as Poison Ivy and Gh0st RAT, the vast majority of the
+time they use what appear to be their own custom backdoors. Throughout
+their stay in the network (which could be years), APT1 usually
+installs new backdoors as they claim more systems in the environment.
+Then, if one backdoor is discovered and deleted, they still have other
+backdoors they can use. We usually detect multiple families of APT1
+backdoors scattered around a victim network when APT1 has been present
+for more than a few weeks.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_583278583/grid-33-right/image"><img alt="APT1" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_418105205/grid-100-full/grid_66_33_full_583278583/grid-33-right/image.img.png/1570420093654.png" title="APT1"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="/content/dam/fireeye-www/services/pdfs/mandiant-apt1-report.pdf" target="_blank"><b>Report</b> – APT1: Exposing One of China’s Cyber Espionage Units</a></li><li class="c01_item">
+<a href="https://www2.fireeye.com/fireeye-mandiant-m-trends-report" target="_blank"><b>Report</b> – M-Trends 2014: Beyond the Breach</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+</div>
+</div>
+<div class="clear-all"></div>
+</div>
+<div class="grid-100-edge fdc-grids section">
+<div class="l_container is-full"><div class="grid-100-full parsys"><div class="grid-100-full fdc-grids section">
+<div class="l_container g-m background is-full" style="background-color: #818C9B;"><div class="l_container"><div class="g g-m pad-top-20 pad-bottom-20 g-no-gutter"><div class="g-u-1 m_g-u-1">
+<div class="g-content">
+<div class="grid-100-mid parsys"><div class="htmlpassthru section">
+<a class="anchor" name="north-korea"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h3 class="guardians allcaps centered">Suspected Attribution: <span class="reverse">North Korea</span></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt38"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT38</h2>
+<p>
+<b>Suspected attribution:</b> North Korea</p>
+<p>
+<b>Target sectors:</b> Financial institutions world-wide</p>
+<p>
+<b>Overview:</b> Our analysis of the North Korean regime-backed threat
+group we are calling APT38 reveals that they are responsible for
+conducting the largest observed cyber heists. Although APT38 shares
+malware development resources and North Korean state sponsorship with
+a group referred to by the security community as “Lazarus”, we believe
+that APT38’s financial motivation, unique toolset, and tactics,
+techniques, and procedures (TTPs) are distinct enough for them to be
+tracked separately from other North Korean cyber activity.</p>
+<p>
+<b>Associated malware:</b> This large and prolific group uses a
+variety of custom malware families, including backdoors, tunnelers,
+dataminers, and destructive malware to steal millions of dollars from
+financial institutions and render victim networks inoperable.</p>
+<p>
+<b>Attack vectors:</b> APT38 has conducted operations in over 16
+organizations in at least 11 countries. This group is careful,
+calculated, and has demonstrated a desire to maintain access to victim
+environments for as long as necessary to understand the network
+layout, required permissions, and system technologies to achieve its
+goals. APT38 is unique in that they are not afraid to aggressively
+destroy evidence or victim networks as part of their operations.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_1970783325/grid-100-full/grid_66_33_full/grid-33-right/image"><img alt="APT38" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_1970783325/grid-100-full/grid_66_33_full/grid-33-right/image.img.png/1570420196716.png" title="APT38"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="https://content.fireeye.com/apt/rpt-apt38" target="_blank"><b>Report</b> – APT 38: Un-usual Suspects</a></li><li class="c01_item">
+<a href="/blog/threat-research/2018/10/apt38-details-on-new-north-korean-regime-backed-threat-group.html"><b>Blog</b> – APT38: Details on New North Korean Regime-Backed Threat Group</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt37"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT37</h2>
+<p>
+<b>Suspected attribution:</b> North Korea</p>
+<p>
+<b>Target sectors:</b> Primarily South Korea – though also Japan,
+Vietnam and the Middle East – in various industry verticals, including
+chemicals, electronics, manufacturing, aerospace, automotive, and healthcare.</p>
+<p>
+<b>Overview:</b> Our analysis of APT37’s recent activity reveals that
+the group’s operations are expanding in scope and sophistication, with
+a toolset that includes access to zero-day vulnerabilities and wiper
+malware. We assess with high confidence that this activity is carried
+out on behalf of the North Korean government given malware development
+artifacts and targeting that aligns with North Korean state interests.
+FireEye Threat Intelligence believes that APT37 is aligned with the
+activity publicly reported as Scarcruft and Group123.</p>
+<p>
+<b>Associated malware:</b> A diverse suite of malware for initial
+intrusion and exfiltration. Along with custom malware used for
+espionage purposes, APT37 also has access to destructive malware.</p>
+<p>
+<b>Attack vectors:</b> Social engineering tactics tailored
+specifically to desired targets, strategic web compromises typical of
+targeted cyber espionage operations, and the use of torrent
+file-sharing sites to distribute malware more indiscriminately.
+Frequent exploitation of vulnerabilities in Hangul Word Processor
+(HWP), as well as Adobe Flash. The group has demonstrated access to
+zero-day vulnerabilities (CVE-2018-0802), and the ability to
+incorporate them into operations.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_1970783325/grid-100-full/grid_66_33_full_220693413/grid-33-right/image"><img alt="APT37" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_1970783325/grid-100-full/grid_66_33_full_220693413/grid-33-right/image.img.png/1570420187147.png" title="APT37"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="https://www2.fireeye.com/rs/848-DID-242/images/rpt_APT37.pdf" target="_blank"><b>Report</b> – APT 37 (Reaper)</a></li><li class="c01_item">
+<a href="/blog/threat-research/2018/02/apt37-overlooked-north-korean-actor.html"><b>Blog</b> – APT37 (Reaper): The Overlooked North Korean Actor</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+</div>
+</div>
+<div class="clear-all"></div>
+</div>
+<div class="grid-100-edge fdc-grids section">
+<div class="l_container is-full"><div class="grid-100-full parsys"><div class="grid-100-full fdc-grids section">
+<div class="l_container g-m background is-full" style="background-color: #818C9B;"><div class="l_container"><div class="g g-m pad-top-20 pad-bottom-20 g-no-gutter"><div class="g-u-1 m_g-u-1">
+<div class="g-content">
+<div class="grid-100-mid parsys"><div class="htmlpassthru section">
+<a class="anchor" name="russia"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h3 class="guardians allcaps centered">Suspected Attribution: <span class="reverse">Russia</span></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt29"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT29</h2>
+<p>
+<b>Suspected attribution:</b> Russian government</p>
+<p>
+<b>Target sectors:</b> Western European governments, foreign policy
+groups and other similar organizations</p>
+<p>
+<b>Overview:</b> APT29 is an adaptive and disciplined threat group
+that hides its activity on a victim’s network, communicating
+infrequently and in a way that closely resembles legitimate traffic.
+By using legitimate popular web services, the group can also take
+advantage of encrypted SSL connections, making detection even more
+difficult. APT29 is one of the most evolved and capable threat groups.
+It deploys new backdoors to fix its own bugs and add features. It
+monitors network defender activity to maintain control over systems.
+APT29 uses only compromised servers for CnC communication. It counters
+attempts to remediate attacks. It also maintains a fast development
+cycle for its malware, quickly altering tools to hinder detection.</p>
+<p>
+<b>Associated malware:</b> HAMMERTOSS, TDISCOVER, UPLOADER</p>
+<p>
+<b>Attack vectors:</b> APT29 has used social media sites such as
+Twitter or GitHub, as well as cloud storage services, to relay
+commands and extract data from compromised networks. The group relays
+commands via images containing hidden and encrypted data. Information
+is extracted from a compromised network and files are uploaded to
+cloud storage services.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_2132965391/grid-100-full/grid_66_33_full/grid-33-right/image"><img alt="APT29" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_2132965391/grid-100-full/grid_66_33_full/grid-33-right/image.img.png/1570420136296.png" title="APT29"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="https://www2.fireeye.com/APT29-HAMMERTOSS-WEB-2015-RPT.html" target="_blank"><b>Report</b> – HAMMERTOSS: Stealthy Tactics Define a Russian Cyber Threat Group</a></li><li class="c01_item">
+<a href="https://www.washingtonpost.com/world/uk-us-and-canada-report-russian-cyberspies-may-be-trying-to-steal-vaccine-research/2020/07/16/d7c0dbd6-c765-11ea-a825-8722004e4150_story.html" target="_blank"><b>News</b> – U.K., U.S. and Canada report that Russian cyberspies are trying to steal vaccine research</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="line-top-grey-thin"><div class="l_container"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt28"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT28</h2>
+<p>
+<b>Also known as:</b> Tsar Team</p>
+<p>
+<b>Suspected attribution:</b> Russian government</p>
+<p>
+<b>Target sectors:</b> The Caucasus, particularly Georgia, eastern
+European countries and militaries, North Atlantic Treaty Organization
+(NATO) and other European security organizations and defense firms</p>
+<p>
+<b>Overview:</b> APT28 is a skilled team of developers and operators
+collecting intelligence on defense and geopolitical
+issues—intelligence that would be useful only to a government. This
+APT group compiles malware samples with Russian language settings
+during working hours (8 a.m. to 6 p.m.), consistent with the time zone
+of Russia’s major cities, including Moscow and St. Petersburg. This
+suggests that APT28 receives direct ongoing financial and other
+resources from a well-established organization, most likely the
+Russian government.</p>
+<p>
+<b>Associated malware:</b> CHOPSTICK, SOURFACE</p>
+<p>
+<b>Attack vectors:</b> Tools commonly used by APT28 include the
+SOURFACE downloader, its second-stage backdoor EVILTOSS and a modular
+family of implants dubbed CHOPSTICK. APT28 has employed RSA encryption
+to protect files and stolen information moved from the victim’s
+network to the controller. It has also made incremental and systematic
+changes to the SOURFACE downloader and its surrounding ecosystem since
+2007, indicating a long-standing and dedicated development effort.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_2132965391/grid-100-full/grid_66_33_full_1104877263/grid-33-right/image"><img alt="APT28" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_2132965391/grid-100-full/grid_66_33_full_1104877263/grid-33-right/image.img.png/1570420125064.png" title="APT28"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="https://www2.fireeye.com/apt28.html" target="_blank"><b>Report</b> – Russia’s APT28 Strategically Evolves its Cyber Operations</a></li><li class="c01_item">
+<a href="/blog/threat-research/2015/04/probable_apt28_useo.html"><b>Blog</b> – Operation RussianDoll: Adobe &amp; Windows Zero-Day Exploits Likely Leveraged by Russia’s APT28 in Highly-Targeted Attack</a></li><li class="c01_item">
+<a href="/blog/threat-research/2014/10/apt28-a-window-into-russias-cyber-espionage-operations.html"><b>Blog</b> – APT28: A Window into Russia's Cyber Espionage Operations?</a></li><li class="c01_item">
+<a href="https://www2.fireeye.com/APT28CyberEspionageandRussianGovmt.html" target="_blank"><b>Webinar</b> – APT28: Cyber Espionage and the Russian Government?</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div class="clear-all"></div></div>
+</div>
+</div>
+<div class="clear-all"></div>
+</div>
+<div class="grid-100-edge fdc-grids section">
+<div class="l_container is-full"><div class="grid-100-full parsys"><div class="grid-100-full fdc-grids section">
+<div class="l_container g-m background is-full" style="background-color: #818C9B;"><div class="l_container"><div class="g g-m pad-top-20 pad-bottom-20 g-no-gutter"><div class="g-u-1 m_g-u-1">
+<div class="g-content">
+<div class="grid-100-mid parsys"><div class="htmlpassthru section">
+<a class="anchor" name="vietnam"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h3 class="guardians allcaps centered">Suspected Attribution: <span class="reverse">Vietnam</span></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt32"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT32</h2>
+<p>
+<b>Also known as:</b> OceanLotus Group</p>
+<p>
+<b>Suspected attribution:</b> Vietnam</p>
+<p>
+<b>Target sectors:</b> Foreign companies investing in Vietnam’s
+manufacturing, consumer products, consulting and hospitality sectors</p>
+<p>
+<b>Overview:</b> Recent activity targeting private interests in
+Vietnam suggests that APT32 poses a threat to companies doing
+business, manufacturing or preparing to invest in the country. While
+the specific motivation for this activity remains opaque, it could
+ultimately erode the competitive advantage of targeted organizations.</p>
+<p>
+<b>Associated malware:</b> SOUNDBITE, WINDSHIELD, PHOREAL, BEACON, KOMPROGO</p>
+<p>
+<b>Attack vectors:</b> APT32 actors leverage ActiveMime files that
+employ social engineering methods to entice the victim into enabling
+macros. Upon execution, the initialized file typically downloads
+multiple malicious payloads from a remote server. APT32 actors
+delivers the malicious attachments via spear phishing emails. Evidence
+has shown that some may have been sent via Gmail.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_231318756/grid-100-full/grid_66_33_full/grid-33-right/image"><img alt="APT32" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_231318756/grid-100-full/grid_66_33_full/grid-33-right/image.img.png/1570420156208.png" title="APT32"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><p>
+</p><ul><li class="c01_item">
+<a href="/blog/threat-research/2017/05/cyber-espionage-apt32.html"><b>Blog</b> – Cyber Espionage is Alive and Well: APT32 and the Threat to Global Corporations</a></li><li class="c01_item">
+<a href="https://www2.fireeye.com/WBNR-APT32-New-Cyber-Espionage-Group.html" target="_blank"><b>Webinar</b> – APT32: New Cyber Espionage Group</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="clear-all"></div></div>
+</div>
+</div>
+<div class="clear-all"></div>
+</div>
+<div class="grid-100-edge fdc-grids section">
+<div class="l_container is-full g-u-none"><div class="grid-100-full parsys"><div class="grid-100-full fdc-grids section">
+<div class="l_container g-m background is-full" style="background-color: #818C9B;"><div class="l_container"><div class="g g-m pad-top-20 pad-bottom-20 g-no-gutter"><div class="g-u-1 m_g-u-1">
+<div class="g-content">
+<div class="grid-100-mid parsys"><div class="htmlpassthru section">
+<a class="anchor" name="undisclosed"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h3 class="guardians allcaps centered">Suspected Attribution: <span class="reverse">Undisclosed</span></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="clear-all"></div></div>
+<div class="grid-66-33-full fdc-grids section">
+<div class="l_container g-m"><div class="g g-m pad-top-80 pad-bottom-60 g-alt">
+<div class="g-u-2-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-66-left parsys"><div class="htmlpassthru section">
+<a class="anchor" name="apt5"></a></div>
+<div class="text parbase section"><div class="c00 c00v0">
+<h2 class="grey">APT5</h2>
+<p>
+<b>Suspected attribution:</b> Undisclosed</p>
+<p>
+<b>Target sectors:</b> Regional Telecommunication Providers,
+Asia-Based Employees of Global Telecommunications, and Tech Firms,
+High-Tech Manufacturing, Military Application Technology</p>
+<p>
+<b>Overview:</b> APT5 has been active since at least 2007. APT5 has
+targeted or breached organizations across multiple industries, but its
+focus appears to be on telecommunications and technology companies,
+especially information about satellite communications.</p>
+<p>
+<b>Associated malware:</b> LEOUNCIA</p>
+<p>
+<b>Attack vectors:</b> It appears to be a large threat group that
+consists of several subgroups, often with distinct tactics and
+infrastructure. The group uses malware with keylogging capabilities to
+specifically target telecommunication companies' corporate networks,
+employees and executives.</p>
+</div>
+</div>
+<div class="htmlpassthru section">
+<p><a href="#groups">Back to top ▵</a></p></div>
+</div>
+</div>
+</div>
+<div class="g-u-1-3 m_g-u-1">
+<div class="g-content">
+<div class="grid-33-right parsys"><div class="image parbase section"><div id="cq-image-jsp-/content/fireeye-www/en_US/current-threats/apt-groups/jcr:content/content-par/grid_100_edge_2094810849/grid-100-full/grid_66_33_full/grid-33-right/image"><img alt="APT5" class="cq-dd-image image-center expand" src="/content/fireeye-www/en_US/current-threats/apt-groups/_jcr_content/content-par/grid_100_edge_2094810849/grid-100-full/grid_66_33_full/grid-33-right/image.img.png/1570420067833.png" title="APT5"/></div></div>
+<div class="list section">
+<div class="c01 c01v1"><h4>Additional resources</h4><ul><li class="c01_item">
+<a href="/content/dam/fireeye-www/current-threats/pdfs/rpt-southeast-asia-threat-landscape.pdf" target="_blank"><b>Report</b> – Southeast Asia: An Evolving Cyber Threat Landscape</a></li><li class="c01_item">
+<a href="http://www.rsaconference.com/writable/presentations/file_upload/tta-r02-nation-state-hacktivist-attacks-targeted-hits-on-asian-organizations_copy1.pdf" target="_blank"><b>Report</b> – Nation State and Hacktivist Attacks: Targeted Hits on Asian Organizations</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="clear-all"></div></div>
+</div>
+</div>
+<div class="clear-all"></div>
+</div>
+<div class="grid-100-full fdc-grids section">
+<div class="l_container g-m bg-n background is-full" style="background-image: url(/content/dam/fireeye-www/texture/tx-bottom-right-grey-01.jpg);"><div class="l_container"><div class="g g-m pad-top-20 pad-bottom-80"><div class="g-u-1 m_g-u-1">
+<div class="g-content">
+<div class="grid-100-mid parsys"><div class="text parbase section"><div class="c00 c00v0">
+<h3 class="sideline-right-red guardians allcaps">Conclusion</h3>
+<p class="type-ML light-text">
+<b>Although informative, these documents cannot substitute for
+thorough intelligence gathering efforts and investigation of
+suspected cyber attacks.</b> Over the last decade, FireEye has spent
+over 100,000 hours per year responding to the world’s largest and most
+consequential breaches. This deep incident response experience,
+gathered from six worldwide security operation centers (SOCs), is
+curated and fed back into a self-learning, symbiotic security
+ecosystem that includes over 11 million sensors and is updated every
+60 minutes.</p>
+<p class="type-ML light-text">FireEye experts, assisted by this
+ecosystem, track a growing collection of 30+ advanced threat actors
+and 300+ advanced malware families. They also maintain profiles of 10+
+nation-state threat sponsors and 40+ targeted industries to track and
+analyze financial and political dimensions of cyber threats worldwide.
+FireEye experts can not only determine the risk associated with a
+validated threat, but also how the threat got into the environment,
+how it spread and what can and should be done about it. These insights
+are delivered as contextual intelligence that helps client
+organizations quickly prioritize and effectively respond to critical
+sophisticated threats.</p>
+<p class="type-ML light-text">Further reading: <a href="/current-threats/threat-intelligence-reports.html">Threat
+Intelligence Reports</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="clear-all"></div></div>
+</div>
+</main>
+<div class="footer_f635 footer">
+<footer class="l_footer g03 g03v0 g03v2 g03-5col" id="g03-footer">
+<div class="main-footer-wrapper">
+<div class="g03_list g03_list_1">
+<div class="parsys"><div class="htmlpassthru section">
+<p style="margin-bottom:6px"><strong>Company</strong></p></div>
+<div class="footer-list section">
+<ul class="g03_block"><li class="g03_item"><a class="Footer" href="/company.html">Why FireEye?</a></li>
+<li class="g03_item"><a class="Footer" href="/customers.html">Customer Stories</a></li>
+<li class="g03_item"><a class="Footer" href="/company/jobs.html">Careers</a></li>
+<li class="g03_item"><a class="Footer" href="/company/compliance-certification.html">Certifications and Compliance</a></li>
+<li class="g03_item"><a class="Footer" href="http://investors.fireeye.com/" target="_blank">Investor Relations</a></li>
+<li class="g03_item"><a class="Footer" href="/company/supplier.html">Supplier Documents</a></li>
+</ul></div>
+</div>
+</div>
+<div class="g03_list g03_list_2">
+<div class="parsys"><div class="htmlpassthru section">
+<p style="margin-bottom:6px"><strong>News and Events</strong></p></div>
+<div class="footer-list section">
+<ul class="g03_block"><li class="g03_item"><a class="Footer" href="/company/newsroom.html">Newsroom</a></li>
+<li class="g03_item"><a class="Footer" href="/company/press-releases.html">Press Releases</a></li>
+<li class="g03_item"><a class="Footer" href="/company/webinars.html">Webinars</a></li>
+<li class="g03_item"><a class="Footer" href="/company/events.html">Events</a></li>
+<li class="g03_item"><a class="Footer" href="/company/awards.html">Awards and Honors</a></li>
+<li class="g03_item"><a class="Footer" href="/company/contact-us/manage-your-communication-preference.html">Email Preferences</a></li>
+</ul></div>
+</div>
+</div>
+<div class="g03_list g03_list_3">
+<div class="parsys"><div class="htmlpassthru section">
+<p style="margin-bottom:6px"><strong>Technical Support</strong></p></div>
+<div class="footer-list section">
+<ul class="g03_block"><li class="g03_item"><a class="Footer" href="/company/incident-response.html">Incident?</a></li>
+<li class="g03_item"><a class="Footer" href="/company/security.html">Report Security Issue</a></li>
+<li class="g03_item"><a class="Footer" href="/support/contacts.html">Contact Support</a></li>
+<li class="g03_item"><a class="Footer" href="https://csportal.fireeye.com/" target="_blank">Customer Portal</a></li>
+<li class="g03_item"><a class="Footer" href="https://community.fireeye.com/" target="_blank">Communities</a></li>
+<li class="g03_item"><a class="Footer" href="https://docs.fireeye.com" target="_blank">Documentation Portal</a></li>
+</ul></div>
+</div>
+</div>
+<div class="g03_list g03_list_4">
+<div class="parsys"><div class="htmlpassthru section">
+<p style="margin-bottom:6px"><strong>FireEye Blogs</strong></p></div>
+<div class="footer-list section">
+<ul class="g03_block"><li class="g03_item"><a class="Footer" href="/blog/threat-research.html">Threat Research</a></li>
+<li class="g03_item"><a class="Footer" href="/blog/products-and-services.html">FireEye Stories</a></li>
+<li class="g03_item"><a class="Footer" href="/blog/executive-perspective.html">Industry Perspectives</a></li>
+</ul></div>
+<div class="htmlpassthru section">
+<p style="margin-bottom:6px"><strong>Threat Map</strong></p></div>
+<div class="footer-list section">
+<ul class="g03_block"><li class="g03_item"><a class="Footer" href="/cyber-map/threat-map.html">View the Latest Threats</a></li>
+</ul></div>
+</div>
+</div>
+<div class="g03_list g03_list_5">
+<div class="parsys"><div class="htmlpassthru section">
+<p style="margin-bottom:6px"><strong>Contact Us</strong><br/>
+<div class="footer-list section">
+<ul class="g03_block">
+<li class="g03_item"><a class="contactlinks" href="tel:+1 877-347-3393">+1 877-347-3393</a><br/> </li>
+</ul>
+</div></p></div>
+<div class="htmlpassthru section">
+<p style="margin-bottom:6px"><strong>Stay Connected</strong></p></div>
+<div class="followus-footer section"><h4 class="g03_title" id="g03-followus-title"> </h4><ul class="g03_block g03-s" id="g03-followus-list"><li class="g03_item g03_item-s">
+<a href="https://www.linkedin.com/company/fireeye" target="_blank">
+<span class="g03-s-i ficon g03-s-i-li ficon-linkedin"></span>
+<span class="g03-s_label">LinkedIn</span>
+</a>
+</li><li class="g03_item g03_item-s">
+<a href="https://twitter.com/fireeye" target="_blank">
+<span class="g03-s-i ficon g03-s-i-tw ficon-twitter2"></span>
+<span class="g03-s_label">Twitter</span>
+</a>
+</li><li class="g03_item g03_item-s">
+<a href="https://www.facebook.com/FireEye" target="_blank">
+<span class="g03-s-i ficon g03-s-i-fb ficon-facebook2"></span>
+<span class="g03-s_label">Facebook</span>
+</a>
+</li><li class="g03_item g03_item-s">
+<a href="https://www.youtube.com/user/FireEyeInc" target="_blank">
+<span class="g03-s-i ficon g03-s-i-yt ficon-youtube2"></span>
+<span class="g03-s_label">YouTube</span>
+</a>
+</li><li class="g03_item g03_item-s">
+<a href="https://itunes.apple.com/us/podcast/eye-on-security/id1073779629?mt=2" target="_blank">
+<span class="g03-s-i ficon g03-s-i-pc ficon-podcast"></span>
+<span class="g03-s_label">Podcast</span>
+</a>
+</li></ul>
+</div>
+<div class="htmlpassthru section">
+<div class="country-notification">
+<div class="c08_modal lang" id="c08_modal-lang">
+<div class="c08 c08v1">
+<div class="c08_header">
+<a class="ficon ficon-close c08_dismiss" data-behavior="dismiss-c08" href="#dismiss-lightbox"></a>
+</div>
+<div class="c08_content">
+<div class="c08_body">
+<div class="col FR">
+<p class="type-ML">Cette page est également disponible en français.</p>
+<div class="button section"><a class="btn" href="/index.html">Version française</a></div>
+</div>
+<div class="col DE">
+<p class="type-ML">Diese Seite ist auch auf Deutsch verfügbar</p>
+<div class="button section"><a class="btn" href="/index.html">Zur deutschen Seite wechseln</a></div>
+</div>
+<div class="col JP">
+<p class="type-ML">日本語ページを</p>
+<div class="button section"><a class="btn" href="/index.html">見る</a></div>
+</div>
+<div class="col KR">
+<p class="type-ML">해당 페이지는 한글 버전으로 보실 수 있습니다</p>
+<div class="button section"><a class="btn" href="/index.html">바로 가기</a></div>
+</div>
+<hr/>
+<div class="col">
+<p><a class="dismiss" data-behavior="dismiss-c08" href="#dismiss-lightbox">Continue viewing this page in English</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<style>
+.c08_modal.lang {
+    background: rgba(255,255,255,0.8);
+}
+.c08_modal.lang .c08_header {
+    background: transparent;
+    border-left: none;
+}
+.c08_modal.lang .c08 {
+    top: 20%;
+    width: 600px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.37) 0 0 15px;
+    border: 1px solid #b4b5b8;
+    background-image: url("/content/dam/fireeye-www/fw/images/bg-language-select.jpg");
+    background-position: right bottom;
+    margin: 0 auto;
+    position: relative;
+    max-width: 90%;
+}
+.c08_modal.lang .c08_dismiss {
+    color: #222;
+}
+.c08_modal.lang .c08_body {
+    padding: 12px 50px 60px;
+}
+.c08_modal.lang .col {
+    display: none;
+}
+.c08_modal.lang .col:last-child {
+    display: block;
+}
+.c08_modal.lang .btn {
+    margin-bottom: 0;
+}
+.c08_modal.lang hr {
+    margin: 30px 80px;
+}
+.c08_modal.lang hr:before {
+    border-bottom: none;
+}
+</style>
+</div></div>
+</div>
+</div></div>
+<div class="legal-footer-wrapper">
+<div class="legal-footer">
+<div class="g03_copyright">
+<p class="g03_copyright_p">
+Copyright © 2021 FireEye, Inc. All rights reserved. <span class="g03-legal"><a href="/company/privacy.html">Privacy &amp; Cookies Policy</a> | <a href="/company/privacy-shield-commitment.html">Privacy Shield</a> | <a href="/company/legal.html">Legal Documentation</a></span>
+</p>
+</div><div class="g03_languages">
+<a class="g01_options-option" href="#footer-worldwide">
+<span>Site Language</span>
+<span>English<span class="ficon ficon-globe"></span></span>
+</a>
+<div class="option-menu" id="footer-worldwide">
+<p><strong>My preferred language:</strong></p>
+<ul class="g01_options_list"><li><a href="https://www.fireeye.com/current-threats/apt-groups.html" target="_blank">English (English)</a></li>
+<li><a href="https://www.fireeye.fr/current-threats/apt-groups.html" target="_blank">French (Français)</a></li>
+<li><a href="https://www.fireeye.de/current-threats/apt-groups.html" target="_blank">German (Deutsch)</a></li>
+<li><a href="https://www.fireeye.jp/current-threats/apt-groups.html" target="_blank">Japanese (日本語)</a></li>
+<li><a href="https://www.fireeye.kr/current-threats/apt-groups.html" target="_blank">Korean (한국어)</a></li>
+<li><a href="/products/international-literature.html">More languages</a></li>
+</ul>
+</div>
+</div> </div>
+</div>
+</footer>
+</div>
+<script src="/etc/designs/fireeye-www/clientlibs_fw.min.js" type="text/javascript"></script>
+<div class="htmlpassthru_c66c htmlpassthru">
+<script>
+function changeSlide(a) {
+    if(isNaN(a)){console.log("updating i");i=2;a=2;}
+	$('#uc-he01_carousel').removeClass('uc-he01_s-1 uc-he01_s-2 uc-he01_s-3 uc-he01_s-4 uc-he01_s-5');
+	$('.uc-he01_sc_s, .uc-he01_c_btn').removeClass('is-active');
+	$('#uc-he01_sc_s-'+(a)+', [data-target="'+(a)+'"]').addClass('is-active animate');
+	window.setTimeout(function() {$('.uc-he01_sc_s, .uc-he01_c_btn').not('#uc-he01_sc_s-'+(a)).removeClass('animate');}, 1000);
+	$('#uc-he01_carousel').addClass('uc-he01_s-'+(a));
+}
+</script></div>
+</body>
+</html>

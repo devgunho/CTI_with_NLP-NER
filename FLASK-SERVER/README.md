@@ -74,7 +74,7 @@ FLASK-SERVER/brat$ python standalone.py
 
 <br/>
 
-## Module Description
+## Description
 
 - `mongodb_connect.py`
 - `run_ner.py`

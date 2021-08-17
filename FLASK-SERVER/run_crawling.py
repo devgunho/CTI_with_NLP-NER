@@ -31,6 +31,34 @@ def run():
             target_url)
         html = req.text
         soup = BeautifulSoup(html, 'html.parser')
+
+        # ---------- make dataset_html ----------
+        # urlparse
+        url = urlparse(target_url)
+        parent_dir = "./dataset_html"
+        if not os.path.isdir(parent_dir):
+            os.mkdir(parent_dir)
+        path = os.path.join(parent_dir, url.netloc)
+        # print(path)
+        if not os.path.isdir(path):
+            os.mkdir(path)
+
+        # crawling date
+        # d = datetime.datetime.now()
+        filename = url.path
+        # filename += '-'+str(d.year)+'-' + \
+        #     str(d.month)+'-'+str(d.day)
+        filename = filename.replace("/", "_")
+        filename += '.txt'
+        # print(filename)
+
+        # write
+        complete_filename = os.path.join(path, filename)
+        print("[+] Stacking HTML", complete_filename)
+        with open(complete_filename, "w",  encoding='utf-8') as file:
+            file.write(str(soup))
+
+        # ---------- make dataset_none-tag ----------
         text_elements = [t for t in soup.find_all(
             text=True) if t.parent.name not in blacklist]
         full_text = ''.join(str(e) for e in text_elements)
@@ -57,7 +85,7 @@ def run():
 
         # write
         complete_filename = os.path.join(path, filename)
-        print("[+] Stacking", complete_filename)
+        print("[+] Stacking none-tag", complete_filename)
         with open(complete_filename, "w",  encoding='utf-8') as file:
             file.write(str(full_text))
 
