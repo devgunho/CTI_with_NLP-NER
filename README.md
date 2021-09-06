@@ -1,5 +1,10 @@
 # CTI with NLP
-CTI (Cyber Threat Intelligence) with NLP
+**CTI (Cyber Threat Intelligence) with NLP**
+
+- Starting with text collection, the goal is to build a server to automate various functions.
+- Extract Cybersecurity Threat Information by automatically processing security-related text documents.
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 <br/>
 

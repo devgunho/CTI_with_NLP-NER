@@ -1,11 +1,10 @@
-/.vscode
+*/.vscode
 */.ipynb_checkpoints
 */__pycache__
 
 /dask-worker-space
 
 /venv
-/dataset
 /pororo
 /fairseq
 
